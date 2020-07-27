@@ -1,7 +1,9 @@
 <template>
-  <section class="container py-8 px-4 mx-auto">
-    <FormContact />
-  </section>
+  <PagesBody>
+    <template v-slot:body>
+      <FormContact />
+    </template>
+  </PagesBody>
 </template>
 
 <script>

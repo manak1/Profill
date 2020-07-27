@@ -1,7 +1,9 @@
 <template>
-  <section class="container py-8 px-4 mx-auto">
-    <FormZip />
-  </section>
+  <PagesBody>
+    <template v-slot:body>
+      <FormZip />
+    </template>
+  </PagesBody>
 </template>
 
 <script>

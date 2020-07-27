@@ -1,7 +1,9 @@
 <template>
-  <div class="container py-8 px-4 mx-auto">
-    <FormCompany />
-  </div>
+  <PagesBody>
+    <template v-slot:body>
+      <FormCompany />
+    </template>
+  </PagesBody>
 </template>
 
 <script>
