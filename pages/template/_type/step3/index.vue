@@ -1,6 +1,6 @@
 <template>
   <section class="container py-8 px-4 mx-auto">
-    トップページ
+    <FormContact />
   </section>
 </template>
 
@@ -8,4 +8,4 @@
 export default {}
 </script>
 
-<style />
+<style scoped></style>
