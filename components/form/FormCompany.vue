@@ -15,9 +15,6 @@
           type="password"
           placeholder="株式会社hogehoge"
         />
-        <p class="text-gray-600 text-xs italic">
-          Make it as long and as crazy as you'd like
-        </p>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
