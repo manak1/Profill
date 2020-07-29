@@ -1,33 +1,39 @@
 <template>
-  <PagesBody :title="'プロフィール'">
-    <template v-slot:body>
-      <FormProfile :form="form" />
-      <div class="text-center">
-        <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
-        <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
-      </div>
-    </template>
-  </PagesBody>
+  <div v-if="form">
+    <PagesBody :title="'プロフィール'">
+      <template v-slot:body>
+        <FormProfile v-model="form" @input="inputForm" />
+        <div class="text-center">
+          <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
+          <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
+        </div>
+      </template>
+    </PagesBody>
+  </div>
 </template>
 
 <script>
+import { formMapper } from "@/store/form"
 export default {
   data() {
     return {
-      form: {
-        first_name: null,
-        last_name: null,
-        first_name_kana: null,
-        last_name_kana: null,
-      },
+      form: null,
     }
   },
+  mounted() {
+    this.form = { ...this.step1 }
+  },
   computed: {
+    ...formMapper.mapState(["step1"]),
     slug() {
       return this.$route.params.type
     },
   },
   methods: {
+    ...formMapper.mapMutations(["SET_PROFILE"]),
+    inputForm() {
+      this.SET_PROFILE(this.form)
+    },
     linkToNext() {
       this.$router.push(`/template/${this.slug}/step2`)
     },

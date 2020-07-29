@@ -10,10 +10,11 @@
         </label>
         <input
           id="email"
-          v-model="form.mail"
+          v-model="$v.form.mail.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          type="text"
+          type="email"
           placeholder="hogehoge@gmail.com"
+          @input="input"
         />
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -25,10 +26,11 @@
         </label>
         <input
           id="tel"
-          v-model="form.tel"
+          v-model="$v.form.tel.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
           placeholder="01-234-5678"
+          @input="input"
         />
       </div>
     </template>
@@ -36,13 +38,17 @@
 </template>
 
 <script>
+import formMixin from "./_formMixin"
+import { validations, messages } from "@/service/validations/formContact"
+
 export default {
-  props: {
-    form: {
-      type: Object,
-      default: () => {},
-    },
+  mixins: [formMixin],
+  data() {
+    return {
+      messages,
+    }
   },
+  validations,
 }
 </script>
 
