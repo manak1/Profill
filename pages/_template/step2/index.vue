@@ -1,8 +1,8 @@
 <template>
   <div v-if="form">
-    <PagesBody :title="'連絡先'">
+    <PagesBody :title="'住所'">
       <template v-slot:body>
-        <FormContact :form="form" @input="inputForm" />
+        <FormZip :form="form" @input="inputForm" />
         <div class="text-center">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
           <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
@@ -21,21 +21,21 @@ export default {
     }
   },
   mounted() {
-    this.form = { ...this.step3 }
+    this.form = { ...this.step2 }
   },
   computed: {
-    ...formMapper.mapState(["step3"]),
+    ...formMapper.mapState(["step2"]),
     slug() {
-      return this.$route.params.type
+      return this.$route.params.template
     },
   },
   methods: {
-    ...formMapper.mapMutations(["SET_CONTACT"]),
+    ...formMapper.mapMutations(["SET_ZIP"]),
     inputForm() {
-      this.SET_CONTACT(this.form)
+      this.SET_ZIP(this.form)
     },
     linkToNext() {
-      this.$router.push(`/template/${this.slug}/step4`)
+      this.$router.push(`/${this.slug}/step3`)
     },
     linkToPrev() {
       this.$router.go(-1)

@@ -26,7 +26,7 @@ export default {
   computed: {
     ...formMapper.mapState(["step1"]),
     slug() {
-      return this.$route.params.type
+      return this.$route.params.template
     },
   },
   methods: {
@@ -35,7 +35,7 @@ export default {
       this.SET_PROFILE(this.form)
     },
     linkToNext() {
-      this.$router.push(`/template/${this.slug}/step2`)
+      this.$router.push(`/${this.slug}/step2`)
     },
     linkToPrev() {
       this.$router.go(-1)

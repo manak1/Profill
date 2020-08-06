@@ -1,8 +1,8 @@
 <template>
   <div v-if="form">
-    <PagesBody :title="'会社情報'">
+    <PagesBody :title="'連絡先'">
       <template v-slot:body>
-        <FormCompany :form="form" @input="inputForm" />
+        <FormContact :form="form" @input="inputForm" />
         <div class="text-center">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
           <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
@@ -11,6 +11,7 @@
     </PagesBody>
   </div>
 </template>
+
 <script>
 import { formMapper } from "@/store/form"
 export default {
@@ -20,21 +21,21 @@ export default {
     }
   },
   mounted() {
-    this.form = { ...this.step4 }
+    this.form = { ...this.step3 }
   },
   computed: {
-    ...formMapper.mapState(["step4"]),
+    ...formMapper.mapState(["step3"]),
     slug() {
-      return this.$route.params.type
+      return this.$route.params.template
     },
   },
   methods: {
-    ...formMapper.mapMutations(["SET_COMPANY"]),
+    ...formMapper.mapMutations(["SET_CONTACT"]),
     inputForm() {
-      this.SET_COMPANY(this.form)
+      this.SET_CONTACT(this.form)
     },
     linkToNext() {
-      this.$router.push(`/template/${this.slug}/step4`)
+      this.$router.push(`/${this.slug}/step4`)
     },
     linkToPrev() {
       this.$router.go(-1)

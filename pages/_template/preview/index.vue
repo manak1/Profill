@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     slug() {
-      return this.$route.params.type
+      return this.$route.params.template
     },
   },
 }
