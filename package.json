@@ -4,14 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "doc": "run-p doc:*",
+    "doc:template": "json-refs resolve -w documents/data/templates.yml > static/data/templates.json",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt export",
+    "export": "nuxt build --target static && nuxt export",
     "serve": "nuxt serve"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
+    "@nuxtjs/apollo": "^4.0.1-rc.1",
+    "graphql-tag": "^2.11.0",
+    "html2canvas": "^1.0.0-rc.5",
     "nuxt": "^2.13.0",
+    "vue-color": "^2.7.1",
     "vuelidate": "^0.7.5",
     "vuex-persistedstate": "^3.0.1"
   },
@@ -21,7 +27,9 @@
     "@babel/register": "^7.10.5",
     "@nuxt/types": "^2.13.3",
     "@nuxt/typescript-build": "^2.0.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/tailwindcss": "^2.1.0",
+    "apollo": "^2.30.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "eslint": "^7.5.0",
@@ -31,6 +39,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vue-scoped-css": "^1.0.0",
     "husky": "^4.2.5",
+    "json-refs": "^3.0.15",
     "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5"

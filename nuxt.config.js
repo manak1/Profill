@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -47,7 +49,11 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ["@nuxtjs/dotenv"],
+
+  generate: {
+    fallback: true,
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
