@@ -1,5 +1,8 @@
 # card-app
 
+## deploy environment
+https://unruffled-wozniak-c2de31.netlify.app/
+
 ## Build Setup
 
 ```bash
