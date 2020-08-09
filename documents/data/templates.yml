@@ -1,0 +1,11 @@
+templates:
+  -
+    title: ほげ
+    text: lorem
+    image: lorem
+    template: Template1
+  -
+    title: ほげほげ
+    text: lorem
+    image: lorem
+    template: Template2

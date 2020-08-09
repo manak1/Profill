@@ -10,9 +10,14 @@ module.exports = {
       sm: "640px",
       lg: "1024px",
     },
+    aspectRatio: {
+      "16/9": [16, 9],
+    },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    aspectRatio: ["responsive"],
+  },
+  plugins: [require("tailwindcss-aspect-ratio")],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === "production",

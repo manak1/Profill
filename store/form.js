@@ -4,31 +4,31 @@ export const formMapper = createNamespacedHelpers("form")
 
 export const profile = () => {
   return {
-    first_name: null,
-    last_name: null,
-    first_name_kana: null,
-    last_name_kana: null,
+    first_name: "",
+    last_name: "",
+    first_name_kana: "",
+    last_name_kana: "",
   }
 }
 
 export const zip = () => {
   return {
-    post_code: null,
-    zip: null,
+    post_code: "",
+    zip: "",
   }
 }
 
 export const contact = () => {
   return {
-    mail: null,
-    tel: null,
+    mail: "",
+    tel: "",
   }
 }
 
 export const company = () => {
   return {
-    organization: null,
-    department: null,
+    organization: "",
+    department: "",
   }
 }
 
@@ -39,6 +39,23 @@ export const state = () => {
     step3: contact(),
     step4: company(),
   }
+}
+
+export const getters = {
+  result(state) {
+    return {
+      first_name: state.step1.first_name,
+      last_name: state.step1.last_name,
+      first_name_kana: state.step1.first_name_kana,
+      last_name_kana: state.step1.last_name_kana,
+      post_code: state.step2.post_code,
+      zip: state.step2.zip,
+      mail: state.step3.mail,
+      tel: state.step3.tel,
+      organization: state.step4.organization,
+      department: state.step4.department,
+    }
+  },
 }
 
 export const mutations = {
