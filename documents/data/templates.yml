@@ -9,3 +9,8 @@ templates:
     text: lorem
     image: lorem
     template: Template2
+  -
+    title: ほげほげho
+    text: lorem
+    image: lorem
+    template: Template3
