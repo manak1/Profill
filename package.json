@@ -8,7 +8,9 @@
     "doc:template": "json-refs resolve -w documents/data/templates.yml > static/data/templates.json",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt build --target static && nuxt export",
+    "export": "run-s export:*",
+    "export:doc": "npm run doc",
+    "export:build": "nuxt build --target static && nuxt export",
     "serve": "nuxt serve"
   },
   "dependencies": {
