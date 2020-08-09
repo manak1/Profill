@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <div class="rounded overflow-hidden shadow-lg">
     <div class="w-full bg-gray-200 px-8 py-8">
       <img class="w-full" src="https://placehold.jp/376x224.png" alt="" />
     </div>

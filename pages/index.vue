@@ -6,7 +6,7 @@
           <template v-slot:submit>
             <div class="text-center px-6 py-4">
               <nuxt-link
-                :to="`/${card.template}/step1`"
+                :to="`/${card.template}`"
                 class="inline-block w-full bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded"
               >
                 この名刺を選択する
