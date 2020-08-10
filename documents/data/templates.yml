@@ -1,16 +1,58 @@
 templates:
   -
+    id: 1
     title: ほげ
     text: lorem
     image: lorem
-    template: Template1
+    name: template1
+    types:
+       -
+          type_id: 1,
+          name: type1
+          isCustom: true
+       -
+         type_id: 2,
+         name: type2
+         isCustom: false
+       -
+         type_id: 3,
+         name: type3
+         isCustom: true
   -
-    title: ほげほげ
+    id: 2
+    title: ほげ
     text: lorem
     image: lorem
-    template: Template2
+    name: template2
+    types:
+      -
+        type_id: 1,
+        name: type1
+        isCustom: true
+      -
+        type_id: 2,
+        name: type2
+        isCustom: false
+      -
+        type_id: 3,
+        name: type3
+        isCustom: true
   -
-    title: ほげほげho
+    id: 3
+    title: ほげ
     text: lorem
     image: lorem
-    template: Template3
+    name: template3
+    types:
+      -
+        type_id: 1,
+        name: type1
+        isCustom: true
+      -
+        type_id: 2,
+        name: type2
+        isCustom: false
+      -
+        type_id: 3,
+        name: type3
+        isCustom: true

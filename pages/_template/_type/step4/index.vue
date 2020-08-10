@@ -10,7 +10,7 @@ import { formMapper } from "@/store/form"
 export default {
   computed: {
     ...formMapper.mapGetters(["result"]),
-    slug() {
+    template() {
       return this.$route.params.template
     },
   },
