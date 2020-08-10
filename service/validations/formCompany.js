@@ -19,9 +19,9 @@ export const validations = {
   form: {
     organization: { required },
     department: {},
-    post_code: { required },
+    post_code: {},
     zip: {},
-    mail: { required },
+    mail: {},
     tel: {},
   },
 }

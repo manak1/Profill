@@ -42,12 +42,6 @@ export default {
         }
       }
 
-      for (let key of keys) {
-        if (this.gqErrors[key]) {
-          errors.push(this.gqErrors[key])
-        }
-      }
-
       if (errors.length === 0) {
         return null
       }
