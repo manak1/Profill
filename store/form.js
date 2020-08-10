@@ -13,7 +13,7 @@ export const profile = () => {
 
 export const sns = () => {
   return {
-    instagrm: "",
+    instagram: "",
     twitter: "",
     facebook: "",
   }
@@ -45,12 +45,12 @@ export const getters = {
       last_name: state.step1.last_name,
       first_name_kana: state.step1.first_name_kana,
       last_name_kana: state.step1.last_name_kana,
-      instagrm: state.step2.instagrm,
+      instagram: state.step2.instagram,
       twitter: state.step2.twitter,
       facebook: state.step2.facebook,
-      post_code: state.step3.post_code,
       organization: state.step3.organization,
       department: state.step3.department,
+      post_code: state.step3.post_code,
       zip: state.step3.zip,
       mail: state.step3.mail,
       tel: state.step3.tel,
