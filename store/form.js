@@ -11,17 +11,11 @@ export const profile = () => {
   }
 }
 
-export const zip = () => {
+export const sns = () => {
   return {
-    post_code: "",
-    zip: "",
-  }
-}
-
-export const contact = () => {
-  return {
-    mail: "",
-    tel: "",
+    instagrm: "",
+    twitter: "",
+    facebook: "",
   }
 }
 
@@ -29,15 +23,18 @@ export const company = () => {
   return {
     organization: "",
     department: "",
+    post_code: "",
+    zip: "",
+    mail: "",
+    tel: "",
   }
 }
 
 export const state = () => {
   return {
     step1: profile(),
-    step2: zip(),
-    step3: contact(),
-    step4: company(),
+    step2: sns(),
+    step3: company(),
   }
 }
 
@@ -48,12 +45,15 @@ export const getters = {
       last_name: state.step1.last_name,
       first_name_kana: state.step1.first_name_kana,
       last_name_kana: state.step1.last_name_kana,
-      post_code: state.step2.post_code,
-      zip: state.step2.zip,
+      instagrm: state.step2.instagrm,
+      twitter: state.step2.twitter,
+      facebook: state.step2.facebook,
+      post_code: state.step3.post_code,
+      organization: state.step3.organization,
+      department: state.step3.department,
+      zip: state.step3.zip,
       mail: state.step3.mail,
       tel: state.step3.tel,
-      organization: state.step4.organization,
-      department: state.step4.department,
     }
   },
 }
@@ -62,13 +62,10 @@ export const mutations = {
   SET_PROFILE(state, data) {
     state.step1 = { ...data }
   },
-  SET_ZIP(state, data) {
+  SET_SNS(state, data) {
     state.step2 = { ...data }
   },
-  SET_CONTACT(state, data) {
-    state.step3 = { ...data }
-  },
   SET_COMPANY(state, data) {
-    state.step4 = { ...data }
+    state.step3 = { ...data }
   },
 }

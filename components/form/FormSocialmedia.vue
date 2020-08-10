@@ -4,32 +4,48 @@
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="email"
+          for="sns1"
         >
-          メールアドレス
+          instagram
         </label>
         <input
-          id="email"
-          v-model="$v.form.mail.$model"
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          type="email"
-          placeholder="hogehoge@gmail.com"
+          id="sns1"
+          v-model="$v.form.instagram.$model"
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          type="text"
+          placeholder=""
           @input="input"
         />
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="tel"
+          for="sns2"
         >
-          電話番号
+          twitter
         </label>
         <input
-          id="tel"
-          v-model="$v.form.tel.$model"
+          id="sns2"
+          v-model="$v.form.twitter.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="01-234-5678"
+          placeholder=""
+          @input="input"
+        />
+      </div>
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="sns3"
+        >
+          facebook
+        </label>
+        <input
+          id="sns3"
+          v-model="$v.form.facebook.$model"
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          type="text"
+          placeholder="90210"
           @input="input"
         />
       </div>
@@ -39,8 +55,7 @@
 
 <script>
 import formMixin from "./_formMixin"
-import { validations, messages } from "@/service/validations/formContact"
-
+import { validations, messages } from "@/service/validations/formSocialmedia"
 export default {
   mixins: [formMixin],
   data() {

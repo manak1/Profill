@@ -1,8 +1,8 @@
 <template>
   <div v-if="form">
-    <PagesBody :title="'連絡先'">
+    <PagesBody :title="'会社情報'">
       <template v-slot:body>
-        <FormContact :form="form" @input="inputForm" />
+        <FormCompany :form="form" @input="inputForm" />
         <div class="text-center mb-20">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
           <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
@@ -38,9 +38,9 @@ export default {
     },
   },
   methods: {
-    ...formMapper.mapMutations(["SET_CONTACT"]),
+    ...formMapper.mapMutations(["SET_COMPANY"]),
     inputForm() {
-      this.SET_CONTACT(this.form)
+      this.SET_COMPANY(this.form)
     },
     linkToNext() {
       this.$router.push(`/${this.slug}/step4`)

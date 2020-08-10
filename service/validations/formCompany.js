@@ -5,11 +5,23 @@ export const messages = {
     mustBeNumber: "半角数字",
   },
   department: {},
+  post_code: {
+    mustBeNumber: "半角数字",
+  },
+  zip: {},
+  mail: {
+    mustBeNumber: "半角数字",
+  },
+  tel: {},
 }
 
 export const validations = {
   form: {
     organization: { required },
     department: {},
+    post_code: { required },
+    zip: {},
+    mail: { required },
+    tel: {},
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <div v-if="form">
-    <PagesBody :title="'プロフィール'">
+    <PagesBody :title="'お名前'">
       <template v-slot:body>
         <FormProfile v-model="form" @input="inputForm" />
         <div class="text-center mb-20">

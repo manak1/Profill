@@ -1,8 +1,8 @@
 <template>
   <div v-if="form">
-    <PagesBody :title="'住所'">
+    <PagesBody :title="'SNS'">
       <template v-slot:body>
-        <FormZip :form="form" @input="inputForm" />
+        <FormSocialmedia :form="form" @input="inputForm" />
         <div class="text-center mb-20">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
           <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
@@ -38,9 +38,9 @@ export default {
     },
   },
   methods: {
-    ...formMapper.mapMutations(["SET_ZIP"]),
+    ...formMapper.mapMutations(["SET_SNS"]),
     inputForm() {
-      this.SET_ZIP(this.form)
+      this.SET_SNS(this.form)
     },
     linkToNext() {
       this.$router.push(`/${this.slug}/step3`)
