@@ -1,27 +1,37 @@
-import { required } from "vuelidate/lib/validators"
+import { maxLength } from "vuelidate/lib/validators"
+
+export const mustBeEmail = (value) => {
+  return /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+    value
+  )
+}
 
 export const messages = {
   organization: {
-    mustBeNumber: "半角数字",
+    maxLength: "名前は200字以内です",
   },
-  department: {},
-  post_code: {
-    mustBeNumber: "半角数字",
+  department: {
+    maxLength: "名前は200字以内です",
   },
-  zip: {},
+  post_code: {},
+  zip: {
+    maxLength: "名前は200字以内です",
+  },
   mail: {
-    mustBeNumber: "半角数字",
+    mustBeEmail: "メール形式で入力してください",
   },
   tel: {},
 }
 
 export const validations = {
   form: {
-    organization: { required },
-    department: {},
+    organization: { maxLength: maxLength(200) },
+    department: { maxLength: maxLength(200) },
     post_code: {},
     zip: {},
-    mail: {},
+    mail: {
+      mustBeEmail,
+    },
     tel: {},
   },
 }

@@ -1,16 +1,12 @@
-import { required } from "vuelidate/lib/validators"
-
 export const messages = {
-  instagram: {
-    mustBeNumber: "半角数字",
-  },
+  instagram: {},
   twitter: {},
   facebook: {},
 }
 
 export const validations = {
   form: {
-    instagram: { required },
+    instagram: {},
     twitter: {},
     facebook: {},
   },

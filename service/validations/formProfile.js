@@ -1,25 +1,25 @@
-import { required } from "vuelidate/lib/validators"
+import { maxLength } from "vuelidate/lib/validators"
 
 export const messages = {
   first_name: {
-    mustBeKanji: "漢字で",
+    maxLength: "名前は200字以内です",
   },
   last_name: {
-    mustBeKanji: "漢字で",
+    maxLength: "名前は200字以内です",
   },
   first_name_kana: {
-    mustBeKana: "かな",
+    maxLength: "名前は200字以内です",
   },
   last_name_kana: {
-    mustBeKana: "かな",
+    maxLength: "名前は200字以内です",
   },
 }
 
 export const validations = {
   form: {
-    first_name: { required },
-    last_name: {},
-    first_name_kana: {},
-    last_name_kana: {},
+    first_name: { maxLength: maxLength(200) },
+    last_name: { maxLength: maxLength(200) },
+    first_name_kana: { maxLength: maxLength(200) },
+    last_name_kana: { maxLength: maxLength(200) },
   },
 }
