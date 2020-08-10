@@ -10,10 +10,9 @@
 </template>
 
 <script>
-import Template1 from "@/components/template/Template1"
 export default {
   components: {
-    Template1,
+    template1type1: () => import(`@/components/template/template1/type1`),
   },
   data() {
     return {
@@ -21,19 +20,18 @@ export default {
     }
   },
   computed: {
-    slug() {
+    template() {
       return this.$route.params.template
+    },
+    type() {
+      return this.$route.params.type
     },
   },
   mounted() {
     const { templates } = require("@/static/data/templates.json")
-    this.componentData = this.templateData(templates)
-  },
-  methods: {
-    templateData(templates) {
-      const { template } = templates.find((item) => item.template === this.slug)
-      return template
-    },
+    const template = templates.find((item) => item.name === this.template)
+    const type = template.types.find((item) => item.name === this.type)
+    this.componentData = `${template.name}${type.name}`
   },
 }
 </script>
