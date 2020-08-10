@@ -2,7 +2,7 @@
   <div v-if="form">
     <PagesBody :title="'会社情報'">
       <template v-slot:body>
-        <FormCompany :form="form" @input="inputForm" />
+        <FormCompany v-model="form" @input="inputForm" />
         <div class="text-center mb-20">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
           <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />

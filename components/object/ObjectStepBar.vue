@@ -24,7 +24,7 @@
         </div>
 
         <div class="text-xs text-center md:text-base">
-          Select Server
+          お名前
         </div>
       </div>
 
@@ -69,7 +69,7 @@
         </div>
 
         <div class="text-xs text-center md:text-base">
-          Add User
+          SNS
         </div>
       </div>
 
@@ -114,7 +114,7 @@
         </div>
 
         <div class="text-xs text-center md:text-base">
-          Setting
+          会社情報
         </div>
       </div>
 
@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="text-xs text-center md:text-base">
-          Finished
+          ダウンロード
         </div>
       </div>
     </div>
