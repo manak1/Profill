@@ -94,9 +94,7 @@ export default {
       const targetData = this.target
       return {
         "bg-green-500": item.id <= targetData.id,
-        "border-2": item.id > targetData.id,
-        "border-gray-200": item.id > targetData.id,
-        "bg-white": item.id > targetData.id,
+        "bg-gray-200": item.id > targetData.id,
       }
     },
   },
@@ -111,7 +109,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 26px;
-  background-image: url("~assets/images/baseline_phone_iphone_black_18dp.png");
+  background-image: url("~assets/images/stepnav/icon-profile.svg");
 }
 .c-icon__sns::before {
   content: "";
@@ -120,7 +118,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/baseline_phone_iphone_black_18dp.png");
+  background-image: url("~assets/images/stepnav/icon-sns.svg");
 }
 
 .c-icon__company::before {
@@ -130,7 +128,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/baseline_phone_iphone_black_18dp.png");
+  background-image: url("~assets/images/stepnav/icon-company.svg");
 }
 
 .c-icon__download::before {
@@ -140,7 +138,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/baseline_phone_iphone_black_18dp.png");
+  background-image: url("~assets/images/stepnav/icon-finished.svg");
 }
 .bar {
   width: 100%;
