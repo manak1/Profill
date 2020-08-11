@@ -40,7 +40,7 @@ export default {
     const template = templates.find((item) => item.name === this.template)
     const type = template.types.find((item) => item.name === this.type)
     this.componentData = `${template.name}${type.name}`
-    this.colorList = { ...this.colorList }
+    this.colorList = { ...this.colors }
   },
   methods: {
     ...formMapper.mapMutations(["SET_COLORS"]),
