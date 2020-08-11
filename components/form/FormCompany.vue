@@ -29,7 +29,7 @@
           v-model="$v.form.department.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="エンジニア"
+          placeholder="エンジニア・デザイナー"
           @input="input"
         />
       </div>
@@ -45,7 +45,7 @@
           v-model="$v.form.post_code.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="90210"
+          placeholder="012-3456"
           @input="input"
         />
       </div>

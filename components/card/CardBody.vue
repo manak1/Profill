@@ -1,7 +1,7 @@
 <template>
   <div class="rounded overflow-hidden shadow-lg">
     <div class="w-full bg-gray-200 px-8 py-8">
-      <img class="w-full" src="https://placehold.jp/376x224.png" alt="" />
+      <img class="w-full" :src="image" alt="" />
     </div>
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">
@@ -23,6 +23,10 @@ export default {
       required: true,
     },
     text: {
+      type: String,
+      required: true,
+    },
+    image: {
       type: String,
       required: true,
     },

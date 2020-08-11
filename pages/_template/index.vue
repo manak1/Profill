@@ -1,8 +1,8 @@
 <template>
   <section v-if="types" class="container py-8 px-4 mx-auto">
-    <div class="w-11/12 mx-auto flex flex-wrap justify-center">
-      <div v-for="type in types" :key="type.type_id" class="pb-8 px-2">
-        <CardBody :title="''" :text="''">
+    <div class="flex flex-wrap justify-center">
+      <div v-for="type in types" :key="type.type_id" class="max-w-sm pb-8 px-2">
+        <CardBody :title="type.title" :text="type.text" :image="type.image">
           <template v-slot:submit>
             <div class="text-center px-6 py-4">
               <nuxt-link

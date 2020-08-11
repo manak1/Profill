@@ -1,58 +1,71 @@
 templates:
   -
     id: 1
-    title: ほげ
-    text: lorem
-    image: lorem
+    title: テンプレート1
+    text: loremlorem
+    image: /templates/template1/template1.png
     name: template1
     types:
-       -
-          type_id: 1,
-          name: type1
-          isCustom: true
-       -
-         type_id: 2,
-         name: type2
-         isCustom: false
-       -
-         type_id: 3,
-         name: type3
-         isCustom: true
+      -
+        type_id: 1,
+        title: タイプ1
+        text: loremlorem
+        name: type1
+        image: /templates/template1/types/type1.png
+        isCustom: true
   -
     id: 2
-    title: ほげ
-    text: lorem
-    image: lorem
+    title: テンプレート2
+    text: loremlorem
+    image: /templates/template2/template2.png
     name: template2
     types:
       -
         type_id: 1,
+        title: タイプ1
+        text: loremlorem
         name: type1
-        isCustom: true
-      -
-        type_id: 2,
-        name: type2
-        isCustom: false
-      -
-        type_id: 3,
-        name: type3
+        image: /templates/template2/types/type1.png
         isCustom: true
   -
     id: 3
-    title: ほげ
-    text: lorem
-    image: lorem
+    title: テンプレート3
+    text: loremlorem
+    image: /templates/template3/template3.png
     name: template3
     types:
       -
         type_id: 1,
+        title: タイプ1
+        text: loremlorem
         name: type1
+        image: /templates/template3/types/type1.png
         isCustom: true
+  -
+    id: 4
+    title: テンプレート4
+    text: loremlorem
+    image: /templates/template4/template4.png
+    name: template4
+    types:
       -
-        type_id: 2,
-        name: type2
-        isCustom: false
+        type_id: 1,
+        title: タイプ1
+        text: loremlorem
+        name: type1
+        image: /templates/template4/types/type1.png
+        isCustom: true
+  -
+    id: 5
+    title: テンプレート5
+    text: loremlorem
+    image: /templates/template5/template5.png
+    name: template5
+    types:
       -
-        type_id: 3,
-        name: type3
+        type_id: 1,
+        title: タイプ1
+        text: loremlorem
+        name: type1
+        image: /templates/template5/types/type1.png
         isCustom: true

@@ -1,8 +1,8 @@
 <template>
   <section v-if="cards" class="container py-8 px-4 mx-auto">
-    <div class="w-11/12 mx-auto flex flex-wrap justify-center">
-      <div v-for="card in cards" :key="card.id" class="pb-8 px-2">
-        <CardBody :title="card.title" :text="card.text">
+    <div class="flex flex-wrap justify-center">
+      <div v-for="card in cards" :key="card.id" class="max-w-sm pb-8 px-2">
+        <CardBody :title="card.title" :text="card.text" :image="card.image">
           <template v-slot:submit>
             <div class="text-center px-6 py-4">
               <nuxt-link
@@ -33,4 +33,4 @@ export default {
 }
 </script>
 
-<style />
+<style scoped></style>
