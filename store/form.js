@@ -32,7 +32,8 @@ export const company = () => {
 
 export const colors = () => {
   return {
-    main_color: "#63B3ED",
+    background_color: "#63B3ED",
+    text_color: "#4A5568",
   }
 }
 
@@ -61,7 +62,8 @@ export const getters = {
       zip: state.step3.zip,
       mail: state.step3.mail,
       tel: state.step3.tel,
-      main_color: state.colors.main_color,
+      background_color: state.colors.background_color,
+      text_color: state.colors.text_color,
     }
   },
 }
