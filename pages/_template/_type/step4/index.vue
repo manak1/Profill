@@ -1,10 +1,12 @@
 <template>
   <PagesBody :title="'ダウンロード'">
     <template v-slot:body>
-      <div class="text-center px-6 py-4">
+      <div class="mx-auto px-6 py-4">
         <div ref="printMe">
           <component :is="componentData" />
         </div>
+      </div>
+      <div class="text-center">
         <a
           class="mx-auto inline-block mt-4 w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
           :href="output"
@@ -50,15 +52,9 @@ export default {
       return this.$route.params.type
     },
   },
-  mounted() {
-    const waitLoad = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve()
-      }, 1000)
-    })
-    waitLoad.then(() => {
-      this.print()
-    })
+  async mounted() {
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    this.print()
   },
   methods: {
     linkToPrev() {
