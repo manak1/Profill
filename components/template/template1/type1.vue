@@ -22,13 +22,31 @@
           {{ result.tel }}
         </div>
       </div>
+      <div class="w-3/5 relative">
+        <qrcode-vue
+          class="c-qrCode"
+          :value="companyUrl"
+          :size="size"
+          level="H"
+        ></qrcode-vue>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { formMapper } from "@/store/form"
+import QrcodeVue from "qrcode.vue"
 export default {
+  components: {
+    QrcodeVue,
+  },
+  data() {
+    return {
+      companyUrl: "https://chatbox-inc.com/",
+      size: 150,
+    }
+  },
   computed: {
     ...formMapper.mapGetters(["result"]),
     ApplyColor() {
@@ -41,4 +59,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.c-qrCode {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+</style>
