@@ -30,11 +30,18 @@ export const company = () => {
   }
 }
 
+export const colors = () => {
+  return {
+    main_color: "#63B3ED",
+  }
+}
+
 export const state = () => {
   return {
     step1: profile(),
     step2: sns(),
     step3: company(),
+    colors: colors(),
   }
 }
 
@@ -54,6 +61,7 @@ export const getters = {
       zip: state.step3.zip,
       mail: state.step3.mail,
       tel: state.step3.tel,
+      main_color: state.colors.main_color,
     }
   },
 }
@@ -67,5 +75,8 @@ export const mutations = {
   },
   SET_COMPANY(state, data) {
     state.step3 = { ...data }
+  },
+  SET_COLORS(state, data) {
+    state.colors = { ...data }
   },
 }
