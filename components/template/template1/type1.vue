@@ -2,7 +2,7 @@
   <div class="shadow-lg">
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
-      <div class="w-2/5 px-8 py-6 bg-blue-400">
+      <div class="w-2/5 px-8 py-6" :style="backgroundColor">
         <h2 class="pb-32 text-4xl font-bold text-gray-700">
           {{ result.organization }}
         </h2>
@@ -31,6 +31,11 @@ import { formMapper } from "@/store/form"
 export default {
   computed: {
     ...formMapper.mapGetters(["result"]),
+    backgroundColor() {
+      return {
+        "background-color": this.result.main_color,
+      }
+    },
   },
 }
 </script>
