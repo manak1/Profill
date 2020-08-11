@@ -5,9 +5,8 @@
         <div ref="printMe">
           <component :is="componentData" />
         </div>
-        <h2>{{ componentData }}</h2>
         <a
-          class="mx-auto w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
+          class="mx-auto inline-block mt-4 w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
           :href="output"
           download="output"
         >
@@ -52,7 +51,14 @@ export default {
     },
   },
   mounted() {
-    this.print()
+    const waitLoad = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+    waitLoad.then(() => {
+      this.print()
+    })
   },
   methods: {
     linkToPrev() {
