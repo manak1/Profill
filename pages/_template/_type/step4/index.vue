@@ -6,17 +6,21 @@
           <component :is="componentData" />
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-24">
         <a
-          class="mx-auto inline-block mt-4 w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
+          class="mx-auto inline-block w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
           :href="output"
           download="output"
         >
           ダウンロード
         </a>
       </div>
-      <div class="text-center mb-20">
+      <!--       <div class="text-center mb-20">
         <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
+      </div> -->
+      <div class="flex space-x-3 justify-center mt-20">
+        <button-twitter />
+        <button-facebook />
       </div>
     </template>
   </PagesBody>
