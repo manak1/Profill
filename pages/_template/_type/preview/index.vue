@@ -10,6 +10,7 @@
         <p>文字色の設定</p>
         <object-color-picker type="compact" @setColor="setTextColor" />
       </div>
+      <input type="file" @change="uploadImage" />
     </div>
   </section>
 </template>
@@ -51,6 +52,29 @@ export default {
     setBackgroundColor(backgroundColor) {
       this.colorList.background_color = backgroundColor
       this.SET_COLORS(this.colorList)
+    },
+    uploadImage(i) {
+      let image = i.target.files[0]
+      if (!image) {
+        return
+      }
+      if (image.size > 10000000) {
+        return
+      }
+      if (image.type !== "image/jpeg") {
+        return
+      }
+
+      let reader = new FileReader()
+      reader.onerror = () => alert("画像の読み取りに失敗しました")
+      reader.onload = async () => {
+        const base64 = reader.result.split(",")[1]
+        const { data } = await this.$axios.post("/send", { image: base64 })
+        // TODO fix
+        this.colorList.background_color = data.colors[0]
+        this.SET_COLORS(this.colorList)
+      }
+      reader.readAsDataURL(image)
     },
   },
 }

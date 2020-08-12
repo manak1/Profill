@@ -52,7 +52,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/dotenv"],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/axios"],
 
   generate: {
     fallback: true,
