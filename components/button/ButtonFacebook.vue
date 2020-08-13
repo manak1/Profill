@@ -30,12 +30,12 @@ export default {
 .c-button__facebook::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 12px;
-  background-image: url("~assets/images/button/temp_facebook.svg");
+  top: 9px;
+  left: 10px;
+  background-image: url("~assets/images/button/facebook-white.svg");
   background-size: cover;
-  height: 18px;
-  width: 18px;
+  height: 22px;
+  width: 22px;
   display: inline-block;
 }
 </style>
