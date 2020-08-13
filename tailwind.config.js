@@ -13,6 +13,10 @@ module.exports = {
     aspectRatio: {
       "16/9": [16, 9],
     },
+    inset: {
+      "1/2": "50%",
+      "2/5": "40%",
+    },
   },
   variants: {
     aspectRatio: ["responsive"],
