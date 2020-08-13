@@ -35,7 +35,7 @@
             alt="twitter アイコン"
           />
           <span class="my-auto">
-            https://www.facebook.com/
+            https://www.instagram.com/
           </span>
         </label>
         <input
