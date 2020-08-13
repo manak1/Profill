@@ -7,8 +7,8 @@
           for="sns1"
         >
           <img
-            class="w-6 h-6 bg-gray-500 mr-2 mt-3 rounded"
-            src="@/assets/images/button/temp_twitter.svg"
+            class="w-6 h-6 mr-2 mt-3 rounded"
+            src="@/assets/images/form/sns/twitter-color.svg"
             alt="twitter アイコン"
           />
           <span class="my-auto">
@@ -30,9 +30,9 @@
           for="sns2"
         >
           <img
-            class="w-6 h-6 bg-gray-500 mr-2 mt-3 rounded"
-            src="@/assets/images/button/temp_facebook.svg"
-            alt="twitter アイコン"
+            class="w-5 h-5 mr-2 mt-3 rounded"
+            src="@/assets/images/form/sns/instagram-color.svg"
+            alt="Instagramアイコン"
           />
           <span class="my-auto">
             https://www.instagram.com/
@@ -53,9 +53,9 @@
           for="sns3"
         >
           <img
-            class="w-6 h-6 bg-gray-500 mr-2 mt-3 rounded"
-            src="@/assets/images/button/temp_facebook.svg"
-            alt="instagram アイコン"
+            class="w-6 h-6 mr-2 mt-3 rounded"
+            src="@/assets/images/form/sns/facebook-color.svg"
+            alt="Facebook アイコン"
           />
           <span class="my-auto">
             https://www.facebook.com/
