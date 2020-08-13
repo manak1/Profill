@@ -2,15 +2,39 @@
   <section class="container py-8 px-4 mx-auto">
     <div v-if="componentData">
       <component :is="componentData" />
-      <div class="mt-4">
-        <p>背景色の設定</p>
-        <object-color-picker class="mt-2" @setColor="setBackgroundColor" />
+      <div
+        class="lg:flex lg:justify-center lg:-space-x-8 items-center text-center"
+      >
+        <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
+          <p class="font-bold">
+            背景色
+          </p>
+          <object-color-picker class="mt-4" @setColor="setBackgroundColor" />
+        </div>
+        <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
+          <p class="font-bold">
+            文字色
+          </p>
+          <object-color-picker
+            type="swatches"
+            class="mt-4"
+            @setColor="setTextColor"
+          />
+        </div>
       </div>
-      <div class="mt-8">
-        <p>文字色の設定</p>
-        <object-color-picker type="compact" @setColor="setTextColor" />
+      <div class="mt-12 lg:mt-16">
+        <label
+          style="border-color: #474747;"
+          for="imageInput"
+          class="py-3 w-full border block text-center rounded cursor-pointer mx-auto lg:w-1/2"
+        >
+          <input id="imageInput" type="file" @change="uploadImage" />
+          ファイルから色を選ぶ
+        </label>
+        <div class="mt-10 text-left">
+          <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
+        </div>
       </div>
-      <input type="file" @change="uploadImage" />
     </div>
   </section>
 </template>
@@ -76,8 +100,15 @@ export default {
       }
       reader.readAsDataURL(image)
     },
+    linkToPrev() {
+      this.$router.go(-1)
+    },
   },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+input[type="file"] {
+  display: none;
+}
+</style>
