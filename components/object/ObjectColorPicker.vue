@@ -2,8 +2,9 @@
   <div>
     <slider-picker v-if="type === 'slide'" v-model="colors" @input="setColor" />
     <compact-picker
-      v-if="type === 'compact'"
+      v-if="type === 'swatches'"
       v-model="colors"
+      :palette="colorPalette"
       @input="setColor"
     />
   </div>
@@ -32,6 +33,32 @@ export default {
   data() {
     return {
       colors,
+      colorPalette: [
+        "#000000",
+        "#0a0a0a",
+        "#151515",
+        "#1f1f1f",
+        "#2a2a2a",
+        "#353535",
+        "#3f3f3f",
+        "#4a4a4a",
+        "#555",
+        "#5f5f5f",
+        "#6a6a6a",
+        "#747474",
+        "#8a8a8a",
+        "#949494",
+        "#9f9f9f",
+        "#aaaaaa",
+        "#bfbfbf",
+        "#c9c9c9",
+        "#d4d4d4",
+        "#dfdfdf",
+        "#e9e9e9",
+        "#efefefef",
+        "#f4f4f4",
+        "#fff",
+      ],
     }
   },
 
@@ -43,4 +70,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.vc-slider {
+  width: 100% !important;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.vc-compact {
+  width: 100% !important;
+  max-width: 245px;
+  margin: 0 auto;
+}
+</style>
