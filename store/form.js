@@ -8,6 +8,7 @@ export const profile = () => {
     last_name: "",
     first_name_kana: "",
     last_name_kana: "",
+    isValid: false,
   }
 }
 
@@ -16,6 +17,7 @@ export const sns = () => {
     instagram: "",
     twitter: "",
     facebook: "",
+    isValid: false,
   }
 }
 
@@ -28,6 +30,7 @@ export const company = () => {
     mail: "",
     tel: "",
     weblink: "",
+    isValid: false,
   }
 }
 

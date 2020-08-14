@@ -18,6 +18,12 @@
               placeholder="関学"
               @input="input"
             />
+            <span
+              v-if="!$v.form.first_name.maxLength && $v.form.first_name.$dirty"
+              class="text-red-600"
+            >
+              {{ messages.first_name.maxLength }}
+            </span>
           </div>
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <input
@@ -27,6 +33,12 @@
               placeholder="太郎"
               @input="input"
             />
+            <span
+              v-if="!$v.form.last_name.maxLength && $v.form.last_name.$dirty"
+              class="text-red-600"
+            >
+              {{ messages.last_name.maxLength }}
+            </span>
           </div>
         </div>
       </div>
@@ -47,6 +59,15 @@
               placeholder="かんがく"
               @input="input"
             />
+            <span
+              v-if="
+                !$v.form.first_name_kana.maxLength &&
+                $v.form.first_name_kana.$dirty
+              "
+              class="text-red-600"
+            >
+              {{ messages.first_name_kana.maxLength }}
+            </span>
           </div>
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <input
@@ -56,6 +77,15 @@
               placeholder="たろう"
               @input="input"
             />
+            <span
+              v-if="
+                !$v.form.last_name_kana.maxLength &&
+                $v.form.last_name_kana.$dirty
+              "
+              class="text-red-600"
+            >
+              {{ messages.last_name_kana.maxLength }}
+            </span>
           </div>
         </div>
       </div>
