@@ -25,7 +25,7 @@
       <div class="w-3/5 relative">
         <qrcode-vue
           class="c-qrCode"
-          :value="companyUrl"
+          :value="result.weblink"
           :size="size"
           level="H"
         ></qrcode-vue>

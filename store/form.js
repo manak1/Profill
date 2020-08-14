@@ -27,6 +27,7 @@ export const company = () => {
     zip: "",
     mail: "",
     tel: "",
+    weblink: "",
   }
 }
 
@@ -62,6 +63,7 @@ export const getters = {
       zip: state.step3.zip,
       mail: state.step3.mail,
       tel: state.step3.tel,
+      weblink: state.step3.weblink,
       background_color: state.colors.background_color,
       text_color: state.colors.text_color,
     }
