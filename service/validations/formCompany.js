@@ -21,6 +21,7 @@ export const messages = {
     mustBeEmail: "メール形式で入力してください",
   },
   tel: {},
+  weblink: {},
 }
 
 export const validations = {
@@ -33,5 +34,6 @@ export const validations = {
       mustBeEmail,
     },
     tel: {},
+    weblink: {},
   },
 }
