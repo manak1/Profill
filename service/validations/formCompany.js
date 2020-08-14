@@ -5,35 +5,56 @@ export const mustBeEmail = (value) => {
     value
   )
 }
+export const judgeWebLink = (value) => {
+  return /^http|https/.test(value)
+}
+export const judgePostCode = (value) => {
+  return /^[0-9]{3}-[0-9]{4}$/.test(value)
+}
+export const judgeTel = (value) => {
+  return /^[0-9]{2,4}-[0-9]{2,4}-[0-9]{2,4}$/.test(value)
+}
 
 export const messages = {
   organization: {
-    maxLength: "名前は200字以内です",
+    maxLength: "組織名は50字以内です",
   },
   department: {
-    maxLength: "名前は200字以内です",
+    maxLength: "役職は50字以内です",
   },
-  post_code: {},
+  post_code: {
+    judgePostCode: "ハイフン付きの〇〇〇-〇〇〇〇の形式で入力してください",
+  },
   zip: {
-    maxLength: "名前は200字以内です",
+    maxLength: "住所は100字以内です",
   },
   mail: {
-    mustBeEmail: "メール形式で入力してください",
+    mustBeEmail: "メールは正しい形式で入力してください",
   },
-  tel: {},
-  weblink: {},
+  tel: {
+    judgeTel: "ハイフン付きの形式で入力してください",
+  },
+  weblink: {
+    judgeWebLink: "http または https から始まるリンクを入力してください",
+  },
 }
 
 export const validations = {
   form: {
-    organization: { maxLength: maxLength(200) },
-    department: { maxLength: maxLength(200) },
-    post_code: {},
-    zip: {},
+    organization: { maxLength: maxLength(50) },
+    department: { maxLength: maxLength(50) },
+    post_code: {
+      judgePostCode,
+    },
+    zip: { maxLength: maxLength(100) },
     mail: {
       mustBeEmail,
     },
-    tel: {},
-    weblink: {},
+    tel: {
+      judgeTel,
+    },
+    weblink: {
+      judgeWebLink,
+    },
   },
 }

@@ -49,8 +49,10 @@ export default {
     },
     input() {
       if (!this.$v.$invalid) {
+        this.form.isValid = false
         this.$emit("input", this.form)
       }
+      this.form.isValid = !!this.$v.$anyError
     },
   },
 }

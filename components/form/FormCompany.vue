@@ -16,6 +16,12 @@
           placeholder="株式会社hogehoge"
           @input="input"
         />
+        <span
+          v-if="!$v.form.organization.maxLength && $v.form.organization.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.organization.maxLength }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
@@ -32,13 +38,19 @@
           placeholder="エンジニア・デザイナー"
           @input="input"
         />
+        <span
+          v-if="!$v.form.department.maxLength && $v.form.department.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.department.maxLength }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           for="grid-zip"
         >
-          住所
+          郵便番号
         </label>
         <input
           id="grid-zip"
@@ -48,6 +60,12 @@
           placeholder="012-3456"
           @input="input"
         />
+        <span
+          v-if="!$v.form.post_code.judgePostCode && $v.form.post_code.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.post_code.judgePostCode }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
@@ -64,6 +82,12 @@
           placeholder="兵庫県西宮市上ケ原一番町"
           @input="input"
         />
+        <span
+          v-if="!$v.form.zip.maxLength && $v.form.zip.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.zip.maxLength }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
@@ -80,6 +104,12 @@
           placeholder="hogehoge@gmail.com"
           @input="input"
         />
+        <span
+          v-if="!$v.form.mail.mustBeEmail && $v.form.mail.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.mail.mustBeEmail }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
@@ -96,6 +126,12 @@
           placeholder="01-234-5678"
           @input="input"
         />
+        <span
+          v-if="!$v.form.tel.judgeTel && $v.form.tel.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.tel.judgeTel }}
+        </span>
       </div>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label
@@ -112,6 +148,12 @@
           placeholder="https://hogehoge.com"
           @input="input"
         />
+        <span
+          v-if="!$v.form.weblink.judgeWebLink && $v.form.weblink.$dirty"
+          class="text-red-600"
+        >
+          {{ messages.weblink.judgeWebLink }}
+        </span>
       </div>
     </template>
   </FormBody>

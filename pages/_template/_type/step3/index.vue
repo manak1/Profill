@@ -5,7 +5,11 @@
         <FormCompany v-model="form" @input="inputForm" />
         <div class="text-center mb-20">
           <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
-          <ButtonPrimary class="mx-6" @linkToNext="linkToNext" />
+          <ButtonPrimary
+            class="mx-6"
+            :is-valid="form.isValid"
+            @linkToNext="linkToNext"
+          />
         </div>
         <div class="text-center">
           <nuxt-link
