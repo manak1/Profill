@@ -17,7 +17,7 @@
         </label>
         <input
           id="sns1"
-          v-model="$v.form.instagram.$model"
+          v-model="$v.form.twitter.$model"
           class="col-span-5 appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
           placeholder="@your account"
@@ -40,7 +40,7 @@
         </label>
         <input
           id="sns2"
-          v-model="$v.form.twitter.$model"
+          v-model="$v.form.instagram.$model"
           class="col-span-5 appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
           placeholder="your name"

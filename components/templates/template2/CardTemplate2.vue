@@ -4,27 +4,72 @@
       <div class="aspect-ratio-16/9" />
       <div class="w-2/5 px-8 py-6" :style="ApplyColor">
         <div class="z-40 relative">
-          <h2 class="pb-32 text-4xl font-bold">
+          <h2 class="text-3xl font-semi-bold pb-2">
             {{ result.organization }}
           </h2>
-          <div class="pb-32 text-3xl font-bold">
-            {{ result.first_name }} {{ result.last_name }}
-          </div>
-          <div class="pb-2 text-2xl font-bold">
-            {{ result.organization }}
-          </div>
-          <div>
+          <div v-if="result.post_code">〒 {{ result.post_code }}</div>
+          <div v-if="result.zip" class="text-lg pb-2">
             {{ result.zip }}
           </div>
-          <div>
+          <div v-if="result.tel" class="text-lg">
+            {{ result.tel }}
+          </div>
+          <div v-if="result.mail" class="text-lg pb-12">
             {{ result.mail }}
           </div>
-          <div>
-            {{ result.tel }}
+          <div v-if="result.department" class="text-xl font-bold pb-4">
+            {{ result.department }}
+          </div>
+          <div class="text-lg font-bold">
+            {{ result.first_name_kana }} {{ result.last_name_kana }}
+          </div>
+          <div class="pb-32 text-5xl font-bold">
+            {{ result.first_name }} {{ result.last_name }}
           </div>
         </div>
       </div>
       <div class="w-3/5 relative">
+        <div class="float-right mr-12" :style="ApplyColor">
+          <div
+            v-if="result.twitter"
+            class="flex tracking-wide text-s font-bold mb-2"
+          >
+            <img
+              class="w-8 h-8 mr-3 mt-3 rounded"
+              src="@/assets/images/form/sns/twitter-color.svg"
+              alt="Twitter アイコン"
+            />
+            <span class="my-auto pt-3">
+              {{ result.twitter }}
+            </span>
+          </div>
+          <div
+            v-if="result.instagram"
+            class="flex tracking-wide text-s font-bold mb-2"
+          >
+            <img
+              class="w-8 h-8 mr-3 mt-3 rounded"
+              src="@/assets/images/form/sns/instagram-color.svg"
+              alt="Instagram アイコン"
+            />
+            <span class="my-auto pt-3">
+              {{ result.instagram }}
+            </span>
+          </div>
+          <div
+            v-if="result.facebook"
+            class="flex tracking-wide text-s font-bold mb-2"
+          >
+            <img
+              class="w-8 h-8 mr-3 mt-3 rounded"
+              src="@/assets/images/form/sns/facebook-color.svg"
+              alt="Facebook アイコン"
+            />
+            <span class="my-auto pt-3">
+              {{ result.facebook }}
+            </span>
+          </div>
+        </div>
         <qrcode-vue
           class="c-qrCode"
           :value="result.weblink"
@@ -64,7 +109,6 @@ export default {
     ...formMapper.mapGetters(["result"]),
     ApplyColor() {
       return {
-        "background-color": this.result.background_color,
         color: this.result.text_color,
       }
     },
