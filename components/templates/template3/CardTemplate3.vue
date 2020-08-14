@@ -1,25 +1,27 @@
 <template>
-  <div class="shadow-lg">
+  <div class="shadow-lg relative">
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
       <div class="w-2/5 px-8 py-6" :style="ApplyColor">
-        <h2 class="pb-32 text-4xl font-bold">
-          {{ result.organization }}
-        </h2>
-        <div class="pb-32 text-3xl font-bold">
-          {{ result.first_name }} {{ result.last_name }}
-        </div>
-        <div class="pb-2 text-2xl font-bold">
-          {{ result.organization }}
-        </div>
-        <div>
-          {{ result.zip }}
-        </div>
-        <div>
-          {{ result.mail }}
-        </div>
-        <div>
-          {{ result.tel }}
+        <div class="z-40 relative">
+          <h2 class="pb-32 text-4xl font-bold">
+            {{ result.organization }}
+          </h2>
+          <div class="pb-32 text-3xl font-bold">
+            {{ result.first_name }} {{ result.last_name }}
+          </div>
+          <div class="pb-2 text-2xl font-bold">
+            {{ result.organization }}
+          </div>
+          <div>
+            {{ result.zip }}
+          </div>
+          <div>
+            {{ result.mail }}
+          </div>
+          <div>
+            {{ result.tel }}
+          </div>
         </div>
       </div>
       <div class="w-3/5 relative">
@@ -31,15 +33,22 @@
         ></qrcode-vue>
       </div>
     </div>
+    <component :is="type" :background-color="result.background_color" />
   </div>
 </template>
 
 <script>
 import { formMapper } from "@/store/form"
-import QrcodeVue from "qrcode.vue"
 export default {
   components: {
-    QrcodeVue,
+    type1: () => import(`@/components/templates/template3/designs/DesignType1`),
+    QrcodeVue: () => import("qrcode.vue"),
+  },
+  props: {
+    type: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {

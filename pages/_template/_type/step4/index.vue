@@ -3,7 +3,7 @@
     <template v-slot:body>
       <div class="mx-auto px-6 py-4">
         <div ref="printMe">
-          <component :is="componentData" />
+          <card-template :type="type" :template="template" />
         </div>
       </div>
       <div class="text-center mt-24">
@@ -29,9 +29,6 @@
 import { formMapper } from "@/store/form"
 
 export default {
-  components: {
-    template1type1: () => import(`@/components/template/template1/type1`),
-  },
   asyncData({ params }) {
     const { templates } = require("@/static/data/templates.json")
     const template = templates.find((item) => item.name === params.template)
