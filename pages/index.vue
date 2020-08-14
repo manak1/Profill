@@ -23,21 +23,11 @@
         </span>
       </p>
     </div>
-    <section class="container mx-auto">
-      <a
-        href="https://twitter.com/share"
-        class="twitter-share-button"
-        data-text="#Profill"
-        data-show-count="false"
-        >Tweet</a
-      >
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
-    </section>
-    <section v-if="cards" class="container py-8 px-4 mx-auto">
+    <div class="container mx-auto flex justify-center space-x-4">
+      <button-twitter />
+      <button-facebook />
+    </div>
+    <section v-if="cards" class="container mt-12 py-8 px-4 mx-auto">
       <div class="flex flex-wrap justify-center">
         <div v-for="card in cards" :key="card.id" class="max-w-sm pb-8 px-2">
           <CardBody :title="card.title" :text="card.text" :image="card.image">

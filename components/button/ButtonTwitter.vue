@@ -24,12 +24,12 @@ export default {}
 .c-button__twitter::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 15px;
-  background-image: url("~assets/images/button/temp_twitter.svg");
+  background-image: url("~assets/images/button/twitter-white.svg");
   background-size: cover;
-  height: 16px;
-  width: 18px;
+  height: 20px;
+  width: 22px;
   display: inline-block;
 }
 </style>
