@@ -1,4 +1,6 @@
 require("dotenv").config()
+const Sass = require("sass")
+const Fiber = require("fibers")
 
 export default {
   /*
@@ -61,5 +63,14 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber,
+        },
+      },
+    },
+  },
 }

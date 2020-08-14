@@ -71,6 +71,7 @@
           </div>
         </div>
         <qrcode-vue
+          v-if="result.companyUrl"
           class="c-qrCode"
           :value="result.weblink"
           :size="size"

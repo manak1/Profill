@@ -15,7 +15,7 @@
     ></div>
     <div class="absolute w-1/2 h-24 c-line1 border-t-4 border-white"></div>
     <div
-      class="absolute w-5/12 c-design h-full c-line2 border-r-4 border-white"
+      class="absolute w-5/12 c-design h-full c-line2 border-r-4 border-white left-4"
     ></div>
   </div>
 </template>
@@ -37,20 +37,6 @@ export default {
   top: 0;
   z-index: -1;
 }
-.square {
-  position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
-  background-color: #9ae6b4;
-}
-.square2 {
-  position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
-}
 
 .c-square2 {
   left: 33.3333%;
@@ -60,6 +46,6 @@ export default {
   bottom: 0;
 }
 .c-line2 {
-  /*bottom: 0;*/
+  left: 0.8rem;
 }
 </style>
