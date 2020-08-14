@@ -7,12 +7,24 @@ templates:
     name: template1
     types:
       -
-        type_id: 1,
+        type_id: 1
         title: タイプ1
         text: loremlorem
         name: type1
         image: /templates/template1/types/type1.png
-        isCustom: true
+      -
+        type_id: 2
+        title: タイプ2
+        text: loremlorem
+        name: type2
+        image: /templates/template1/types/type2.png
+      
+      -
+        type:id: 3
+        title: タイプ3
+        text: loremlorem
+        name: type3
+        image: /templates/template1/types/type3.png
   -
     id: 2
     title: テンプレート2
@@ -26,7 +38,34 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template2/types/type1.png
-        isCustom: true
+      
+      -
+        type_id: 2
+        title: タイプ2
+        text: loremlorem
+        name: type2
+        image: /templates/template2/types/type2.png
+      
+      -
+        type:id: 3
+        title: タイプ3
+        text: loremlorem
+        name: type3
+        image: /templates/template2/types/type3.png
+
+      -
+        type_id: 4
+        title: タイプ4
+        text: loremlorem
+        name: type2
+        image: /templates/template2/types/type4.png
+      
+      -
+        type:id: 5
+        title: タイプ5
+        text: loremlorem
+        name: type3
+        image: /templates/template2/types/type5.png
   -
     id: 3
     title: テンプレート3
@@ -40,7 +79,6 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template3/types/type1.png
-        isCustom: true
   -
     id: 4
     title: テンプレート4
@@ -49,23 +87,37 @@ templates:
     name: template4
     types:
       -
-        type_id: 1,
+        type_id: 1
         title: タイプ1
         text: loremlorem
         name: type1
         image: /templates/template4/types/type1.png
-        isCustom: true
-  -
-    id: 5
-    title: テンプレート5
-    text: loremlorem
-    image: /templates/template5/template5.png
-    name: template5
-    types:
+
       -
-        type_id: 1,
-        title: タイプ1
+        type_id: 2
+        title: タイプ2
         text: loremlorem
-        name: type1
-        image: /templates/template5/types/type1.png
-        isCustom: true
+        name: type2
+        image: /templates/template4/types/type2.png
+      
+      -
+        type:id: 3
+        title: タイプ3
+        text: loremlorem
+        name: type3
+        image: /templates/template4/types/type3.png
+
+      -
+        type_id: 4
+        title: タイプ4
+        text: loremlorem
+        name: type2
+        image: /templates/template4/types/type4.png
+      
+      -
+        type:id: 5
+        title: タイプ5
+        text: loremlorem
+        name: type3
+        image: /templates/template4/types/type5.png
+ 

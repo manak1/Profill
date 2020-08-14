@@ -1,7 +1,8 @@
 <template>
   <section class="container py-8 px-4 mx-auto">
     <div v-if="componentData">
-      <component :is="componentData" />
+      <card-template :template="template" :type="type" />
+      <!--    <component :is="componentData" /> -->
       <div
         class="lg:flex lg:justify-center lg:-space-x-8 items-center text-center"
       >
@@ -41,10 +42,8 @@
 
 <script>
 import { formMapper } from "@/store/form"
+
 export default {
-  components: {
-    template1type1: () => import(`@/components/template/template1/type1`),
-  },
   data() {
     return {
       componentData: null,
