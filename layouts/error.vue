@@ -11,12 +11,12 @@
       alt="404"
     />
     <p
-      class="container text-center absolute object-cover transform -translate-x-1/2 left-1/2 w-full text-3xl font-bold top-1/2 c-404_text"
+      class="container text-center absolute object-cover transform -translate-x-1/2 left-1/2 w-full lg:text-3xl sm:text-2xl text-lg font-bold top-1/2 c-404_text"
     >
       お探しのページは見つかりませんでした。
     </p>
     <button
-      class="absolute transform -translate-x-1/2 c-home-btn rounded-lg border-2 hover:opacity-50 py-2 px-8"
+      class="absolute transform -translate-x-1/2 c-home-btn rounded-lg border-2 hover:opacity-50 sm:py-2 sm:px-8 py-2 px-4"
     >
       <router-link to="/">
         ホームに戻る
@@ -35,5 +35,27 @@
   color: #9095ff;
   border-color: #9095ff;
   top: 62%;
+}
+@media screen and (max-width: 1024px) {
+  .c-404_img {
+    top: 20%;
+  }
+  .c-404_text {
+    top: 33%;
+  }
+  .c-home-btn {
+    top: 45%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .c-404_img {
+    top: 23%;
+  }
+  .c-404_text {
+    top: 30%;
+  }
+  .c-home-btn {
+    top: 38%;
+  }
 }
 </style>
