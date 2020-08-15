@@ -1,8 +1,12 @@
 <template>
-  <header class="mb-8">
-    <nav class="flex items-center justify-between bg-green-300 flex-wrap p-6">
+  <header class="mb-8 l-header">
+    <nav class="flex items-center justify-between flex-wrap p-5 lg:p-6">
       <h1 class="text-white">
-        ほげ
+        <img
+          src="@/assets/images/header/Rogo.svg"
+          class="h-6 lg:h-8"
+          alt="Profillロゴ"
+        />
       </h1>
     </nav>
   </header>
@@ -12,4 +16,8 @@
 export default {}
 </script>
 
-<style scoped></style>
+<style scoped>
+.l-header {
+  border-bottom: 1px solid #9eb9ff;
+}
+</style>
