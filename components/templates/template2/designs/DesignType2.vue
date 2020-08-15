@@ -55,12 +55,13 @@ export default {
   left: 65%;
   top: 68.8%;
 }
-@media screen and (max-width: 640px) {
-  .c-border2 {
-    top: 70%;
+@media screen and (max-width: 1024px) {
+  .c-arrow1 {
+    left: 47.5%;
   }
   .c-arrow2 {
     top: 68.7%;
+    left: 64%;
   }
 }
 </style>

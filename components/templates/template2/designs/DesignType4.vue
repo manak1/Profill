@@ -34,7 +34,7 @@ export default {
     backgroundClass() {
       return {
         "background-color": `${this.backgroundColor}`,
-        height: `${this.triangleWidth * Math.sqrt(2)}px`,
+        height: `${this.triangleWidth + 20}px`,
       }
     },
     borderClass() {
