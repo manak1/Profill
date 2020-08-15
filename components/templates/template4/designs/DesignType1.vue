@@ -24,14 +24,14 @@ export default {
 }
 .square {
   position: relative;
-  top: 100px;
+  top: 16%;
   width: 80%;
   height: 30%;
   background-color: #9ae6b4;
 }
 .square2 {
   position: relative;
-  top: 140px;
+  top: 20%;
   width: 60%;
   height: 10%;
   background-color: #9ae6b4;

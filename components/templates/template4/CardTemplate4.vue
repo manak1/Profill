@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="w-2/5 px-8 py-6" :style="ApplyColor">
-        <div class="z-40 absolute" style="bottom: 15%; left: 5%;">
+        <div class="z-40 absolute" style="bottom: 8%; left: 5%;">
           <div
             v-if="result.department"
             class="text-xxs sm:text-base lg:text-xl font-bold"
@@ -64,7 +64,7 @@
             {{ result.first_name }} {{ result.last_name }}
           </div>
           <h2
-            class="text-xxs sm:text-xl sm:mt-3 lg:text-4xl font-bold lg:mt-16"
+            class="text-xxs sm:text-xl sm:mt-3 lg:text-4xl font-bold lg:mt-24"
           >
             {{ result.organization }}
           </h2>
@@ -74,7 +74,10 @@
           <div v-if="result.zip" class="text-xxs sm:text-base lg:text-lg">
             {{ result.zip }}
           </div>
-          <div v-if="result.tel" class="text-xxs sm:text-base lg:text-lg mt-1">
+          <div
+            v-if="result.tel"
+            class="text-xxs sm:text-base lg:text-lg mt-2 lg:mt-4"
+          >
             {{ result.tel }}
           </div>
           <div v-if="result.mail" class="text-xxs sm:text-base lg:text-lg">
@@ -117,9 +120,9 @@
 import { formMapper } from "@/store/form"
 export default {
   components: {
-    type1: () => import(`@/components/templates/template1/designs/DesignType1`),
-    type2: () => import(`@/components/templates/template1/designs/DesignType2`),
-    type3: () => import(`@/components/templates/template1/designs/DesignType3`),
+    type1: () => import(`@/components/templates/template4/designs/DesignType1`),
+    type2: () => import(`@/components/templates/template4/designs/DesignType2`),
+    type3: () => import(`@/components/templates/template4/designs/DesignType3`),
     QrcodeVue: () => import("qrcode.vue"),
   },
   props: {
