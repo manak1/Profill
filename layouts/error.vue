@@ -15,13 +15,12 @@
     >
       お探しのページは見つかりませんでした。
     </p>
-    <button
-      class="absolute transform -translate-x-1/2 c-home-btn rounded-lg border-2 hover:opacity-50 sm:py-2 sm:px-8 py-2 px-4"
+    <nuxt-link
+      class="inline-block absolute transform -translate-x-1/2 c-home-btn rounded-lg border-2 hover:opacity-50 sm:py-2 sm:px-8 py-2 px-4"
+      to="/"
     >
-      <router-link to="/">
-        ホームに戻る
-      </router-link>
-    </button>
+      ホームに戻る
+    </nuxt-link>
   </div>
 </template>
 <style scoped>

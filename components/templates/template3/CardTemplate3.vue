@@ -29,7 +29,7 @@
             >
               <img
                 class="w-5 h-8 lg:w-8 lg:h-8 mr-1 rounded"
-                src="@/assets/images/form/sns/twitter-color.svg"
+                src="@/assets/images/sns/twitter-color.svg"
                 alt="Twitter アイコン"
               />
               <span class="text-xxs sm:text-xs lg:text-base">
@@ -41,7 +41,7 @@
               class="flex items-center tracking-wide text-s font-bold"
             >
               <img
-                src="@/assets/images/form/sns/instagram-color.svg"
+                src="@/assets/images/sns/instagram-color.svg"
                 alt="Instagram アイコン"
                 class="mr-1 rounded w-5 h-5 lg:w-8 lg:h-8 lg:px-1"
               />
@@ -55,7 +55,7 @@
             >
               <img
                 class="w-5 h-8 lg:w-8 w-5 h-8 lg:h-8 mr-1 rounded"
-                src="@/assets/images/form/sns/facebook-color.svg"
+                src="@/assets/images/sns/facebook-color.svg"
                 alt="Facebook アイコン"
               />
               <span class="text-xxs sm:text-xs lg:text-base">

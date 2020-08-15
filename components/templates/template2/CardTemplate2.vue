@@ -52,7 +52,7 @@
           >
             <img
               class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/form/sns/twitter-color.svg"
+              src="@/assets/images/sns/twitter-color.svg"
               alt="Twitter アイコン"
             />
             <span class="my-auto pt-3">
@@ -65,7 +65,7 @@
           >
             <img
               class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/form/sns/instagram-color.svg"
+              src="@/assets/images/sns/instagram-color.svg"
               alt="Instagram アイコン"
             />
             <span class="my-auto pt-3">
@@ -78,7 +78,7 @@
           >
             <img
               class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/form/sns/facebook-color.svg"
+              src="@/assets/images/sns/facebook-color.svg"
               alt="Facebook アイコン"
             />
             <span class="my-auto pt-3">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative">
+    <div class="p-hero relative">
       <img
         class="object-cover w-full h-full mx-auto"
         src="@/assets/images/hero/bgObject.svg"
@@ -68,4 +68,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.p-hero {
+  top: -80px;
+}
+</style>
