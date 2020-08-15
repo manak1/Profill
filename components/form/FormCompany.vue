@@ -18,7 +18,7 @@
         />
         <span
           v-if="!$v.form.organization.maxLength && $v.form.organization.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.organization.maxLength }}
         </span>
@@ -40,7 +40,7 @@
         />
         <span
           v-if="!$v.form.department.maxLength && $v.form.department.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.department.maxLength }}
         </span>
@@ -62,7 +62,7 @@
         />
         <span
           v-if="!$v.form.post_code.judgePostCode && $v.form.post_code.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.post_code.judgePostCode }}
         </span>
@@ -84,7 +84,7 @@
         />
         <span
           v-if="!$v.form.zip.maxLength && $v.form.zip.$dirty"
-          class="text-red-600"
+          class="ext-indigo-500"
         >
           {{ messages.zip.maxLength }}
         </span>
@@ -106,7 +106,7 @@
         />
         <span
           v-if="!$v.form.mail.mustBeEmail && $v.form.mail.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.mail.mustBeEmail }}
         </span>
@@ -128,7 +128,7 @@
         />
         <span
           v-if="!$v.form.tel.judgeTel && $v.form.tel.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.tel.judgeTel }}
         </span>
@@ -150,7 +150,7 @@
         />
         <span
           v-if="!$v.form.weblink.judgeWebLink && $v.form.weblink.$dirty"
-          class="text-red-600"
+          class="text-indigo-500"
         >
           {{ messages.weblink.judgeWebLink }}
         </span>

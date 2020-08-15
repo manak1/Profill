@@ -17,25 +17,26 @@ export const judgeTel = (value) => {
 
 export const messages = {
   organization: {
-    maxLength: "組織名は50字以内です",
+    maxLength: "組織名は50字以内が推奨されています",
   },
   department: {
-    maxLength: "役職は50字以内です",
+    maxLength: "役職は50字以内が推奨されています",
   },
   post_code: {
-    judgePostCode: "ハイフン付きの〇〇〇-〇〇〇〇の形式で入力してください",
+    judgePostCode:
+      "ハイフン付きの〇〇〇-〇〇〇〇の形式で入力すると、きれいに表示されます！",
   },
   zip: {
-    maxLength: "住所は100字以内です",
+    maxLength: "住所は100字以内が推奨されています",
   },
   mail: {
-    mustBeEmail: "メールは正しい形式で入力してください",
+    mustBeEmail: "メールが正しい形式でない可能性があります",
   },
   tel: {
-    judgeTel: "ハイフン付きの形式で入力してください",
+    judgeTel: "ハイフン付きの形式で入力するときれいに表示されます",
   },
   weblink: {
-    judgeWebLink: "http または https から始まるリンクを入力してください",
+    judgeWebLink: "http または https から始まるリンクの入力が推奨されています",
   },
 }
 

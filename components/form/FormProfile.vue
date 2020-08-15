@@ -20,7 +20,7 @@
             />
             <span
               v-if="!$v.form.first_name.maxLength && $v.form.first_name.$dirty"
-              class="text-red-600"
+              class="text-indigo-500"
             >
               {{ messages.first_name.maxLength }}
             </span>
@@ -35,7 +35,7 @@
             />
             <span
               v-if="!$v.form.last_name.maxLength && $v.form.last_name.$dirty"
-              class="text-red-600"
+              class="text-indigo-500"
             >
               {{ messages.last_name.maxLength }}
             </span>
@@ -64,7 +64,7 @@
                 !$v.form.first_name_kana.maxLength &&
                 $v.form.first_name_kana.$dirty
               "
-              class="text-red-600"
+              class="text-indigo-500"
             >
               {{ messages.first_name_kana.maxLength }}
             </span>
@@ -82,7 +82,7 @@
                 !$v.form.last_name_kana.maxLength &&
                 $v.form.last_name_kana.$dirty
               "
-              class="text-red-600"
+              class="text-indigo-500"
             >
               {{ messages.last_name_kana.maxLength }}
             </span>
