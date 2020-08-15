@@ -50,7 +50,7 @@
       <div class="w-3/5 relative">
         <qrcode-vue
           v-if="result.weblink"
-          class="c-qrCode sm:hidden lg:hidden"
+          class="c-qrCode sm:hidden lg:hidden p-1 bg-white"
           :value="result.weblink"
           :size="size / 2"
           foreground="#474747"
@@ -58,7 +58,7 @@
         ></qrcode-vue>
         <qrcode-vue
           v-if="result.weblink"
-          class="c-qrCode hidden sm:block lg:hidden"
+          class="c-qrCode hidden sm:block lg:hidden p-1 bg-white"
           :value="result.weblink"
           :size="size / 1.5"
           foreground="#474747"
@@ -66,7 +66,7 @@
         ></qrcode-vue>
         <qrcode-vue
           v-if="result.weblink"
-          class="c-qrCode hidden lg:block"
+          class="c-qrCode hidden lg:block p-1 bg-white"
           :value="result.weblink"
           :size="size"
           foreground="#474747"
