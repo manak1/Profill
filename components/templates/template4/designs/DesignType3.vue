@@ -1,8 +1,7 @@
 <template>
-  <!-- 名刺デザイン13 -->
+  <!-- 名刺デザイン16 -->
   <div class="absolute c-design w-full h-full">
-    <span class="square block"></span>
-    <span class="square2 block"> </span>
+    <div class="c-type3 w-full h-full relative"></div>
   </div>
 </template>
 
@@ -21,18 +20,12 @@ export default {
 .c-design {
   top: 0;
 }
-.square {
-  position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
-  background-color: #9ae6b4;
-}
-.square2 {
-  position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
+.c-type3 {
+  z-index: -10;
+  background-image: url("~assets/images/templates/template4/bgObject3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: top;
 }
 </style>

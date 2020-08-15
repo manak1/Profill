@@ -1,7 +1,7 @@
 <template>
   <!-- 名刺デザイン16 -->
   <div class="absolute c-design w-full h-full">
-    <div class="c-type4 w-full h-full"></div>
+    <div class="c-type4 w-1/2 absolute" style="height: 50%;"></div>
   </div>
 </template>
 
@@ -21,7 +21,9 @@ export default {
   top: 0;
 }
 .c-type4 {
-  background-image: url("~assets/images/templates/template4/bgObject5.png");
+  right: 0;
+  bottom: 0;
+  background-image: url("~assets/images/templates/template4/bgObject6.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 100%;
