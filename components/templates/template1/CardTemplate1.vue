@@ -94,16 +94,16 @@
           >
             {{ result.organization }}
           </h2>
-          <div v-if="result.post_code" class="text-xxs sm:text-sm">
+          <div v-if="result.post_code" class="text-xxs sm:text-base">
             {{ result.post_code }}
           </div>
-          <div v-if="result.zip" class="text-xxs sm:text-sm lg:text-lg">
+          <div v-if="result.zip" class="text-xxs sm:text-base lg:text-lg">
             {{ result.zip }}
           </div>
-          <div v-if="result.tel" class="text-xxs sm:text-sm lg:text-lg mt-1">
+          <div v-if="result.tel" class="text-xxs sm:text-base lg:text-lg mt-1">
             {{ result.tel }}
           </div>
-          <div v-if="result.mail" class="text-xxs sm:text-sm lg:text-lg">
+          <div v-if="result.mail" class="text-xxs sm:text-base lg:text-lg">
             {{ result.mail }}
           </div>
         </div>
