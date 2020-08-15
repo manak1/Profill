@@ -111,12 +111,33 @@ templates:
         type_id: 4
         title: タイプ4
         text: loremlorem
-        name: type2
+        name: type4
         image: /templates/template4/types/type4.png
 
       -
         type:id: 5
         title: タイプ5
         text: loremlorem
-        name: type3
+        name: type5
         image: /templates/template4/types/type5.png
+
+      -
+        type:id: 6
+        title: タイプ6
+        text: loremlorem
+        name: type6
+        image: /templates/template4/types/type6.png
+
+      -
+        type:id: 7
+        title: タイプ7
+        text: loremlorem
+        name: type7
+        image: /templates/template4/types/type7.png
+
+      -
+        type:id: 8
+        title: タイプ8
+        text: loremlorem
+        name: type8
+        image: /templates/template4/types/type8.png

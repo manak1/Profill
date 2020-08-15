@@ -123,6 +123,11 @@ export default {
     type1: () => import(`@/components/templates/template4/designs/DesignType1`),
     type2: () => import(`@/components/templates/template4/designs/DesignType2`),
     type3: () => import(`@/components/templates/template4/designs/DesignType3`),
+    type4: () => import(`@/components/templates/template4/designs/DesignType4`),
+    type5: () => import(`@/components/templates/template4/designs/DesignType5`),
+    type6: () => import(`@/components/templates/template4/designs/DesignType6`),
+    type7: () => import(`@/components/templates/template4/designs/DesignType7`),
+    type8: () => import(`@/components/templates/template4/designs/DesignType8`),
     QrcodeVue: () => import("qrcode.vue"),
   },
   props: {
@@ -133,7 +138,6 @@ export default {
   },
   data() {
     return {
-      companyUrl: "https://chatbox-inc.com/",
       size: 128,
     }
   },
