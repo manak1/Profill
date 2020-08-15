@@ -6,7 +6,7 @@
       :style="{ '--color': backgroundColor }"
     ></div>
     <div
-      class="absolute w-2/3 border-b-2 border-black c-border1"
+      class="absolute border-b-2 border-black c-border1"
       :style="{ 'border-color': backgroundColor }"
       :backgroundColor="backgroundColor"
     ></div>
@@ -34,42 +34,34 @@ export default {
 </script>
 <style scoped>
 /* レスポンシブを考えると%指定が望ましい */
-.c-design {
-  top: 0;
-  z-index: -1;
-}
-.square {
-  position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
-  background-color: #9ae6b4;
-}
-.square2 {
-  position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
-}
 .c-border1 {
   top: 12%;
+  width: 50%;
 }
 .c-border2 {
-  top: 62%;
+  top: 70%;
 }
 .c-arrow1 {
   --color: black;
   border-color: transparent transparent var(--color) var(--color);
   transform: rotate(-135deg);
-  left: 65%;
-  top: 11%;
+  left: 48.3%;
+  top: 10.8%;
 }
 .c-arrow2 {
   --color: black;
   border-color: transparent transparent var(--color) var(--color);
   transform: rotate(-135deg);
   left: 65%;
-  top: 61%;
+  top: 68.8%;
+}
+@media screen and (max-width: 1024px) {
+  .c-arrow1 {
+    left: 47.5%;
+  }
+  .c-arrow2 {
+    top: 68.7%;
+    left: 64%;
+  }
 }
 </style>
