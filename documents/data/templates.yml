@@ -12,19 +12,21 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template1/types/type1.png
+        custom: true
       -
         type_id: 2
         title: タイプ2
         text: loremlorem
         name: type2
         image: /templates/template1/types/type2.png
-
+        custom: true
       -
         type:id: 3
         title: タイプ3
         text: loremlorem
         name: type3
         image: /templates/template1/types/type3.png
+        custom: false
   -
     id: 2
     title: テンプレート2
@@ -38,6 +40,8 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template2/types/type1.png
+        custom: true
+
 
       -
         type_id: 2
@@ -45,6 +49,8 @@ templates:
         text: loremlorem
         name: type2
         image: /templates/template2/types/type2.png
+        custom: true
+
 
       -
         type:id: 3
@@ -52,6 +58,8 @@ templates:
         text: loremlorem
         name: type3
         image: /templates/template2/types/type3.png
+        custom: true
+
 
       -
         type_id: 4
@@ -59,6 +67,8 @@ templates:
         text: loremlorem
         name: type4
         image: /templates/template2/types/type4.png
+        custom: true
+
 
       -
         type:id: 5
@@ -66,6 +76,7 @@ templates:
         text: loremlorem
         name: type5
         image: /templates/template2/types/type5.png
+        custom: false
   -
     id: 3
     title: テンプレート3
@@ -79,12 +90,16 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template3/types/type1.png
+        custom: true
+
       -
         type_id: 2
         title: タイプ2
         text: loremlorem
         name: type2
         image: /templates/template3/types/type2.png
+        custom: false
+
 
       -
         type_id: 3
@@ -92,6 +107,8 @@ templates:
         text: loremlorem
         name: type3
         image: /templates/template3/types/type3.png
+        custom: false
+
   -
     id: 4
     title: テンプレート4
@@ -105,6 +122,7 @@ templates:
         text: loremlorem
         name: type1
         image: /templates/template4/types/type1.png
+        custom: true
 
       -
         type_id: 2
@@ -112,6 +130,7 @@ templates:
         text: loremlorem
         name: type2
         image: /templates/template4/types/type2.png
+        custom: true
 
       -
         type:id: 3
@@ -119,6 +138,8 @@ templates:
         text: loremlorem
         name: type3
         image: /templates/template4/types/type3.png
+        custom: false
+
 
       -
         type_id: 4
@@ -126,6 +147,8 @@ templates:
         text: loremlorem
         name: type4
         image: /templates/template4/types/type4.png
+        custom: false
+
 
       -
         type:id: 5
@@ -133,6 +156,8 @@ templates:
         text: loremlorem
         name: type5
         image: /templates/template4/types/type5.png
+        custom: false
+
 
       -
         type:id: 6
@@ -140,6 +165,8 @@ templates:
         text: loremlorem
         name: type6
         image: /templates/template4/types/type6.png
+        custom: false
+
 
       -
         type:id: 7
@@ -147,6 +174,8 @@ templates:
         text: loremlorem
         name: type7
         image: /templates/template4/types/type7.png
+        custom: false
+
 
       -
         type:id: 8
@@ -154,3 +183,4 @@ templates:
         text: loremlorem
         name: type8
         image: /templates/template4/types/type8.png
+        custom: false
