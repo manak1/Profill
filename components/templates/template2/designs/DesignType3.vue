@@ -1,8 +1,18 @@
 <template>
   <!-- 名刺デザイン7 -->
-  <div class="absolute c-design w-full h-full">
-    <span class="square block"></span>
-    <span class="square2 block"> </span>
+  <div>
+    <div
+      class="absolute h-40 c-design c-border1 w-full border-t-8 border-black"
+      :style="{ 'border-top-color': backgroundColor }"
+    ></div>
+    <div
+      class="absolute h-32 c-design c-border2 w-full border-t-4 border-black"
+      :style="{ 'border-top-color': backgroundColor }"
+    ></div>
+    <div
+      class="absolute w-3/4 c-design h-full border-r-2 border-white left-4"
+      :style="{ 'border-right-color': backgroundColor }"
+    ></div>
   </div>
 </template>
 
@@ -19,20 +29,12 @@ export default {
 <style scoped>
 /* レスポンシブを考えると%指定が望ましい */
 .c-design {
-  top: 0;
+  z-index: -1;
+  bottom: 0;
 }
-.square {
-  position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
-  background-color: #9ae6b4;
+.c-border1 {
 }
-.square2 {
-  position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
+.c-border2 {
+  bottom: 12px;
 }
 </style>

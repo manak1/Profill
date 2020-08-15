@@ -2,33 +2,49 @@
   <div class="shadow-lg relative">
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
-      <div class="w-2/5 px-8 py-6" :style="ApplyColor">
+      <div class="w-2/5 sm:w-3/5 px-8 py-6" :style="ApplyColor">
         <div class="z-40 relative">
-          <h2 class="text-3xl font-semi-bold pb-2">
+          <h2
+            :class="{ 'c-hidden-3xl': !result.organization }"
+            class="text-3xl font-semi-bold pb-2"
+          >
             {{ result.organization }}
           </h2>
-          <div v-if="result.post_code">〒 {{ result.post_code }}</div>
-          <div v-if="result.zip" class="text-lg pb-2">
+          <div :class="{ 'c-hidden-lg': !result.post_code }">
+            〒 {{ result.post_code }}
+          </div>
+          <div :class="{ 'c-hidden-lg': !result.zip }" class="text-lg pb-2">
             {{ result.zip }}
           </div>
-          <div v-if="result.tel" class="text-lg">
+          <div :class="{ 'c-hidden-lg': !result.tel }" class="text-lg">
             {{ result.tel }}
           </div>
-          <div v-if="result.mail" class="text-lg pb-12">
+          <div :class="{ 'c-hidden-lg': !result.mail }" class="text-lg pb-16">
             {{ result.mail }}
           </div>
-          <div v-if="result.department" class="text-xl font-bold pb-4">
+          <div
+            :class="{ 'c-hidden-xl': !result.department }"
+            class="text-xl font-bold pb-6"
+          >
             {{ result.department }}
           </div>
-          <div class="text-lg font-bold">
+          <div
+            :class="{
+              'c-hidden-lg': !result.first_name_kana && !result.last_name_kana,
+            }"
+            class="text-lg font-bold"
+          >
             {{ result.first_name_kana }} {{ result.last_name_kana }}
           </div>
-          <div class="pb-32 text-5xl font-bold">
+          <div
+            :class="{ 'c-hidden-5xl': !result.first_name && !result.last_name }"
+            class="pb-32 text-5xl font-bold"
+          >
             {{ result.first_name }} {{ result.last_name }}
           </div>
         </div>
       </div>
-      <div class="w-3/5 relative">
+      <div class="w-3/5 sm-2/5 relative">
         <div class="float-right mr-12" :style="ApplyColor">
           <div
             v-if="result.twitter"
@@ -71,7 +87,7 @@
           </div>
         </div>
         <qrcode-vue
-          v-if="result.companyUrl"
+          v-if="result.weblink"
           class="c-qrCode"
           :value="result.weblink"
           :size="size"
@@ -120,7 +136,23 @@ export default {
 <style scoped>
 .c-qrCode {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 40px;
+  bottom: 40px;
+}
+.c-hidden-5xl {
+  visibility: hidden;
+  height: 72px;
+}
+.c-hidden-3xl {
+  visibility: hidden;
+  height: 45px;
+}
+.c-hidden-xl {
+  visibility: hidden;
+  height: 30px;
+}
+.c-hidden-lg {
+  visibility: hidden;
+  height: 24px;
 }
 </style>
