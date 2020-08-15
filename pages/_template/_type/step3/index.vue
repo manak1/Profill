@@ -32,9 +32,6 @@ export default {
       form: null,
     }
   },
-  mounted() {
-    this.form = { ...this.step3 }
-  },
   computed: {
     ...formMapper.mapState(["step3"]),
     template() {
@@ -43,6 +40,9 @@ export default {
     type() {
       return this.$route.params.type
     },
+  },
+  mounted() {
+    this.form = { ...this.step3 }
   },
   methods: {
     ...formMapper.mapMutations(["SET_COMPANY"]),
