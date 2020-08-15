@@ -74,11 +74,24 @@ templates:
     name: template3
     types:
       -
-        type_id: 1,
+        type_id: 1
         title: タイプ1
         text: loremlorem
         name: type1
         image: /templates/template3/types/type1.png
+      -
+        type_id: 2
+        title: タイプ2
+        text: loremlorem
+        name: type2
+        image: /templates/template3/types/type2.png
+
+      -
+        type_id: 3
+        title: タイプ3
+        text: loremlorem
+        name: type3
+        image: /templates/template3/types/type3.png
   -
     id: 4
     title: テンプレート4
