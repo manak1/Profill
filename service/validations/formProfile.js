@@ -2,16 +2,16 @@ import { maxLength } from "vuelidate/lib/validators"
 
 export const messages = {
   first_name: {
-    maxLength: "名前は25字以内です",
+    maxLength: "名前は25字以内が推奨されています",
   },
   last_name: {
-    maxLength: "名前は25字以内です",
+    maxLength: "名前は25字以内が推奨されています",
   },
   first_name_kana: {
-    maxLength: "ふりがなは25字以内です",
+    maxLength: "ふりがなは25字以内が推奨されています",
   },
   last_name_kana: {
-    maxLength: "ふりがなは25字以内です",
+    maxLength: "ふりがなは25字以内が推奨されています",
   },
 }
 

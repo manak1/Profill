@@ -8,7 +8,6 @@ export const profile = () => {
     last_name: "愛樹",
     first_name_kana: "いけだ",
     last_name_kana: "まなき",
-    isValid: false,
   }
 }
 
@@ -17,7 +16,6 @@ export const sns = () => {
     instagram: "@mikeana",
     twitter: "@mikeana",
     facebook: "@mikeana",
-    isValid: false,
   }
 }
 
@@ -30,7 +28,6 @@ export const company = () => {
     mail: "tokoro@tokoro.test",
     tel: "090-9233-5455",
     weblink: "https",
-    isValid: false,
   }
 }
 
