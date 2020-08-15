@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="`http://www.facebook.com/share.php?u=${tempUrl}`"
+    :href="`http://www.facebook.com/share.php?u=${url}`"
     class="py-2 pl-6 relative text-white text-center rounded-md c-button__facebook"
   >
     Facebook
@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      tempUrl: "https://unruffled-wozniak-c2de31.netlify.app/",
+      url: "https://profill.ga",
     }
   },
 }
