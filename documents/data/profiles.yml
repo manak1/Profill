@@ -1,0 +1,33 @@
+profiles:
+  -
+    label: manaki(フロントエンド)
+    avatar: /profiles/avatar1.svg
+    tools:
+        twitter: https://chatbox-inc.com/
+        instagram: null
+        facebook: https://chatbox-inc.com/
+        github: https://github.com/manak1
+  -
+    label: yusuke(フロントエンド)
+    avatar: /profiles/avatar2.svg
+    tools:
+        twitter: https://chatbox-inc.com/
+        instagram: null
+        facebook: https://chatbox-inc.com/
+        github: https://github.com/tamemoto
+  -
+    label: kazuyan(バックエンド)
+    avatar: /profiles/avatar3.svg
+    tools:
+        twitter: https://chatbox-inc.com/
+        instagram: null
+        facebook: https://chatbox-inc.com/
+        github: https://github.com/kazuki-komori
+  -
+    label: chisaudon(デザイン)
+    avatar: /profiles/avatar4.svg
+    tools:
+        twitter: https://chatbox-inc.com/
+        instagram: null
+        facebook: https://chatbox-inc.com/
+        github: https://github.com/chisakondo
