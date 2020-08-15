@@ -38,9 +38,18 @@ export default {
     },
   },
   async mounted() {
-    const triangleFullWidth = this.$refs.cardDesign1.offsetWidth / 10
-    this.triangleWidth = triangleFullWidth / 2
-    this.triangleHeight = this.$refs.cardDesign1.offsetHeight / 8
+    this.handleBorderSize()
+    window.addEventListener("resize", this.handleBorderSize)
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleBorderSize)
+  },
+  methods: {
+    handleBorderSize() {
+      const triangleFullWidth = this.$refs.cardDesign1.offsetWidth / 10
+      this.triangleWidth = triangleFullWidth / 2
+      this.triangleHeight = this.$refs.cardDesign1.offsetHeight / 8
+    },
   },
 }
 </script>
