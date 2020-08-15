@@ -50,6 +50,7 @@
         </div>
       </div>
     </section>
+    <LayoutFooter />
   </div>
 </template>
 

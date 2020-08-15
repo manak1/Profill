@@ -1,13 +1,15 @@
 <template>
   <header class="mb-8 l-header">
     <nav class="flex items-center justify-between flex-wrap p-5 lg:p-6">
-      <h1 class="text-white">
-        <img
-          src="@/assets/images/header/Rogo.svg"
-          class="h-6 lg:h-8"
-          alt="Profillロゴ"
-        />
-      </h1>
+      <nuxt-link class="inline-block" to="/">
+        <h1 class="text-white">
+          <img
+            src="@/assets/images/header/Rogo.svg"
+            class="h-6 lg:h-8"
+            alt="Profillロゴ"
+          />
+        </h1>
+      </nuxt-link>
     </nav>
   </header>
 </template>
