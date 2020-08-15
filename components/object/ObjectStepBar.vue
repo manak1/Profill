@@ -16,7 +16,7 @@
                 class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1"
               >
                 <div
-                  class="w-0 bg-green-300 py-1 rounded"
+                  class="w-0 c-step-color py-1 rounded"
                   :class="activeBarClass(step)"
                 ></div>
               </div>
@@ -93,7 +93,7 @@ export default {
     activeCircleClass(item) {
       const targetData = this.target
       return {
-        "bg-green-500": item.id <= targetData.id,
+        "c-step-color": item.id <= targetData.id,
         "bg-gray-200": item.id > targetData.id,
       }
     },
@@ -142,5 +142,9 @@ export default {
 }
 .bar {
   width: 100%;
+}
+.c-step-color {
+  background: linear-gradient(180deg, #9095ff 0%, rgba(255, 255, 255, 0) 100%),
+    #9eb9ff;
 }
 </style>
