@@ -1,8 +1,8 @@
 <template>
   <!-- 名刺デザイン10  -->
-  <div class="absolute c-design w-full h-full">
-    <span class="square block"></span>
-    <span class="square2 block"> </span>
+  <div class="absolute overflow-hidden c-design w-full h-full">
+    <div class="square" :style="{ backgroundColor: backgroundColor }" />
+    <div class="square2" :style="{ backgroundColor: backgroundColor }" />
   </div>
 </template>
 
@@ -24,16 +24,20 @@ export default {
 }
 .square {
   position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
+  top: 50%;
+  left: -30%;
+  transform: rotate(-45deg) translate(-25%, -25%);
+  width: 100%;
+  height: 80%;
   background-color: #9ae6b4;
 }
 .square2 {
   position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
+  top: -145%;
+  right: -55%;
+  transform: rotate(-45deg);
+  width: 100%;
+  height: 90%;
+  background-color: #555555;
 }
 </style>
