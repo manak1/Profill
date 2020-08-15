@@ -7,7 +7,7 @@
         alt="トップ画像"
       />
       <p
-        class="absolute transform container -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 px-18 md:px-0 text-center sm:px-20"
+        class="absolute transform container -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 px-18 sm:px-20 lg:px-0 text-center px-20"
       >
         <img
           class="object-cover w-1/4 h-1/4 mx-auto mb-8"
