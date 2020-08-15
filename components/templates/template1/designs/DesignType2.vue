@@ -1,8 +1,13 @@
 <template>
-  <!-- 名刺デザイン2 -->
-  <div class="absolute c-design w-full h-full">
-    <span class="square block"></span>
-    <span class="square2 block"> </span>
+  <!-- 名刺デザイン1  -->
+  <div
+    ref="cardDesign1"
+    class="absolute c-design w-full h-full overflow-hidden"
+  >
+    <div class="flex absolute" style="bottom: 0; z-index: -1;">
+      <div class="c-triangle c-triangle" :style="borderClass"></div>
+    </div>
+    <div class="c-line w-full relative" :style="lineClass" />
   </div>
 </template>
 
@@ -14,25 +19,60 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      triangleWidth: "50px",
+      triangleHeght: "50px",
+    }
+  },
+  computed: {
+    borderClass() {
+      return {
+        "border-color": `transparent transparent transparent ${this.backgroundColor}`,
+        "border-width": `${this.triangleWidth}px 0 0 ${this.triangleWidth}px`,
+      }
+    },
+
+    lineClass() {
+      return {
+        "background-color": this.backgroundColor,
+      }
+    },
+  },
+  async mounted() {
+    this.handleBorderSize()
+    window.addEventListener("resize", this.handleBorderSize)
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleBorderSize)
+  },
+  methods: {
+    handleBorderSize() {
+      const triangleFullWidth = this.$refs.cardDesign1.offsetWidth / 2
+      this.triangleWidth = triangleFullWidth / 1.5
+      this.triangleHeight = this.$refs.cardDesign1.offsetHeight / 2
+    },
+  },
 }
 </script>
-<style scoped>
-/* レスポンシブを考えると%指定が望ましい */
+
+<style lang="scss" scoped>
 .c-design {
   top: 0;
 }
-.square {
-  position: relative;
-  top: 100px;
-  width: 80%;
-  height: 30%;
-  background-color: #9ae6b4;
+.c-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 0 50px;
+  border-color: transparent transparent #007bff transparent;
 }
-.square2 {
-  position: relative;
-  top: 140px;
-  width: 60%;
-  height: 10%;
-  background-color: #9ae6b4;
+
+.c-line {
+  width: 100%;
+  height: 1px;
+  transform: rotate(45deg);
+  transform-origin: -15% -15% 0;
+  z-index: -10;
 }
 </style>
