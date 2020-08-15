@@ -2,8 +2,8 @@
   <section class="container py-8 px-4 mx-auto">
     <div v-if="componentData">
       <card-template :template="template" :type="type" />
-      <!--    <component :is="componentData" /> -->
       <div
+        v-if="isCustom"
         class="lg:flex lg:justify-center lg:-space-x-8 items-center text-center"
       >
         <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
@@ -48,6 +48,7 @@ export default {
     return {
       componentData: null,
       colorList: null,
+      isCustom: null,
     }
   },
   computed: {
@@ -63,6 +64,7 @@ export default {
     const { templates } = require("@/static/data/templates.json")
     const template = templates.find((item) => item.name === this.template)
     const type = template.types.find((item) => item.name === this.type)
+    this.isCustom = type.custom
     this.componentData = `${template.name}${type.name}`
     this.colorList = { ...this.colors }
   },
