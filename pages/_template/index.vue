@@ -22,6 +22,9 @@
       </div>
       <div v-if="isTypeOdd" class="w-full max-w-sm"></div>
     </div>
+    <div class="text-center lg:w-10/12">
+      <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
+    </div>
   </section>
 </template>
 
@@ -44,6 +47,11 @@ export default {
     const { templates } = require("@/static/data/templates.json")
     const template = templates.find((item) => item.name === this.template)
     this.types = template.types
+  },
+  methods: {
+    linkToPrev() {
+      this.$router.go(-1)
+    },
   },
 }
 </script>
