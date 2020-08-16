@@ -25,9 +25,8 @@
       </div>
       <div class="mt-12 lg:mt-16">
         <label
-          style="border-color: #474747;"
           for="imageInput"
-          class="py-3 w-full border block text-center rounded cursor-pointer mx-auto lg:w-1/2"
+          class="py-3 w-full text-gray-800 border border-gray-400 block text-center rounded cursor-pointer mx-auto lg:w-1/2"
         >
           <input id="imageInput" type="file" @change="uploadImage" />
           ファイルから色を選ぶ
@@ -78,6 +77,9 @@ export default {
       this.colorList.background_color = backgroundColor
       this.SET_COLORS(this.colorList)
     },
+    linkToPrev() {
+      this.$router.go(-1)
+    },
     uploadImage(i) {
       let image = i.target.files[0]
       if (!image) {
@@ -94,16 +96,16 @@ export default {
       reader.onerror = () => alert("画像の読み取りに失敗しました")
       reader.onload = async () => {
         const base64 = reader.result.split(",")[1]
+        this.$loader.on()
         const { data } = await this.$axios.post("/send", { image: base64 })
         // TODO fix
         this.colorList.background_color = data.colors[0]
         this.SET_COLORS(this.colorList)
+        this.$loader.off()
       }
       reader.readAsDataURL(image)
     },
-    linkToPrev() {
-      this.$router.go(-1)
-    },
+    async hoge() {},
   },
 }
 </script>
