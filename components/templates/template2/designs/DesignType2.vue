@@ -1,6 +1,6 @@
 <template>
   <!-- 名刺デザイン5 -->
-  <div>
+  <div style="z-index: -1;">
     <div
       class="c-arrow1 w-4 h-4 border-2 border-transparent absolute"
       :style="{ '--color': backgroundColor }"
