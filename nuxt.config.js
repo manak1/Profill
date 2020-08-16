@@ -41,7 +41,6 @@ export default {
   plugins: [
     "@/plugins/vuelidate",
     "@/plugins/loader",
-    { src: "@/plugins/localstorage", mode: "client" },
     { src: "@/plugins/vue-html2canvas", mode: "client" },
   ],
   /*
