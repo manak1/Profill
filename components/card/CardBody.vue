@@ -7,6 +7,14 @@
       <div class="font-bold text-xl mb-2">
         {{ title }}
       </div>
+      <div class="mb-4">
+        <span
+          v-if="custom"
+          class="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700"
+        >
+          カラー変更可
+        </span>
+      </div>
       <p class="text-gray-700 text-base">
         {{ text }}
       </p>
@@ -29,6 +37,10 @@ export default {
     image: {
       type: String,
       required: true,
+    },
+    custom: {
+      type: Boolean,
+      default: false,
     },
   },
 }

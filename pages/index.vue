@@ -35,7 +35,12 @@
     <section v-if="cards" class="container mt-12 py-8 px-4 mx-auto">
       <div class="flex flex-wrap justify-center">
         <div v-for="card in cards" :key="card.id" class="max-w-sm pb-8 px-2">
-          <CardBody :title="card.title" :text="card.text" :image="card.image">
+          <CardBody
+            :title="card.title"
+            :text="card.text"
+            :image="card.image"
+            :custom="false"
+          >
             <template v-slot:submit>
               <div class="text-center px-6 py-4">
                 <nuxt-link
