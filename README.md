@@ -51,8 +51,8 @@ $ npm run dev
 
 [manaki (フロントエンド)](https://github.com/manak1)
 
-[yusuke (バックエンド)](https://github.com/tamemoto)
+[yusuke (フロントエンド)](https://github.com/tamemoto)
 
-[kazuytan (バックエンド)](https://github.com/kazuki-komori)
+[kazuyan (バックエンド)](https://github.com/kazuki-komori)
 
 [ちー (デザイン)](https://github.com/chisakondo)

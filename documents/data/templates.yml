@@ -2,7 +2,7 @@ templates:
   -
     id: 1
     title: テンプレート1
-    text: loremlorem
+    text: プロフィール情報は右側、SNS情報は上部に表示されます。
     image: /templates/template1/template1.png
     name: template1
     types:
@@ -30,7 +30,7 @@ templates:
   -
     id: 2
     title: テンプレート2
-    text: loremlorem
+    text: プロフィール情報は左側、SNS情報は右上に表示されます。
     image: /templates/template2/template2.png
     name: template2
     types:
@@ -80,7 +80,7 @@ templates:
   -
     id: 3
     title: テンプレート3
-    text: loremlorem
+    text: プロフィール情報は両側、SNS情報は左下に表示されます。
     image: /templates/template3/template3.png
     name: template3
     types:
@@ -112,7 +112,7 @@ templates:
   -
     id: 4
     title: テンプレート4
-    text: loremlorem
+    text: プロフィール情報は左側、SNS情報は左上に表示されます。
     image: /templates/template4/template4.png
     name: template4
     types:
