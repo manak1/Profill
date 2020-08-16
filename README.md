@@ -39,8 +39,8 @@ $ npm run dev
 ### Pull Request の作成にあたって
 
 - lint のエラーがないことを確認してください。
- - `npm run lint` でエラーをチェックすることができます。
- - 自動で修正可能なものは `npm run lint:fix` で修正を行うことができます。
+    - `npm run lint` でエラーをチェックすることができます。
+    - 自動で修正可能なものは `npm run lint:fix` で修正を行うことができます。
 - `Pull Request` 作成後、自動で Netlify にデプロイが行われます。
 エラーが出ていないことを確認してください。
  
