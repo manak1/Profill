@@ -1,11 +1,12 @@
 <template>
   <PagesBody :title="'ダウンロード'">
     <template v-slot:body>
-      <div class="mx-auto px-6 py-4">
+      <div class="mx-auto mb-4 px-6 py-4">
         <div ref="printMe">
           <card-template :type="type" :template="template" />
         </div>
       </div>
+      <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
       <div class="text-center mt-24">
         <a
           class="inline-flex items-center justify-center w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
