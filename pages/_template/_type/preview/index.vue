@@ -3,10 +3,9 @@
     <div v-if="componentData">
       <card-template :template="template" :type="type" />
       <div
-        v-if="isCustom"
         class="lg:flex lg:justify-center lg:-space-x-8 items-center text-center"
       >
-        <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
+        <div v-if="isCustom" class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
           <p class="font-bold">
             背景色
           </p>
