@@ -8,21 +8,21 @@ templates:
     types:
       -
         type_id: 1
-        title: デザインタイプ1
+        title: ギザギザ
         text: loremlorem
         name: type1
         image: /templates/template1/types/type1.png
         custom: true
       -
         type_id: 2
-        title: デザインタイプ2
+        title: サンカク
         text: loremlorem
         name: type2
         image: /templates/template1/types/type2.png
         custom: true
       -
         type_id: 3
-        title: デザインタイプ3
+        title: アワ
         text: loremlorem
         name: type3
         image: /templates/template1/types/type3.png
@@ -36,7 +36,7 @@ templates:
     types:
       -
         type_id: 1,
-        title: デザインタイプ1
+        title: グラデーション
         text: loremlorem
         name: type1
         image: /templates/template2/types/type1.png
@@ -45,7 +45,7 @@ templates:
 
       -
         type_id: 2
-        title: デザインタイプ2
+        title: ヤジルシ
         text: loremlorem
         name: type2
         image: /templates/template2/types/type2.png
@@ -54,7 +54,7 @@ templates:
 
       -
         type_id: 3
-        title: デザインタイプ3
+        title: ストライプ
         text: loremlorem
         name: type3
         image: /templates/template2/types/type3.png
@@ -63,7 +63,7 @@ templates:
 
       -
         type_id: 4
-        title: デザインタイプ4
+        title: ギザギザ
         text: loremlorem
         name: type4
         image: /templates/template2/types/type4.png
@@ -72,7 +72,7 @@ templates:
 
       -
         type_id: 5
-        title: デザインタイプ5
+        title: 惑星
         text: loremlorem
         name: type5
         image: /templates/template2/types/type5.png
@@ -86,7 +86,7 @@ templates:
     types:
       -
         type_id: 1
-        title: デザインタイプ1
+        title: ヒシガタ
         text: loremlorem
         name: type1
         image: /templates/template3/types/type1.png
@@ -94,7 +94,7 @@ templates:
 
       -
         type_id: 2
-        title: デザインタイプ2
+        title: ミズタマ
         text: loremlorem
         name: type2
         image: /templates/template3/types/type2.png
@@ -103,7 +103,7 @@ templates:
 
       -
         type_id: 3
-        title: デザインタイプ3
+        title: ホシ
         text: loremlorem
         name: type3
         image: /templates/template3/types/type3.png
@@ -118,7 +118,7 @@ templates:
     types:
       -
         type_id: 1
-        title: デザインタイプ1
+        title: グラフ1
         text: loremlorem
         name: type1
         image: /templates/template4/types/type1.png
@@ -126,7 +126,7 @@ templates:
 
       -
         type_id: 2
-        title: デザインタイプ2
+        title: グラフ2
         text: loremlorem
         name: type2
         image: /templates/template4/types/type2.png
@@ -134,7 +134,7 @@ templates:
 
       -
         type_id: 3
-        title: デザインタイプ3
+        title: ミズタマ
         text: loremlorem
         name: type3
         image: /templates/template4/types/type3.png
@@ -143,7 +143,7 @@ templates:
 
       -
         type_id: 4
-        title: デザインタイプ4
+        title: アワ
         text: loremlorem
         name: type4
         image: /templates/template4/types/type4.png
@@ -152,8 +152,8 @@ templates:
 
       -
         type_id: 5
-        title: デザインタイプ5
-        text: loremlorem
+        title: サンカク
+        text: loremlorem　
         name: type5
         image: /templates/template4/types/type5.png
         custom: false
@@ -161,7 +161,7 @@ templates:
 
       -
         type_id: 6
-        title: デザインタイプ6
+        title: ケッショウ
         text: loremlorem
         name: type6
         image: /templates/template4/types/type6.png
@@ -170,7 +170,7 @@ templates:
 
       -
         type_id: 7
-        title: デザインタイプ7
+        title: カイダン1
         text: loremlorem
         name: type7
         image: /templates/template4/types/type7.png
@@ -179,7 +179,7 @@ templates:
 
       -
         type_id: 8
-        title: デザインタイプ8
+        title: カイダン2
         text: loremlorem
         name: type8
         image: /templates/template4/types/type8.png
