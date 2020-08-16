@@ -3,7 +3,7 @@ profiles:
     label: manaki(フロントエンド)
     avatar: /profiles/avatar1.svg
     tools:
-        twitter: https://chatbox-inc.com/
+        twitter: https://twitter.com/mikeanakida
         instagram: null
         facebook: https://chatbox-inc.com/
         github: https://github.com/manak1
@@ -19,15 +19,15 @@ profiles:
     label: kazuyan(バックエンド)
     avatar: /profiles/avatar3.svg
     tools:
-        twitter: https://chatbox-inc.com/
+        twitter: https://twitter.com/D_kazuyan
         instagram: null
         facebook: https://chatbox-inc.com/
         github: https://github.com/kazuki-komori
   -
-    label: chisaudon(デザイン)
+    label: ちー(デザイン)
     avatar: /profiles/avatar4.svg
     tools:
-        twitter: https://chatbox-inc.com/
+        twitter: https://twitter.com/5xPsr
         instagram: null
         facebook: https://chatbox-inc.com/
         github: https://github.com/chisakondo

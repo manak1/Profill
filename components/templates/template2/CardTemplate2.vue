@@ -11,7 +11,7 @@
             {{ result.organization }}
           </h2>
           <div :class="{ 'c-hidden-lg': !result.post_code }">
-            〒 {{ result.post_code }}
+            〒{{ result.post_code }}
           </div>
           <div :class="{ 'c-hidden-lg': !result.zip }" class="text-lg pb-2">
             {{ result.zip }}
