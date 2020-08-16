@@ -2,7 +2,7 @@ import createPersistedState from "vuex-persistedstate"
 
 export default ({ store }) => {
   createPersistedState({
-    key: "card-app",
+    key: "profill",
     paths: [store.form],
   })(store)
 }
