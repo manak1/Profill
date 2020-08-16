@@ -3,11 +3,9 @@
     <div class="w-full bg-gray-200 px-8 py-8">
       <img class="w-full" :src="image" alt="" />
     </div>
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">
-        {{ title }}
-      </div>
-      <div class="mb-4">
+    <div class="px-6 py-4 relative">
+      <div class="font-bold text-xl flex space-between mb-2 space-x-3">
+        <span class="inline-block w-1/2"> {{ title }}</span>
         <span
           v-if="custom"
           class="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700"
@@ -46,4 +44,9 @@ export default {
 }
 </script>
 
-<style />
+<style scoped>
+.c-label {
+  top: 0;
+  right: 15%;
+}
+</style>

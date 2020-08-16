@@ -20,6 +20,7 @@
           </template>
         </CardBody>
       </div>
+      <div v-if="isTypeOdd" class="w-full max-w-sm"></div>
     </div>
   </section>
 </template>
@@ -34,6 +35,9 @@ export default {
   computed: {
     template() {
       return this.$route.params.template
+    },
+    isTypeOdd() {
+      return this.types.length % 2 === 1
     },
   },
   mounted() {
