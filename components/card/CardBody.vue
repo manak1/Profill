@@ -13,9 +13,6 @@
           カラー変更可
         </span>
       </div>
-      <p class="text-gray-700 text-base">
-        {{ text }}
-      </p>
     </div>
     <slot name="submit" />
   </div>
