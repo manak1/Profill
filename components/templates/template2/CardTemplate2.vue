@@ -2,95 +2,112 @@
   <div class="shadow-lg relative">
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
-      <div class="w-2/5 sm:w-3/5 px-8 py-6" :style="ApplyColor">
-        <div class="z-40 relative">
-          <h2
-            :class="{ 'c-hidden-3xl': !result.organization }"
-            class="text-3xl font-semi-bold pb-2"
-          >
+
+      <div class="w-2/5 px-8 py-6" :style="ApplyColor">
+        <div class="z-40 absolute" style="top: 0; left: 5%;">
+          <h2 class="text-xxs sm:text-xl sm:mt-3 lg:text-4xl font-bold lg:mt-4">
             {{ result.organization }}
           </h2>
-          <div :class="{ 'c-hidden-lg': !result.post_code }">
+          <div v-if="result.post_code" class="text-xxs sm:text-base">
             〒{{ result.post_code }}
           </div>
-          <div :class="{ 'c-hidden-lg': !result.zip }" class="text-lg pb-2">
+          <div v-if="result.zip" class="text-xxs sm:text-base lg:text-lg">
             {{ result.zip }}
           </div>
-          <div :class="{ 'c-hidden-lg': !result.tel }" class="text-lg">
+          <div
+            v-if="result.tel"
+            class="text-xxs sm:text-base lg:text-lg mt-2 lg:mt-4"
+          >
             {{ result.tel }}
           </div>
-          <div :class="{ 'c-hidden-lg': !result.mail }" class="text-lg pb-16">
+          <div v-if="result.mail" class="text-xxs sm:text-base lg:text-lg">
             {{ result.mail }}
           </div>
           <div
-            :class="{ 'c-hidden-xl': !result.department }"
-            class="text-xl font-bold pb-6"
+            v-if="result.department"
+            class="text-xxs sm:text-base lg:text-xl sm:mt-16 lg:mt-12 font-bold"
           >
             {{ result.department }}
           </div>
           <div
-            :class="{
-              'c-hidden-lg': !result.first_name_kana && !result.last_name_kana,
-            }"
-            class="text-lg font-bold"
+            class="text-xxs sm:text-sm lg:text-lg font-bold -mb-1 lg:mt-4 lg:-mb-2"
           >
             {{ result.first_name_kana }} {{ result.last_name_kana }}
           </div>
-          <div
-            :class="{ 'c-hidden-5xl': !result.first_name && !result.last_name }"
-            class="pb-32 text-5xl font-bold"
-          >
+          <div class="text-xs sm:text-3xl lg:text-5xl font-bold">
             {{ result.first_name }} {{ result.last_name }}
           </div>
         </div>
       </div>
-      <div class="w-3/5 sm-2/5 relative">
-        <div class="float-right mr-12" :style="ApplyColor">
-          <div
-            v-if="result.twitter"
-            class="flex tracking-wide text-s font-bold mb-2"
-          >
-            <img
-              class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/sns/twitter-color.svg"
-              alt="Twitter アイコン"
-            />
-            <span class="my-auto pt-3">
-              {{ result.twitter }}
-            </span>
-          </div>
-          <div
-            v-if="result.instagram"
-            class="flex tracking-wide text-s font-bold mb-2"
-          >
-            <img
-              class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/sns/instagram-color.svg"
-              alt="Instagram アイコン"
-            />
-            <span class="my-auto pt-3">
-              {{ result.instagram }}
-            </span>
-          </div>
-          <div
-            v-if="result.facebook"
-            class="flex tracking-wide text-s font-bold mb-2"
-          >
-            <img
-              class="w-8 h-8 mr-3 mt-3 rounded"
-              src="@/assets/images/sns/facebook-color.svg"
-              alt="Facebook アイコン"
-            />
-            <span class="my-auto pt-3">
-              {{ result.facebook }}
-            </span>
-          </div>
+      <div
+        class="z-40 absolute space-y-2"
+        style="top: 2%; right: 3%;"
+        :style="ApplyColor"
+      >
+        <div
+          v-if="result.twitter"
+          class="flex items-center tracking-wide text-s font-bold"
+        >
+          <img
+            class="w-5 h-8 lg:w-8 lg:h-8 mr-1 rounded"
+            src="@/assets/images/sns/twitter-color.svg"
+            alt="Twitter アイコン"
+          />
+          <span class="text-xxs sm:text-xs lg:text-base">
+            {{ result.twitter }}
+          </span>
         </div>
+        <div
+          v-if="result.instagram"
+          class="flex items-center tracking-wide text-s font-bold"
+        >
+          <img
+            src="@/assets/images/sns/instagram-color.svg"
+            alt="Instagram アイコン"
+            class="mr-1 rounded w-5 h-5 lg:w-8 lg:h-8 lg:px-1"
+          />
+          <span class="text-xxs sm:xs lg:text-base">
+            {{ result.instagram }}
+          </span>
+        </div>
+        <div
+          v-if="result.facebook"
+          class="flex items-center tracking-wide text-s font-bold"
+        >
+          <img
+            class="w-5 h-8 lg:w-8 w-5 h-8 lg:h-8 mr-1 rounded"
+            src="@/assets/images/sns/facebook-color.svg"
+            alt="Facebook アイコン"
+          />
+          <span class="text-xxs sm:text-xs lg:text-base">
+            {{ result.facebook }}
+          </span>
+        </div>
+      </div>
+
+      <div class="w-3/5 relative">
         <qrcode-vue
           v-if="result.weblink"
-          class="c-qrCode"
+          class="c-qrCode sm:hidden lg:hidden p-1 bg-white"
+          :value="result.weblink"
+          :size="size / 2"
+          foreground="#474747"
+          level="H"
+        ></qrcode-vue>
+        <qrcode-vue
+          v-if="result.weblink"
+          class="c-qrCode hidden sm:block lg:hidden p-1 bg-white"
+          :value="result.weblink"
+          :size="size / 1.5"
+          foreground="#474747"
+          level="H"
+        ></qrcode-vue>
+        <qrcode-vue
+          v-if="result.weblink"
+          class="c-qrCode hidden lg:block p-1 bg-white"
           :value="result.weblink"
           :size="size"
+          foreground="#474747"
           level="H"
         ></qrcode-vue>
       </div>
@@ -118,8 +135,7 @@ export default {
   },
   data() {
     return {
-      companyUrl: "https://chatbox-inc.com/",
-      size: 150,
+      size: 128,
     }
   },
   computed: {
@@ -136,23 +152,7 @@ export default {
 <style scoped>
 .c-qrCode {
   position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-.c-hidden-5xl {
-  visibility: hidden;
-  height: 72px;
-}
-.c-hidden-3xl {
-  visibility: hidden;
-  height: 45px;
-}
-.c-hidden-xl {
-  visibility: hidden;
-  height: 30px;
-}
-.c-hidden-lg {
-  visibility: hidden;
-  height: 24px;
+  right: 5%;
+  bottom: 10%;
 }
 </style>
