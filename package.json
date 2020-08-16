@@ -19,6 +19,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "@nuxtjs/axios": "^5.12.1",
+    "body-scroll-lock": "^3.0.3",
     "fibers": "^5.0.0",
     "nuxt": "^2.13.0",
     "qrcode.vue": "^1.7.0",
