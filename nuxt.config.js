@@ -41,6 +41,7 @@ export default {
   plugins: [
     "@/plugins/vuelidate",
     "@/plugins/loader",
+    { src: "@/plugins/localstorage", mode: "client" },
     { src: "@/plugins/vue-html2canvas", mode: "client" },
   ],
   /*
@@ -60,6 +61,7 @@ export default {
   generate: {
     fallback: true,
   },
+
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
