@@ -5,15 +5,15 @@ profiles:
     tools:
         twitter: https://twitter.com/mikeanakida
         instagram: null
-        facebook: https://chatbox-inc.com/
+        facebook: null
         github: https://github.com/manak1
   -
     label: yusuke(フロントエンド)
     avatar: /profiles/avatar2.svg
     tools:
-        twitter: https://chatbox-inc.com/
+        twitter: https://twitter.com/yusuke_prog_web
         instagram: null
-        facebook: https://chatbox-inc.com/
+        facebook: null
         github: https://github.com/tamemoto
   -
     label: kazuyan(バックエンド)
@@ -21,7 +21,7 @@ profiles:
     tools:
         twitter: https://twitter.com/D_kazuyan
         instagram: null
-        facebook: https://chatbox-inc.com/
+        facebook: null
         github: https://github.com/kazuki-komori
   -
     label: ちー(デザイン)
@@ -29,5 +29,5 @@ profiles:
     tools:
         twitter: https://twitter.com/5xPsr
         instagram: null
-        facebook: https://chatbox-inc.com/
+        facebook: null
         github: https://github.com/chisakondo
