@@ -69,7 +69,7 @@
             {{ result.organization }}
           </h2>
           <div v-if="result.post_code" class="text-xxs sm:text-base">
-            {{ result.post_code }}
+            〒{{ result.post_code }}
           </div>
           <div v-if="result.zip" class="text-xxs sm:text-base lg:text-lg">
             {{ result.zip }}

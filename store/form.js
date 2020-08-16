@@ -4,30 +4,30 @@ export const formMapper = createNamespacedHelpers("form")
 
 export const profile = () => {
   return {
-    first_name: "池田",
-    last_name: "愛樹",
-    first_name_kana: "いけだ",
-    last_name_kana: "まなき",
+    first_name: "山田",
+    last_name: "太郎",
+    first_name_kana: "やまだ",
+    last_name_kana: "たろう",
   }
 }
 
 export const sns = () => {
   return {
-    instagram: "@mikeana",
-    twitter: "@mikeana",
-    facebook: "@mikeana",
+    instagram: "hoge",
+    twitter: "@hogemi",
+    facebook: "hogehoge",
   }
 }
 
 export const company = () => {
   return {
-    organization: "株式会社chatbox",
+    organization: "株式会社◯◯",
     department: "フロントエンド",
-    post_code: "660-0045",
-    zip: "兵庫県沖縄市1-23-2",
+    post_code: "012-3456",
+    zip: "東京都葛飾区亀有公園前派出所",
     mail: "tokoro@tokoro.test",
-    tel: "090-9233-5455",
-    weblink: "https",
+    tel: "090-0123-4344",
+    weblink: "https://talent.supporterz.jp/geekten/2020/",
   }
 }
 
