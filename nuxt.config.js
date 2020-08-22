@@ -65,6 +65,7 @@ export default {
       const result = []
       const { templates } = require("./static/data/templates.json")
       for (let template of templates) {
+        result.push(`/${template.name}`)
         for (let type of template.types) {
           result.push(`/${template.name}/${type.name}/step1`)
           result.push(`/${template.name}/${type.name}/step2`)
