@@ -47,10 +47,6 @@ $ npm run dev
 - `Pull Request` 作成後、自動で Netlify にデプロイが行われます。
 エラーが出ていないことを確認してください。
  
-### API仕様
-
-画像から色を抽出するAPIを[こちら](https://github.com/tamemoto/card-api)で動作させています。
-
 ## 製作者
 
 [manaki (フロントエンド)](https://github.com/manak1)

@@ -15,8 +15,7 @@
       <div class="text-center mt-24">
         <a
           class="inline-flex items-center justify-center w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
-          :href="output"
-          download="output"
+          @click.prevent="print"
         >
           <i class="c-icon__download inline-block" />
           <span class="pl-1">ダウンロード</span>
@@ -44,7 +43,6 @@ export default {
   },
   data() {
     return {
-      output: null,
       componentData: null,
     }
   },
@@ -57,20 +55,17 @@ export default {
       return this.$route.params.type
     },
   },
-  async mounted() {
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    this.print()
-  },
   methods: {
-    linkToPrev() {
-      this.$router.go(-1)
-    },
     async print() {
       const el = this.$refs.printMe
       const options = {
         type: "dataURL",
       }
-      this.output = await this.$html2canvas(el, options)
+      const imgUrl = await this.$html2canvas(el, options)
+      let anchor = document.createElement("a")
+      anchor.href = imgUrl
+      anchor.download = "output.png"
+      anchor.click()
     },
   },
 }

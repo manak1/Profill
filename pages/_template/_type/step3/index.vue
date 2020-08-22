@@ -56,12 +56,6 @@ export default {
     inputForm() {
       this.SET_COMPANY(this.form)
     },
-    linkToNext() {
-      this.$router.push(`/${this.template}/${this.type}/step4`)
-    },
-    linkToPrev() {
-      this.$router.go(-1)
-    },
   },
 }
 </script>
