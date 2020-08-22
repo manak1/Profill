@@ -60,6 +60,16 @@ export default {
 
   generate: {
     fallback: true,
+    route() {
+      const result = []
+      const { templates } = require("@/static/data/templates")
+      for (let template of templates) {
+        for (let type of template.types) {
+          result.push(`/${template.name}/${type.name}`)
+        }
+      }
+      return result
+    },
   },
 
   /*
