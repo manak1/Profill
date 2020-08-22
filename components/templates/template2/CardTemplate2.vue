@@ -145,7 +145,7 @@ export default {
     ...formMapper.mapGetters(["result"]),
     ApplyColor() {
       return {
-        color: this.result.text_color,
+        color: this.color.text_color,
       }
     },
   },

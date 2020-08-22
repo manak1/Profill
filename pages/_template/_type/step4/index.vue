@@ -56,6 +56,7 @@ export default {
     },
   },
   methods: {
+    ...formMapper.mapActions(["clearInput"]),
     async print() {
       const el = this.$refs.printMe
       const options = {
@@ -66,6 +67,7 @@ export default {
       anchor.href = imgUrl
       anchor.download = "output.png"
       anchor.click()
+      // this.clearInput()
     },
   },
 }

@@ -70,4 +70,16 @@ export const mutations = {
   SET_COMPANY(state, data) {
     state.step3 = { ...data }
   },
+  CLEAR_INPUT(state) {
+    state.step1 = profile()
+    state.step2 = sns()
+    state.step3 = company()
+  },
+}
+
+export const actions = {
+  clearInput({ commit }) {
+    localStorage.clear()
+    commit("CLEAR_INPUT")
+  },
 }

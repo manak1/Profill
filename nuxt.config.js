@@ -42,6 +42,7 @@ export default {
     "@/plugins/vuelidate",
     "@/plugins/loader",
     { src: "@/plugins/vue-html2canvas", mode: "client" },
+    { src: "@/plugins/localstorage", mode: "client" },
   ],
   /*
    ** Auto import components
