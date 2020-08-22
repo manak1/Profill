@@ -13,7 +13,7 @@
           v-model="$v.form.organization.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="株式会社hogehoge"
+          placeholder="株式会社Profill"
           @input="input"
         />
         <span
@@ -79,7 +79,7 @@
           v-model="$v.form.zip.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="兵庫県西宮市上ケ原一番町"
+          placeholder="東京都葛飾区亀有公園前派出所"
           @input="input"
         />
         <span
@@ -101,7 +101,7 @@
           v-model="$v.form.mail.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="email"
-          placeholder="hogehoge@gmail.com"
+          placeholder="example@gmail.com"
           @input="input"
         />
         <span
@@ -145,7 +145,7 @@
           v-model="$v.form.weblink.$model"
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="text"
-          placeholder="https://hogehoge.com"
+          placeholder="https://example.com"
           @input="input"
         />
         <span

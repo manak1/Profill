@@ -32,7 +32,7 @@
             ></i>
           </div>
         </div>
-        <div class="text-xs text-center md:text-base">
+        <div class="text-xs text-center text-gray-700 md:text-base">
           {{ step.label }}
         </div>
       </div>

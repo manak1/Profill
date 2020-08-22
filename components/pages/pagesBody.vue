@@ -1,6 +1,8 @@
 <template>
   <section class="container py-8 px-4 mx-auto">
-    <h2>{{ title }}</h2>
+    <h2 class="font-bold text-gray-700">
+      {{ title }}
+    </h2>
     <div class="mb-16">
       <ObjectStepBar />
     </div>

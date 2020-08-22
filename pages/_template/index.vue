@@ -27,7 +27,7 @@
         to="/"
         class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
       >
-        戻る
+        トップページへ
       </nuxt-link>
     </div>
   </section>
@@ -48,11 +48,6 @@ export default {
     },
     isTypeOdd() {
       return this.types.length % 2 !== 0
-    },
-  },
-  methods: {
-    linkToPrev() {
-      this.$router.go(-1)
     },
   },
 }

@@ -5,7 +5,7 @@
     </div>
     <div class="px-6 py-4 relative">
       <div class="font-bold text-xl flex space-between mb-2 space-x-3">
-        <span class="inline-block w-1/2"> {{ title }}</span>
+        <span class="inline-block text-gray-700 w-1/2"> {{ title }}</span>
         <span
           v-if="custom"
           class="inline-block bg-gray-200 rounded px-3 py-1 text-sm font-semibold text-gray-700"
