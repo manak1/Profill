@@ -60,12 +60,17 @@ export default {
 
   generate: {
     fallback: true,
-    route() {
+    crawler: false,
+    routes() {
       const result = []
-      const { templates } = require("@/static/data/templates")
+      const { templates } = require("./static/data/templates.json")
       for (let template of templates) {
         for (let type of template.types) {
-          result.push(`/${template.name}/${type.name}`)
+          result.push(`/${template.name}/${type.name}/step1`)
+          result.push(`/${template.name}/${type.name}/step2`)
+          result.push(`/${template.name}/${type.name}/step3`)
+          result.push(`/${template.name}/${type.name}/step4`)
+          result.push(`/${template.name}/${type.name}/preview`)
         }
       }
       return result
