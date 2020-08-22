@@ -155,12 +155,6 @@
           {{ messages.weblink.judgeWebLink }}
         </span>
       </div>
-      <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        @click="resetForm"
-      >
-        入力をリセット
-      </button>
     </template>
   </FormBody>
 </template>
@@ -174,11 +168,6 @@ export default {
     return {
       messages,
     }
-  },
-  methods: {
-    resetForm() {
-      this.$router.go(0)
-    },
   },
   validations,
 }

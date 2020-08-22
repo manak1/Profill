@@ -24,15 +24,21 @@
         </div>
       </div>
       <div class="mt-12 lg:mt-16">
-        <label
-          for="imageInput"
-          class="py-3 w-full text-gray-800 border border-gray-400 block text-center rounded cursor-pointer mx-auto lg:w-1/2"
-        >
-          <input id="imageInput" type="file" @change="uploadImage" />
-          ファイルから色を選ぶ
-        </label>
+        <!--        <label-->
+        <!--          for="imageInput"-->
+        <!--          class="py-3 w-full text-gray-800 border border-gray-400 block text-center rounded cursor-pointer mx-auto lg:w-1/2"-->
+        <!--        >-->
+        <!--          <input id="imageInput" type="file" @change="uploadImage" />-->
+        <!--          ファイルから色を選ぶ-->
+        <!--        </label>-->
         <div class="mt-10 text-left">
-          <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
+          <a
+            href="#"
+            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
+            @click.prevent="$router.go(-1)"
+          >
+            戻る
+          </a>
         </div>
       </div>
     </div>
@@ -77,35 +83,31 @@ export default {
       this.colorList.background_color = backgroundColor
       this.SET_COLORS(this.colorList)
     },
-    linkToPrev() {
-      this.$router.go(-1)
-    },
-    uploadImage(i) {
-      let image = i.target.files[0]
-      if (!image) {
-        return
-      }
-      if (image.size > 10000000) {
-        return
-      }
-      if (image.type !== "image/jpeg") {
-        return
-      }
-
-      let reader = new FileReader()
-      reader.onerror = () => alert("画像の読み取りに失敗しました")
-      reader.onload = async () => {
-        const base64 = reader.result.split(",")[1]
-        this.$loader.on()
-        const { data } = await this.$axios.post("/send", { image: base64 })
-        // TODO fix
-        this.colorList.background_color = data.colors[0]
-        this.SET_COLORS(this.colorList)
-        this.$loader.off()
-      }
-      reader.readAsDataURL(image)
-    },
-    async hoge() {},
+    // uploadImage(i) {
+    //   let image = i.target.files[0]
+    //   if (!image) {
+    //     return
+    //   }
+    //   if (image.size > 10000000) {
+    //     return
+    //   }
+    //   if (image.type !== "image/jpeg") {
+    //     return
+    //   }
+    //
+    //   let reader = new FileReader()
+    //   reader.onerror = () => alert("画像の読み取りに失敗しました")
+    //   reader.onload = async () => {
+    //     const base64 = reader.result.split(",")[1]
+    //     this.$loader.on()
+    //     const { data } = await this.$axios.post("/send", { image: base64 })
+    //
+    //     this.colorList.background_color = data.colors[0]
+    //     this.SET_COLORS(this.colorList)
+    //     this.$loader.off()
+    //   }
+    //   reader.readAsDataURL(image)
+    // },
   },
 }
 </script>
