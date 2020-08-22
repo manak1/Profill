@@ -18,7 +18,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },
@@ -32,7 +32,7 @@ export default {
   computed: {
     borderClass() {
       return {
-        "border-color": `transparent transparent ${this.backgroundColor} transparent`,
+        "border-color": `transparent transparent ${this.objectColor} transparent`,
         "border-width": `0 ${this.triangleWidth}px ${this.triangleHeight}px ${this.triangleWidth}px`,
       }
     },

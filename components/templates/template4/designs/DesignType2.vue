@@ -12,7 +12,7 @@
         :style="{
           height: squareHeights[n - 1] + 'px',
           width: squareWidth[n - 1] + 'px',
-          'background-color': backgroundColor,
+          'background-color': objectColor,
         }"
       ></div>
     </div>
@@ -22,7 +22,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },
@@ -32,18 +32,6 @@ export default {
       squareHeights: [],
       squareWidth: [],
     }
-  },
-  computed: {
-    applyColor() {
-      return {
-        "background-color": this.backgroundColor,
-      }
-    },
-    applySquareHeight() {
-      return function (height) {
-        return { height: height }
-      }
-    },
   },
   async mounted() {
     this.handleSquareSize()

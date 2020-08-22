@@ -6,14 +6,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    backgroundColor: {
-      type: String,
-      required: true,
-    },
-  },
-}
+export default {}
 </script>
 <style scoped>
 /* レスポンシブを考えると%指定が望ましい */

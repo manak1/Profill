@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },

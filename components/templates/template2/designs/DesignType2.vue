@@ -3,21 +3,21 @@
   <div style="z-index: -1;">
     <div
       class="c-arrow1 w-4 h-4 border-2 border-transparent absolute"
-      :style="{ '--color': backgroundColor }"
+      :style="{ '--color': objectColor }"
     ></div>
     <div
       class="absolute border-b-2 border-black c-border1"
-      :style="{ 'border-color': backgroundColor }"
-      :backgroundColor="backgroundColor"
+      :style="{ 'border-color': objectColor }"
+      :backgroundColor="objectColor"
     ></div>
     <div
       class="c-arrow2 w-4 h-4 border-2 border-transparent absolute"
-      :style="{ '--color': backgroundColor }"
+      :style="{ '--color': objectColor }"
     ></div>
     <div
       class="absolute w-2/3 border-b-2 border-black c-border2"
-      :style="{ 'border-color': backgroundColor }"
-      :backgroundColor="backgroundColor"
+      :style="{ 'border-color': objectColor }"
+      :backgroundColor="objectColor"
     ></div>
   </div>
 </template>
@@ -25,7 +25,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },

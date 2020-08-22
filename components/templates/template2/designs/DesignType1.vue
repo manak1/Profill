@@ -3,15 +3,15 @@
     <!-- 名刺デザイン3  -->
     <div
       class="absolute c-design w-1/2 h-full opacity-25"
-      :style="{ backgroundColor: backgroundColor }"
+      :style="{ backgroundColor: objectColor }"
     ></div>
     <div
       class="absolute c-design w-1/8 h-full c-square2"
-      :style="{ backgroundColor: backgroundColor }"
+      :style="{ backgroundColor: objectColor }"
     ></div>
     <div
       class="absolute c-design w-1/3 h-full opacity-75"
-      :style="{ backgroundColor: backgroundColor }"
+      :style="{ backgroundColor: objectColor }"
     ></div>
     <div class="absolute w-1/2 h-24 c-line1 border-t-4 border-white"></div>
     <div
@@ -23,7 +23,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },

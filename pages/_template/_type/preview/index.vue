@@ -7,9 +7,9 @@
       >
         <div v-if="isCustom" class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
           <p class="font-bold">
-            背景色
+            デザイン色
           </p>
-          <object-color-picker class="mt-4" @setColor="setBackgroundColor" />
+          <object-color-picker class="mt-4" @setColor="setDesignColor" />
         </div>
         <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/2">
           <p class="font-bold">
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { formMapper } from "@/store/form"
+import { colorMapper } from "@/store/color"
 
 export default {
   data() {
@@ -56,7 +56,7 @@ export default {
     }
   },
   computed: {
-    ...formMapper.mapState(["colors"]),
+    ...colorMapper.mapGetters(["color"]),
     template() {
       return this.$route.params.template
     },
@@ -73,13 +73,13 @@ export default {
     this.colorList = { ...this.colors }
   },
   methods: {
-    ...formMapper.mapMutations(["SET_COLORS"]),
-    setTextColor(textColor) {
-      this.colorList.text_color = textColor
+    ...colorMapper.mapMutations(["SET_COLORS"]),
+    setTextColor(color) {
+      this.colorList.text_color = color
       this.SET_COLORS(this.colorList)
     },
-    setBackgroundColor(backgroundColor) {
-      this.colorList.background_color = backgroundColor
+    setDesignColor(color) {
+      this.colorList.object_color = color
       this.SET_COLORS(this.colorList)
     },
     // uploadImage(i) {

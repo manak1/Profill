@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },
@@ -33,7 +33,7 @@ export default {
   computed: {
     backgroundClass() {
       return {
-        "background-color": `${this.backgroundColor}`,
+        "background-color": `${this.objectColor}`,
         height: `${this.triangleWidth + 20}px`,
       }
     },
@@ -41,9 +41,7 @@ export default {
       return {
         "border-right": `${this.triangleWidth}px solid transparent`,
         "border-left": `${this.triangleWidth}px solid transparent`,
-        "border-top": `${this.triangleWidth + 20}px solid ${
-          this.backgroundColor
-        }`,
+        "border-top": `${this.triangleWidth + 20}px solid ${this.objectColor}`,
       }
     },
   },

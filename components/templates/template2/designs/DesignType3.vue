@@ -3,15 +3,15 @@
   <div>
     <div
       class="absolute h-40 c-design c-border1 w-full border-t-8 border-black"
-      :style="{ 'border-top-color': backgroundColor }"
+      :style="{ 'border-top-color': objectColor }"
     ></div>
     <div
       class="absolute h-32 c-design c-border2 w-full border-t-4 border-black"
-      :style="{ 'border-top-color': backgroundColor }"
+      :style="{ 'border-top-color': objectColor }"
     ></div>
     <div
       class="absolute w-3/4 c-design h-full border-r-2 border-white left-4"
-      :style="{ 'border-right-color': backgroundColor }"
+      :style="{ 'border-right-color': objectColor }"
     ></div>
   </div>
 </template>
@@ -19,7 +19,7 @@
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },

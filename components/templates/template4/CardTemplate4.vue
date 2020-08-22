@@ -112,12 +112,14 @@
         ></qrcode-vue>
       </div>
     </div>
-    <component :is="type" :background-color="result.background_color" />
+    <component :is="type" :object-color="color.object_color" />
   </div>
 </template>
 
 <script>
 import { formMapper } from "@/store/form"
+import { colorMapper } from "@/store/color"
+
 export default {
   components: {
     type1: () => import(`@/components/templates/template4/designs/DesignType1`),
@@ -143,9 +145,10 @@ export default {
   },
   computed: {
     ...formMapper.mapGetters(["result"]),
+    ...colorMapper.mapGetters(["color"]),
     ApplyColor() {
       return {
-        color: this.result.text_color,
+        color: this.color.text_color,
       }
     },
   },

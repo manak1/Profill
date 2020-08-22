@@ -1,15 +1,15 @@
 <template>
   <!-- 名刺デザイン10  -->
   <div class="absolute overflow-hidden c-design w-full h-full">
-    <div class="square" :style="{ backgroundColor: backgroundColor }" />
-    <div class="square2" :style="{ backgroundColor: backgroundColor }" />
+    <div class="square" :style="{ backgroundColor: objectColor }" />
+    <div class="square2" :style="{ backgroundColor: objectColor }" />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    backgroundColor: {
+    objectColor: {
       type: String,
       required: true,
     },
