@@ -22,15 +22,17 @@
               </div>
             </div>
           </template>
-          <div
-            class="w-10 h-10 mx-auto rounded-full text-lg text-white flex items-center"
-            :class="activeCircleClass(step)"
-          >
-            <i
-              class="flex justify-center items-center w-full"
-              :class="`c-icon__${step.icon}`"
-            ></i>
-          </div>
+          <nuxt-link :to="`/${template}/${type}/${step.state}`" class="block">
+            <span
+              class="inline-block w-10 h-10 mx-auto rounded-full text-lg text-white flex items-center"
+              :class="activeCircleClass(step)"
+            >
+              <i
+                class="flex justify-center items-center w-full"
+                :class="`c-icon__${step.icon}`"
+              />
+            </span>
+          </nuxt-link>
         </div>
         <div class="text-xs text-center text-gray-700 md:text-base">
           {{ step.label }}
@@ -81,6 +83,12 @@ export default {
       const targetRoute = this.$route.name
       const targetStep = targetRoute.split("-")[2]
       return this.steps.find((value) => value.state === targetStep)
+    },
+    template() {
+      return this.$route.params.template
+    },
+    type() {
+      return this.$route.params.type
     },
   },
   methods: {
