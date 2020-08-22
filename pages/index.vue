@@ -61,14 +61,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      cards: null,
-    }
-  },
-  mounted() {
+  asyncData() {
     const { templates } = require("@/static/data/templates.json")
-    this.cards = templates
+    return {
+      cards: templates,
+    }
   },
 }
 </script>

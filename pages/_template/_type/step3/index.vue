@@ -4,12 +4,19 @@
       <template v-slot:body>
         <FormCompany v-model="form" @input="inputForm" />
         <div class="text-center mb-20">
-          <ButtonDanger class="mx-6" @linkToPrev="linkToPrev" />
-          <ButtonPrimary
-            class="mx-6"
+          <nuxt-link
+            :to="`/${template}/${type}/step2`"
+            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
+          >
+            戻る
+          </nuxt-link>
+          <nuxt-link
+            :to="`/${template}/${type}/step4`"
+            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
             :is-valid="form.isValid"
-            @linkToNext="linkToNext"
-          />
+          >
+            次へ
+          </nuxt-link>
         </div>
         <div class="text-center">
           <nuxt-link
