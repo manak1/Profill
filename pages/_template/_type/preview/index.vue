@@ -23,13 +23,13 @@
         </div>
       </div>
       <div class="mt-12 lg:mt-16">
-        <!--        <label-->
-        <!--          for="imageInput"-->
-        <!--          class="py-3 w-full text-gray-800 border border-gray-400 block text-center rounded cursor-pointer mx-auto lg:w-1/2"-->
-        <!--        >-->
-        <!--          <input id="imageInput" type="file" @change="uploadImage" />-->
-        <!--          ファイルから色を選ぶ-->
-        <!--        </label>-->
+        <label
+          for="imageInput"
+          class="py-3 w-full text-gray-800 border border-gray-400 block text-center rounded cursor-pointer mx-auto lg:w-1/2"
+        >
+          <input id="imageInput" type="file" @change="uploadImage" />
+          背景画像を選択する
+        </label>
         <div class="mt-10 text-left">
           <a
             href="#"
@@ -82,31 +82,33 @@ export default {
       this.colorList.object_color = color
       this.SET_COLORS(this.colorList)
     },
-    // uploadImage(i) {
-    //   let image = i.target.files[0]
-    //   if (!image) {
-    //     return
-    //   }
-    //   if (image.size > 10000000) {
-    //     return
-    //   }
-    //   if (image.type !== "image/jpeg") {
-    //     return
-    //   }
-    //
-    //   let reader = new FileReader()
-    //   reader.onerror = () => alert("画像の読み取りに失敗しました")
-    //   reader.onload = async () => {
-    //     const base64 = reader.result.split(",")[1]
-    //     this.$loader.on()
-    //     const { data } = await this.$axios.post("/send", { image: base64 })
-    //
-    //     this.colorList.background_color = data.colors[0]
-    //     this.SET_COLORS(this.colorList)
-    //     this.$loader.off()
-    //   }
-    //   reader.readAsDataURL(image)
-    // },
+    uploadImage(i) {
+      let image = i.target.files[0]
+      //imageがなかったら
+      if (!image) {
+        return
+      }
+      // サイズが大きすぎたら
+      if (image.size > 10000000) {
+        return
+      }
+      //jpeg,pngじゃなかったら
+      if (image.type !== "image/jpeg" || image.type !== "image/png") {
+        return
+      }
+
+      let reader = new FileReader()
+      reader.onerror = () => alert("画像の読み取りに失敗しました")
+      reader.onload = async () => {
+        const base64 = reader.result.split(",")[1]
+        this.$loader.on()
+        //ここで背景に適用できれば良い
+
+        this.$loader.off()
+        return base64
+      }
+      reader.readAsDataURL(image)
+    },
   },
 }
 </script>
