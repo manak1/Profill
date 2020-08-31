@@ -41,6 +41,7 @@ export default {
   plugins: [
     "@/plugins/vuelidate",
     "@/plugins/loader",
+    { src: "@/plugins/toggle-button", ssr: false },
     { src: "@/plugins/vue-html2canvas", mode: "client" },
     // { src: "@/plugins/localstorage", mode: "client" },
   ],
