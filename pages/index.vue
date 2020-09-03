@@ -25,8 +25,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.p-hero {
-  top: -80px;
-}
-</style>
+<style scoped></style>
