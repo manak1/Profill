@@ -1,6 +1,7 @@
 profiles:
   -
-    label: manaki(フロントエンド)
+    name: manaki
+    position: フロントエンド
     avatar: /profiles/avatar1.svg
     tools:
         twitter: https://twitter.com/mikeanakida
@@ -8,7 +9,8 @@ profiles:
         facebook: null
         github: https://github.com/manak1
   -
-    label: yusuke(フロントエンド)
+    name: yusuke
+    position: フロントエンド
     avatar: /profiles/avatar2.svg
     tools:
         twitter: https://twitter.com/yusuke_prog_web
@@ -16,7 +18,8 @@ profiles:
         facebook: null
         github: https://github.com/tamemoto
   -
-    label: kazuyan(バックエンド)
+    name: kazuyan
+    position: バックエンド
     avatar: /profiles/avatar3.svg
     tools:
         twitter: https://twitter.com/D_kazuyan
@@ -24,7 +27,8 @@ profiles:
         facebook: null
         github: https://github.com/kazuki-komori
   -
-    label: ちー(デザイン)
+    name: ちー
+    position: デザイン
     avatar: /profiles/avatar4.svg
     tools:
         twitter: https://twitter.com/5xPsr
