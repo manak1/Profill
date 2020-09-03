@@ -12,10 +12,14 @@
         >
           <div class="flex items-center">
             <p>
-              <img :src="item.avatar" style="width: 40px; height: 40px;" />
+              <img
+                :src="item.avatar"
+                style="width: 40px; height: 40px;"
+                :alt="item.name"
+              />
             </p>
             <div class="pl-4 text-gray-700 text-base">
-              {{ item.label }}
+              {{ item.name }}({{ item.position }})
             </div>
           </div>
           <div>
@@ -24,6 +28,8 @@
                 v-if="item.tools.twitter"
                 :href="item.tools.twitter"
                 target="_blank"
+                rel="noopener"
+                aria-label="twitterリンク"
                 class="inline-block my-2 mx-1 lg:mx-2"
               >
                 <i class="l-icon__twitter" />
@@ -32,6 +38,8 @@
                 v-if="item.tools.instagram"
                 :href="item.tools.instagram"
                 target="_blank"
+                rel="noopener"
+                aria-label="instagramリンク"
                 class="inline-block my-2 mx-1 lg:mx-2"
               >
                 <i class="l-icon__instagram" />
@@ -40,6 +48,8 @@
                 v-if="item.tools.facebook"
                 :href="item.tools.facebook"
                 target="_blank"
+                rel="noopener"
+                aria-label="facebookリンク"
                 class="inline-block my-2 mx-1 lg:mx-2"
               >
                 <i class="l-icon__facebook" />
@@ -48,6 +58,8 @@
                 v-if="item.tools.github"
                 :href="item.tools.github"
                 target="_blank"
+                rel="noopener"
+                aria-label="githubリンク"
                 class="inline-block my-2 mx-1 lg:mx-2"
               >
                 <i class="l-icon__github" />
