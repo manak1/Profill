@@ -13,32 +13,36 @@
             <input
               id="name"
               v-model="$v.form.first_name.$model"
+              :class="classNames('c-input', ['first_name'])"
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="山田"
               @input="input"
             />
-            <span
-              v-if="!$v.form.first_name.maxLength && $v.form.first_name.$dirty"
+            <div
+              v-for="(message, index) in getMessages(['first_name'])"
+              :key="index"
               class="text-indigo-500"
             >
-              {{ messages.first_name.maxLength }}
-            </span>
+              {{ message }}
+            </div>
           </div>
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <input
               v-model="$v.form.last_name.$model"
+              :class="classNames('c-input', ['last_name'])"
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="太郎"
               @input="input"
             />
-            <span
-              v-if="!$v.form.last_name.maxLength && $v.form.last_name.$dirty"
+            <div
+              v-for="(message, index) in getMessages(['last_name'])"
+              :key="index"
               class="text-indigo-500"
             >
-              {{ messages.last_name.maxLength }}
-            </span>
+              {{ message }}
+            </div>
           </div>
         </div>
       </div>
@@ -54,38 +58,36 @@
             <input
               id="name-kana"
               v-model="$v.form.first_name_kana.$model"
+              :class="classNames('c-input', ['first_name_kana'])"
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="やまだ"
               @input="input"
             />
-            <span
-              v-if="
-                !$v.form.first_name_kana.maxLength &&
-                $v.form.first_name_kana.$dirty
-              "
+            <div
+              v-for="(message, index) in getMessages(['first_name_kana'])"
+              :key="index"
               class="text-indigo-500"
             >
-              {{ messages.first_name_kana.maxLength }}
-            </span>
+              {{ message }}
+            </div>
           </div>
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <input
               v-model="$v.form.last_name_kana.$model"
+              :class="classNames('c-input', ['last_name_kana'])"
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="たろう"
               @input="input"
             />
-            <span
-              v-if="
-                !$v.form.last_name_kana.maxLength &&
-                $v.form.last_name_kana.$dirty
-              "
+            <div
+              v-for="(message, index) in getMessages(['last_name_kana'])"
+              :key="index"
               class="text-indigo-500"
             >
-              {{ messages.last_name_kana.maxLength }}
-            </span>
+              {{ message }}
+            </div>
           </div>
         </div>
       </div>
@@ -108,4 +110,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.c-input {
+  appearance: none;
+}
+</style>
