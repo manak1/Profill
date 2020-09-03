@@ -1,5 +1,5 @@
 <template>
-  <section v-if="types" class="container py-8 px-4 mx-auto">
+  <section v-if="types" class="container mt-8 py-8 px-4 mx-auto">
     <div class="flex flex-wrap justify-center">
       <div v-for="type in types" :key="type.type_id" class="max-w-sm pb-8 px-2">
         <CardBody

@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full bg-white mb-8 l-header">
+  <header class="w-full bg-white l-header">
     <nav class="flex items-center justify-between flex-wrap p-5 lg:p-6">
       <nuxt-link class="inline-block" to="/">
         <h1 class="text-white">
