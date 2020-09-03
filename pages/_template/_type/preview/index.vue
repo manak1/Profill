@@ -22,23 +22,10 @@
           />
         </div>
         <div class="mt-8 lg:mt-12 mx-auto w-full lg:w-1/3">
-          <p class="font-bold">
-            画像の透明度
+          <p class="font-bold mb-8">
+            画像の明るさ
           </p>
-          <toggle-button
-            v-model="imgOpacity"
-            :color="{ checked: '#d4d4d4', unchecked: '#9c9c9c' }"
-            :labels="{ checked: 'white', unchecked: 'black' }"
-            :width="80"
-            :height="32"
-            :font-size="15"
-            @change="setImageOpacity"
-          />
-          <!--          <object-image-opacity-->
-          <!--            type="swatches"-->
-          <!--            class="mt-4"-->
-          <!--            @setOpacity="setImageOpacity"-->
-          <!--          />-->
+          <ObjectToggle @setOpacity="setImageOpacity" />
         </div>
       </div>
       <div class="mt-12 lg:mt-16">
@@ -66,8 +53,10 @@
 <script>
 import { colorMapper } from "@/store/color"
 import { imageMapper } from "@/store/image"
+import ObjectColorPicker from "@/components/object/ObjectColorPicker"
 
 export default {
+  components: { ObjectColorPicker },
   data() {
     return {
       componentData: null,
@@ -105,8 +94,8 @@ export default {
       this.colorList.object_color = color
       this.SET_COLORS(this.colorList)
     },
-    setImageOpacity() {
-      if (this.imgOpacity === true) {
+    setImageOpacity(isDark) {
+      if (isDark) {
         this.SET_OPACITY({ opacity: "#d4d4d4" })
       } else {
         this.SET_OPACITY({ opacity: "#9c9c9c" })
