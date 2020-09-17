@@ -21,24 +21,19 @@ export default {
     htmlAttrs: {
       lang: "ja",
     },
-    title: process.env.npm_package_name || "",
+    title: "Profill | バーチャル名刺を作成しよう",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "",
+        content: "WEB上で簡単にバーチャル名刺を作成できるサービス",
       },
       {
         hid: "og:site_name",
         property: "og:site_name",
         content: "Profill | バーチャル名刺を作成しよう",
-      },
-      {
-        hid: "description",
-        name: "description",
-        content: "WEB上で簡単にバーチャル名刺を作成できるサービス",
       },
       { hid: "og:type", property: "og:type", content: "website" },
       {
