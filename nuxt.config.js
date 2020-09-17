@@ -30,6 +30,31 @@ export default {
         name: "description",
         content: process.env.npm_package_description || "",
       },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Profill",
+      },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://profille.netlify.app/",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Profill",
+      },
+      {
+        hid: "og:description",
+        property: "og;description",
+        content: "WEB上で簡単にバーチャル名刺を作成できるアプリ",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/images/ogp/ogp.png",
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
