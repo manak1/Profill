@@ -35,6 +35,7 @@ export default {
         property: "og:site_name",
         content: "Profill",
       },
+      { hid: "og:type", property: "og:type", content: "website" },
       {
         hid: "og:url",
         property: "og:url",
@@ -47,7 +48,7 @@ export default {
       },
       {
         hid: "og:description",
-        property: "og;description",
+        property: "og:description",
         content: "WEB上で簡単にバーチャル名刺を作成できるアプリ",
       },
       {
