@@ -33,7 +33,12 @@ export default {
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "Profill",
+        content: "Profill | バーチャル名刺を作成しよう",
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "WEB上で簡単にバーチャル名刺を作成できるサービス",
       },
       { hid: "og:type", property: "og:type", content: "website" },
       {
@@ -44,12 +49,12 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "Profill",
+        content: "Profill | バーチャル名刺を作成しよう",
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: "WEB上で簡単にバーチャル名刺を作成できるアプリ",
+        content: "WEB上で簡単にバーチャル名刺を作成できるサービス",
       },
       {
         hid: "og:image",
