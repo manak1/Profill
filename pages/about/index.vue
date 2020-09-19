@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-12 container mx-auto">
+  <div class="pt-12 container mx-auto px-4">
     <h2 class="text-2xl">
       使い方ページ
     </h2>
