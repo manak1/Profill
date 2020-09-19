@@ -12,7 +12,7 @@
         :class="activeIconClass"
       />
     </a>
-    <div v-if="show" class="text-sm c-accordion__body" :class="activeBodyClass">
+    <div v-if="show" class="text-xs c-accordion__body" :class="activeBodyClass">
       <p class="py-2 px-8">
         {{ text }}
       </p>
