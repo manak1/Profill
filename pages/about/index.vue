@@ -1,55 +1,56 @@
 <template>
-  <section class="container mx-auto">
-    <FormBody>
-      <template #body>
-        <div class="pt-12 container mx-auto">
-          <h2 class="text-4xl font-bold">
-            Profillの使い方
-          </h2>
-          <p class="my-2">
-            Profill（プロフィル）は、オンライン会議などで使える背景型バーチャル名刺を、ブラウザ上で作れる無料サービスです。
-          </p>
-          <div class="my-12">
-            <h3 class="mb-2 text-xl font-bold">
-              基本的な使い方
-            </h3>
-            <ul>
-              <li v-for="(instruction, index) in instructions" :key="index">
-                <ObjectAccordion
-                  :text="instruction.text"
-                  :title="instruction.title"
-                />
-              </li>
-            </ul>
-          </div>
-          <div class="my-12">
-            <h3 class="text-xl font-bold">
-              推奨環境
-            </h3>
-            <p class="my-2">
-              パソコン、スマートフォンどちらでも利用可能です。
-              オフライン機能など、すべての機能を快適にご使用いただく場合は、下記の環境を推奨いたします。
-            </p>
-            <div class="my-5">
-              Windows <br />OS: Windows10、ブラウザ: GoogleChrome <br />
-              Mac <br />OS: High Sierra、ブラウザ: GoogleChrome <br />
-              Androidスマートフォン <br />OS: 8.0.0以降、ブラウザ: GoogleChrome
-              <br />
-              iPhone <br />OS: 11.3以降、ブラウザ: Safari
-            </div>
-            <p class="mt-12">
-              ※ サポートが終了しているOS・ブラウザ（例:WindowsXP、Internet
-              Explorer10以下など）ではサービスが正常に動作しない可能性があります。
-            </p>
-            <p class="mt-6 mb-40">
-              ※ サポートが終了しているOS・ブラウザ（例:WindowsXP、Internet
-              Explorer10以下など）ではサービスが正常に動作しない可能性があります。
-            </p>
-          </div>
-        </div>
-      </template>
-    </FormBody>
-  </section>
+  <div class="pt-12 container mx-auto">
+    <h2 class="text-4xl font-bold">
+      Profillの使い方
+    </h2>
+    <p class="my-2">
+      Profill（プロフィル）は、オンライン会議などで使える背景型バーチャル名刺を、ブラウザ上で作れる無料サービスです。
+    </p>
+    <div class="my-12">
+      <h3 class="mb-2 text-xl font-bold">
+        基本的な使い方
+      </h3>
+      <ul>
+        <li
+          v-for="(instruction, index) in instructions"
+          :key="index"
+          class="c-accordion"
+        >
+          <ObjectAccordion
+            :text="instruction.text"
+            :title="instruction.title"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="my-12">
+      <h3 class="text-xl font-bold">
+        推奨環境
+      </h3>
+      <p class="my-2">
+        パソコン、スマートフォンどちらでも利用可能です。
+        オフライン機能など、すべての機能を快適にご使用いただく場合は、下記の環境を推奨いたします。
+      </p>
+      <div class="my-5">
+        <div>Windows</div>
+        <div>OS: Windows10、ブラウザ: GoogleChrome</div>
+        <div>Mac</div>
+        <div>OS: High Sierra、ブラウザ: GoogleChrome</div>
+        <div>Androidスマートフォン</div>
+        <div>OS: 8.0.0以降、ブラウザ: GoogleChrome</div>
+        <div>iPhone</div>
+        <div>OS: 11.3以降、ブラウザ: Safari</div>
+      </div>
+      <p class="mt-12">
+        ※ サポートが終了しているOS・ブラウザ（例:WindowsXP、Internet
+        Explorer10以下など）ではサービスが正常に動作しない可能性があります。
+      </p>
+      <p class="mt-6 mb-40">
+        ※ サポートが終了しているOS・ブラウザ（例:WindowsXP、Internet
+        Explorer10以下など）ではサービスが正常に動作しない可能性があります。
+      </p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -94,7 +95,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li {
+li.c-accordion {
   border: solid #ccc 1px;
   border-bottom: solid #fff 1px;
   &:last-child {
