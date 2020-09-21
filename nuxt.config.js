@@ -85,7 +85,14 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/dotenv", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/axios", "@nuxtjs/markdownit"],
+
+  markdownit: {
+    preset: "default",
+    linkify: true,
+    breaks: true,
+    use: ["markdown-it-div", "markdown-it-attrs"],
+  },
 
   generate: {
     fallback: true,

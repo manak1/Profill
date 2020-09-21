@@ -20,8 +20,11 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "@nuxtjs/axios": "^5.12.1",
+    "@nuxtjs/markdownit": "^1.2.10",
     "body-scroll-lock": "^3.0.3",
     "fibers": "^5.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-div": "^1.1.0",
     "nuxt": "^2.13.0",
     "qrcode.vue": "^1.7.0",
     "sass": "^1.26.10",
