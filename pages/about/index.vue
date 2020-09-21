@@ -14,7 +14,7 @@
         <li
           v-for="(instruction, index) in instructions"
           :key="index"
-          class="c-accordion"
+          class="p-accordion__listItem"
         >
           <ObjectAccordion
             :text="instruction.text"
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li.c-accordion {
+.p-accordion__listItem {
   border: solid #ccc 1px;
   border-bottom: solid #fff 1px;
   &:last-child {
