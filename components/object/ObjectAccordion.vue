@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full c-accordion border">
+  <div class="w-full c-accordion">
     <a
       href="#"
       class="flex justify-between c-accordion__container px-5 py-2"
@@ -55,7 +55,6 @@ export default {
 
 <style lang="scss" scoped>
 .c-accordion {
-  border-color: #ccc;
   color: #474747;
   &__container {
     background-color: #ccc;
@@ -67,12 +66,10 @@ export default {
   }
   &__icon {
     transition: 0.1s ease-in;
-    transform: rotate(-90deg);
   }
-
   &__iconActive {
     transition: 0.3s ease-out;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 </style>
