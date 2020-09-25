@@ -1,8 +1,14 @@
 <template>
   <div class="shadow-lg relative">
+    <div
+      v-if="ImageMaskSrc"
+      :style="ImageSrc"
+      class="c-bgimg w-full h-full absolute"
+    >
+      <img :src="ImageMaskSrc" class="block w-full h-full opacity-50" />
+    </div>
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
-
       <div class="w-2/5 px-8 py-6" :style="ApplyColor">
         <div class="z-40 absolute" style="top: 0; left: 5%;">
           <h2 class="text-xxs sm:text-xl sm:mt-3 lg:text-4xl font-bold lg:mt-4">
@@ -119,6 +125,7 @@
 <script>
 import { formMapper } from "@/store/form"
 import { colorMapper } from "@/store/color"
+import { imageMapper } from "@/store/image"
 
 export default {
   components: {
@@ -143,10 +150,23 @@ export default {
   computed: {
     ...colorMapper.mapGetters(["color"]),
     ...formMapper.mapGetters(["result"]),
+    ...imageMapper.mapGetters(["image"]),
     ApplyColor() {
       return {
         color: this.color.text_color,
       }
+    },
+    ImageSrc() {
+      if (this.image.url) {
+        return {
+          "background-color": this.image.opacity,
+          "z-index": -1,
+        }
+      }
+      return {}
+    },
+    ImageMaskSrc() {
+      return this.image.url
     },
   },
 }
