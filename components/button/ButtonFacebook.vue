@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      url: "https://profill.ga",
+      url: "https://profill-app.net/",
     }
   },
 }

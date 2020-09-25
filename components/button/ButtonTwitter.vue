@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://twitter.com/intent/tweet?text=Profillで名刺を作ったよ!オンライン会議の背景に設定して使ってみてね！&hashtags=profill,バーチャル名刺&url=https://profill.ga"
+    href="https://twitter.com/intent/tweet?text=Profillで名刺を作ったよ!オンライン会議の背景に設定して使ってみてね！&hashtags=profill,バーチャル名刺&url=https://profill-app.net/"
     class="py-2 pl-6 relative text-white text-center rounded-md c-button__twitter"
   >
     ツイート
