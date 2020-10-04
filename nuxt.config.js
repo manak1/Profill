@@ -39,7 +39,7 @@ export default {
       {
         hid: "og:url",
         property: "og:url",
-        content: "https://profille.netlify.app/",
+        content: "https://profill-app.net/",
       },
       {
         hid: "og:title",
@@ -54,8 +54,13 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/images/ogp/ogp.png",
+        content: "https://profill-app.net/images/ogp/ogp.png",
       },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      { property: "fb:app_id", content: "FacebookURL" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
