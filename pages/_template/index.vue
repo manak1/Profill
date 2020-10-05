@@ -22,7 +22,7 @@
       </div>
       <div v-if="isTypeOdd" class="w-full max-w-sm"></div>
     </div>
-    <div class="text-center lg:w-10/12">
+    <div class="text-center">
       <nuxt-link
         to="/"
         class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"

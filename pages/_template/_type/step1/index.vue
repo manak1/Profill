@@ -4,28 +4,17 @@
       <template v-slot:body>
         <FormProfile v-model="form" @input="inputForm" />
         <div class="text-center mb-20 ml-32">
-          <nuxt-link
-            :to="`/${template}/${type}/step2`"
-            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
-            :is-valid="form.isValid"
-          >
-            次へ
-          </nuxt-link>
+          <ButtonLink :link="`/${template}/${type}/step2`" :text="`次へ`" />
         </div>
-        <div class="text-center mb-20">
-          <nuxt-link
-            :to="`/${template}/${type}/preview`"
-            class="inline-block bg-white w-10/12 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded"
-          >
-            プレビュー
-          </nuxt-link>
+        <div class="text-center mb-4">
+          <ButtonPreview :link="`/${template}/${type}/preview`" />
         </div>
-        <div>
+        <div class="text-center">
           <nuxt-link
             :to="`/${template}`"
-            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
+            class="inline-block bg-white w-10/12 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded"
           >
-            デザイン選択へ
+            デザイン選択へ戻る
           </nuxt-link>
         </div>
       </template>
@@ -35,7 +24,10 @@
 
 <script>
 import { formMapper } from "@/store/form"
+import ButtonPreview from "@/components/button/ButtonPreview"
+import ButtonLink from "@/components/button/ButtonLink"
 export default {
+  components: { ButtonLink, ButtonPreview },
   data() {
     return {
       form: null,
