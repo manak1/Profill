@@ -6,12 +6,7 @@
           <card-template :type="type" :template="template" />
         </div>
       </div>
-      <nuxt-link
-        :to="`/${template}/${type}/step3`"
-        class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
-      >
-        戻る
-      </nuxt-link>
+      <ButtonLink :link="`/${template}/${type}/step3`" :text="`戻る`" />
       <div class="text-center mt-24">
         <a
           class="inline-flex items-center justify-center w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
