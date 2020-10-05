@@ -4,7 +4,7 @@
       <h2 class="text-center text-gray-600 text-2xl font-bold mb-8">
         製作者
       </h2>
-      <div v-if="data" class="w-full lg:w-1/2 mx-auto">
+      <div v-if="data" class="w-full max-w-sm mx-auto mb-8">
         <div
           v-for="item in data"
           :key="item.index"
@@ -67,6 +67,19 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center">
+        <a
+          href="https://forms.gle/KXxn9Wu1aoFGy9Gv5"
+          target="_blank"
+          class="text-center text-gray-600"
+        >
+          お問い合わせ
+        </a>
+        /
+        <a href="#" class="text-center text-gray-600">
+          利用規約
+        </a>
       </div>
     </div>
   </footer>

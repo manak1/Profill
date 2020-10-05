@@ -10,6 +10,12 @@
           />
         </h1>
       </nuxt-link>
+      <nuxt-link
+        class="bg-transparent text-blue-700 hover:opacity-75 py-2 px-4 border border-blue-500 rounded"
+        to="/about"
+      >
+        使い方
+      </nuxt-link>
     </nav>
   </header>
 </template>

@@ -12,7 +12,7 @@
             次へ
           </nuxt-link>
         </div>
-        <div class="text-center mb-20">
+        <div class="text-center mb-4">
           <nuxt-link
             :to="`/${template}/${type}/preview`"
             class="inline-block bg-white w-10/12 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded"
@@ -20,12 +20,12 @@
             プレビュー
           </nuxt-link>
         </div>
-        <div>
+        <div class="text-center">
           <nuxt-link
             :to="`/${template}`"
-            class="hover:text-blue-700 text-blue-500 font-bold py-2 px-4 rounded"
+            class="inline-block bg-white w-10/12 hover:bg-gray-100 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded"
           >
-            デザイン選択へ
+            デザイン選択へ戻る
           </nuxt-link>
         </div>
       </template>
