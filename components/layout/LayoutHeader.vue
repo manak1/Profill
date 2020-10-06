@@ -5,7 +5,7 @@
         <h1 class="text-white">
           <img
             src="@/assets/images/header/Rogo.svg"
-            class="h-6 lg:h-8"
+            class="h-8"
             alt="Profillロゴ"
           />
         </h1>
