@@ -2,18 +2,18 @@
   <div class="w-full c-accordion">
     <a
       href="#"
-      class="flex justify-between c-accordion__container px-5 py-2"
+      class="flex justify-between bg-white c-accordion__container px-5 py-2"
       @click.prevent="toggle"
     >
-      <p class="text-sm">{{ title }}</p>
+      <p class="text-sm font-bold text-gray-700">{{ title }}</p>
       <img
         src="@/assets/images/other/chevrondown-icon.svg"
         alt="下向きのシェブロン"
         :class="activeIconClass"
       />
     </a>
-    <div v-if="show" class="text-xs c-accordion__body" :class="activeBodyClass">
-      <p class="py-2 px-8">
+    <div v-if="show" class="text-xs c-accordion__body">
+      <p class="py-2 px-8 text-gray-700">
         {{ text }}
       </p>
     </div>
@@ -57,10 +57,9 @@ export default {
 .c-accordion {
   color: #474747;
   &__container {
-    background-color: #ccc;
     transition: 0.3s;
     &:hover {
-      background-color: #b7b7b7;
+      opacity: 0.7;
       transition: 0.3s;
     }
   }

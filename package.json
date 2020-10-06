@@ -7,6 +7,7 @@
     "doc": "run-p doc:*",
     "doc:template": "json-refs resolve -w documents/data/templates.yml > static/data/templates.json",
     "doc:profiles": "json-refs resolve -w documents/data/profiles.yml > static/data/profiles.json",
+    "doc:usage": "json-refs resolve -w documents/data/usage.yml > static/data/usage.json",
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
