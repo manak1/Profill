@@ -14,7 +14,7 @@
             <p>
               <img
                 :src="item.avatar"
-                style="width: 40px; height: 40px;"
+                style="width: 40px; height: 40px; border-radius: 50%;"
                 :alt="item.name"
               />
             </p>
