@@ -4,7 +4,7 @@
     ref="cardDesign1"
     class="absolute c-design w-full h-full overflow-hidden"
   >
-    <div class="flex absolute" style="bottom: 0; z-index: -1;">
+    <div class="flex absolute" style="bottom: 0;">
       <div
         v-for="n in 10"
         :key="n"

@@ -14,7 +14,6 @@ export default {}
   top: 0;
 }
 .c-type2 {
-  z-index: -10;
   background-image: url("~assets/images/templates/template3/bgObject2.png");
   background-size: contain;
   background-repeat: no-repeat;

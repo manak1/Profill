@@ -35,7 +35,6 @@ export default {
 /* レスポンシブを考えると%指定が望ましい */
 .c-design {
   top: 0;
-  z-index: -1;
 }
 
 .c-square2 {

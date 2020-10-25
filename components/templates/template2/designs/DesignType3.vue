@@ -29,7 +29,6 @@ export default {
 <style scoped>
 /* レスポンシブを考えると%指定が望ましい */
 .c-design {
-  z-index: -1;
   bottom: 0;
 }
 .c-border1 {

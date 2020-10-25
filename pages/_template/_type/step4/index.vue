@@ -3,7 +3,7 @@
     <template v-slot:body>
       <div class="mx-auto mb-4 px-6 py-4">
         <div ref="printMe">
-          <card-template :type="type" :template="template" />
+          <card-template :template="template" :type="type" />
         </div>
       </div>
       <div class="text-center mt-16">
@@ -26,19 +26,16 @@
 import { formMapper } from "@/store/form"
 
 export default {
-  asyncData({ params }) {
-    const { templates } = require("@/static/data/templates.json")
-    const template = templates.find((item) => item.name === params.template)
-    const type = template.types.find((item) => item.name === params.type)
-    const componentData = `${template.name}${type.name}`
-    return {
-      componentData,
-    }
-  },
   data() {
     return {
       componentData: null,
     }
+  },
+  mounted() {
+    const { templates } = require("@/static/data/templates.json")
+    const template = templates.find((item) => item.name === this.template)
+    const type = template.types.find((item) => item.name === this.type)
+    this.componentData = `${template.name}${type.name}`
   },
   computed: {
     ...formMapper.mapGetters(["result"]),

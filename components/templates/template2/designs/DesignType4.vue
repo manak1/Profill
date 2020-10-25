@@ -54,7 +54,6 @@ export default {
 /* レスポンシブを考えると%指定が望ましい */
 .c-design {
   bottom: 0;
-  z-index: -1;
 }
 .c-triangle {
   width: 0;

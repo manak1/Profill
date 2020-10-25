@@ -165,7 +165,6 @@ export default {
       if (this.image.url) {
         return {
           "background-color": this.image.opacity,
-          "z-index": -1,
         }
       }
       return {}

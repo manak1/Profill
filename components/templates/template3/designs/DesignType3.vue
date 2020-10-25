@@ -14,7 +14,6 @@ export default {}
   top: 0;
 }
 .c-type3 {
-  z-index: -10;
   left: -6%;
   background-image: url("~assets/images/templates/template3/bgObject3.png");
   background-size: contain;
