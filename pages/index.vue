@@ -1,10 +1,6 @@
 <template>
   <div>
     <hero-section />
-    <div class="container mx-auto flex justify-center space-x-4">
-      <button-twitter />
-      <button-facebook />
-    </div>
     <template-section :cards="cards" />
     <LayoutFooter />
   </div>

@@ -1,11 +1,6 @@
 <template>
   <div class="container text-center mx-auto mt-20">
     <img
-      class="object-cover w-full h-full"
-      src="@/assets/images/error/bgObject.svg"
-      alt="404の枠"
-    />
-    <img
       class="absolute object-cover transform -translate-x-1/2 left-1/2 w-1/5 h-1/5 c-404_img"
       src="@/assets/images/error/404.svg"
       alt="404"

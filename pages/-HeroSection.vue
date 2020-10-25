@@ -1,13 +1,28 @@
 <template>
   <div class="p-hero bg-indigo-100 mb-12">
-    <section class="container py-8 mx-auto">
-      <div class="p-hero__position p-hero__image"></div>
-      <div class="p-hero__textBox pl-4">
-        <h2 class="p-hero__text text-gray-700">
-          <span class="p-hero__text--emphasize">P</span>rofill
-        </h2>
-        <p class="p-hero__text--sm text-gray-700">
-          WEB上で簡単にバーチャル名刺を作成しよう!
+    <section class="container py-8 px-4 mx-auto">
+      <div class="lg:flex lg:justify-center mt-8 lg:mt-0 lg:py-32">
+        <div class="p-hero__textBox text-center mb-16 lg:text-left lg:mb-0">
+          <h2 class="p-hero__text mb-4 text-2xl lg:text-3xl text-gray-700">
+            バーチャル名刺を作成しよう!
+          </h2>
+          <p class="text-gray-700 mb-6">
+            Profill(プロフィル)はWEB上で簡単にバーチャル背景で使える名刺を作成できるアプリです。
+          </p>
+          <div
+            class="container mx-auto flex justify-center lg:justify-start space-x-4"
+          >
+            <button-twitter />
+            <button-facebook />
+          </div>
+        </div>
+        <p class="flex justify-center lg:justify-start lg:pl-4">
+          <img
+            src="~assets/images/hero/hero.svg"
+            width="420"
+            height="336"
+            alt="Profill"
+          />
         </p>
       </div>
     </section>
@@ -20,66 +35,13 @@ export default {}
 
 <style lang="scss" scoped>
 .p-hero {
-  position: relative;
-  z-index: 0;
-  &__image {
-    position: relative;
-    &::before {
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      border-radius: inherit;
-      pointer-events: none;
-      background-size: cover;
-      z-index: -1;
-      background-position: 50%;
-    }
-  }
-  &__position {
-    background: rgba(0, 0, 0, 0);
-    flex: none;
-    height: 584px;
-    width: 1000px;
-    max-width: 100%;
-    z-index: -2;
-    &::before {
-      content: "";
-      background-image: url("~assets/images/hero/hero.svg");
-    }
-  }
-  &__textBox {
-    position: absolute;
-    top: 60px;
-  }
   &__text {
-    top: 0;
-    flex: none;
-    font-size: 88px;
-    height: auto;
-    line-height: 1.2;
-    text-align: left;
-    max-width: 100%;
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    word-break: break-word;
-    z-index: 0;
-    &--emphasize {
-      color: #9095ff;
-      opacity: 0.7;
-      background: -webkit-linear-gradient(90deg, #9095ff, #1382de 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    &--sm {
-      font-size: 16px;
-      font-weight: bold;
-    }
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .p-hero__textBox {
+    width: calc(100% - 500px);
   }
 }
 </style>
