@@ -133,15 +133,6 @@ templates:
         custom: true
 
       -
-        type_id: 3
-        title: ミズタマ
-        text: loremlorem
-        name: type3
-        image: /templates/template4/types/type3.png
-        custom: false
-
-
-      -
         type_id: 4
         title: アワ
         text: loremlorem

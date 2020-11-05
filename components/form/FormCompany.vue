@@ -90,7 +90,7 @@
           @input="input"
         />
         <div
-          v-for="(message, index) in getMessages(['post_code'])"
+          v-for="(message, index) in getMessages(['zip'])"
           :key="index"
           class="text-indigo-500"
         >

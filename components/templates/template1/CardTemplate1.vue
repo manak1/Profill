@@ -173,5 +173,6 @@ export default {
   position: absolute;
   left: 5%;
   bottom: 15%;
+  z-index: 100;
 }
 </style>

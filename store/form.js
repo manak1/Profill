@@ -4,30 +4,30 @@ export const formMapper = createNamespacedHelpers("form")
 
 export const profile = () => {
   return {
-    first_name: "",
-    last_name: "",
-    first_name_kana: "",
-    last_name_kana: "",
+    first_name: "aaaa",
+    last_name: "aaa",
+    first_name_kana: "aaaa",
+    last_name_kana: "aaaa",
   }
 }
 
 export const sns = () => {
   return {
-    instagram: "",
-    twitter: "",
-    facebook: "",
+    instagram: "aaa",
+    twitter: "aa",
+    facebook: "aaa",
   }
 }
 
 export const company = () => {
   return {
-    organization: "",
-    department: "",
-    post_code: "",
-    zip: "",
-    mail: "",
-    tel: "",
-    weblink: "",
+    organization: "aaaaa",
+    department: "aaaaa",
+    post_code: "012-3456",
+    zip: "aaaaa",
+    mail: "tame@gmail.com",
+    tel: "050-5555-5555",
+    weblink: "https://ionicframework.com/docs/api/item",
   }
 }
 
