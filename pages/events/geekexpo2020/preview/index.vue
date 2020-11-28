@@ -1,6 +1,6 @@
 <template>
   <div>
-    hoge
+    hogehoge
   </div>
 </template>
 
