@@ -3,7 +3,7 @@
     <template v-slot:body>
       <div class="mx-auto mb-4 px-6 py-4">
         <div ref="printMe">
-          <event-card-template />
+          <EventCardTemplate />
         </div>
       </div>
       <div class="text-center mt-16">
