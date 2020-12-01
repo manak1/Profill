@@ -12,7 +12,7 @@ export default {}
   top: 0;
 }
 .c-type4 {
-  background-image: url("~assets/images/templates/event/bgGeekExpo2020.png");
+  background-image: url("~assets/images/templates/event/bgGeekexpo2020.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 100%;
