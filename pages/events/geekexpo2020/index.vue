@@ -13,7 +13,7 @@
               :to="`/events/geekexpo2020/step1`"
               class="inline-block w-full bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
             >
-              入力を始める1
+              入力を始める
             </nuxt-link>
           </div>
         </template>
