@@ -8,7 +8,7 @@
       </div>
       <div class="text-center mt-16">
         <a
-          class="inline-flex items-center justify-center w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
+          class="inline-flex items-center justify-center cursor-pointer w-1/2 bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-4 border rounded"
           @click.prevent="print"
         >
           <i class="c-icon__download inline-block" />
