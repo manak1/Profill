@@ -4,23 +4,21 @@
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <div class="text-right mb-8">
           <select
-            class="border border-gray-300 rounded-md text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+            class="border border-gray-300 rounded-md text-gray-700 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
           >
-            <option>Q.好きなラーメン屋は?</option>
-            <option>Red</option>
-            <option>Blue</option>
-            <option>Yellow</option>
-            <option>Black</option>
-            <option>Orange</option>
-            <option>Purple</option>
-            <option>Gray</option>
-            <option>White</option>
+            <option
+              v-for="(selection, index) in selections"
+              :key="index"
+              :value="selection.text"
+            >
+              {{ selection.text }}
+            </option>
           </select>
         </div>
         <div class="mb-3">
           <textarea
             id="hitokoto"
-            placeholder="A.ラーメン二郎しか勝たん"
+            placeholder="ラーメン二郎しか勝たん!!"
             class="autoexpand tracking-wide py-2 px-4 leading-relaxed appearance-none block w-full bg-white border border-gray-400 rounded-md hover:border-gray-400 focus:outline-none"
           />
         </div>
@@ -30,7 +28,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      form: {
+        selected: "",
+        comment: "",
+      },
+      selections: [
+        { text: "好きなラーメン店は?", isQuestion: true },
+        { text: "推し言語(フレームワーク等)は?", isQuestion: true },
+        { text: "今日の意気込みをどうぞ!", isQuestion: false },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped></style>

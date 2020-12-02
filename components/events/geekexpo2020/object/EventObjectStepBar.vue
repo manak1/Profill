@@ -111,7 +111,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 26px;
-  background-image: url("~assets/images/stepnav/icon-profile.svg");
+  background-image: url("~assets/images/events/geekexpo2020/stepnav/icon-profile.svg");
 }
 .c-icon__link::before {
   content: "";
@@ -120,7 +120,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/stepnav/icon-sns.svg");
+  background-image: url("~assets/images/events/geekexpo2020/stepnav/icon-sns.svg");
 }
 
 .c-icon__comment::before {
@@ -130,7 +130,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/stepnav/icon-company.svg");
+  background-image: url("~assets/images/events/geekexpo2020/stepnav/icon-hitokoto.svg");
 }
 
 .c-icon__download::before {
@@ -140,7 +140,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("~assets/images/stepnav/icon-finished.svg");
+  background-image: url("~assets/images/events/geekexpo2020/stepnav/icon-finished.svg");
 }
 .bar {
   width: 100%;
