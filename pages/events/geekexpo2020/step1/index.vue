@@ -1,7 +1,7 @@
 <template>
   <EventPagesBody :title="`プロフィール`">
     <template v-slot:body>
-      <EventFormProfile />
+      <EventFormProfile v-model="form" @input="inputForm" />
       <div class="text-center mb-20 ml-32">
         <ButtonLink :link="`/events/geekexpo2020/step2`" :text="`次へ`" />
       </div>
@@ -21,7 +21,26 @@
 </template>
 
 <script>
-export default {}
+import { geekexpoMapper } from "@/store/events/geekexpo2020/form"
+export default {
+  data() {
+    return {
+      form: {},
+    }
+  },
+  computed: {
+    ...geekexpoMapper.mapState(["step1"]),
+  },
+  mounted() {
+    this.form = { ...this.step1 }
+  },
+  methods: {
+    ...geekexpoMapper.mapMutations(["SET_PROFILE"]),
+    inputForm() {
+      this.SET_PROFILE(this.form)
+    },
+  },
+}
 </script>
 
 <style scoped></style>
