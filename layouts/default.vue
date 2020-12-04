@@ -2,7 +2,7 @@
   <div class="w-full">
     <ObjectLoader v-if="loading" />
     <BannerGeekexpo2020 v-if="isRoot && banner" @close="closeBanner" />
-    <LayoutHeader class="banner-height" />
+    <LayoutHeader :class="applyBannerHeight" />
     <div class="hidden lg:block" :class="applyFixedHeightPc" />
     <div class="lg:hidden" :class="applyFixedHeightSp" />
     <Nuxt />
@@ -42,6 +42,12 @@ export default {
       return {
         "header-height-sp": !this.banner,
         "header-banner-height-sp": this.banner,
+      }
+    },
+
+    applyBannerHeight() {
+      return {
+        "banner-height": this.banner,
       }
     },
   },
