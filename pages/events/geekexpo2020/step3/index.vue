@@ -1,7 +1,7 @@
 <template>
   <EventPagesBody :title="'ヒトコト'">
     <template v-slot:body>
-      <EventFormContent />
+      <EventFormContent v-model="form" @input="inputForm" />
       <div class="text-center mb-20">
         <ButtonLink :link="`/events/geekexpo2020/step2`" :text="`戻る`" />
         <ButtonLink :link="`/events/geekexpo2020/step4`" :text="`次へ`" />
@@ -14,7 +14,26 @@
 </template>
 
 <script>
-export default {}
+import { geekexpoMapper } from "@/store/events/geekexpo2020/form"
+export default {
+  data() {
+    return {
+      form: {},
+    }
+  },
+  computed: {
+    ...geekexpoMapper.mapState(["step3"]),
+  },
+  mounted() {
+    this.form = { ...this.step3 }
+  },
+  methods: {
+    ...geekexpoMapper.mapMutations(["SET_CONTENT"]),
+    inputForm() {
+      this.SET_CONTENT(this.form)
+    },
+  },
+}
 </script>
 
 <style scoped></style>
