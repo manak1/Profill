@@ -21,8 +21,8 @@ const sns = () => {
 
 const content = () => {
   return {
-    question: "",
-    comment: "",
+    question: { text: "好きなラーメン店は?", isQuestion: true },
+    comment: "ラーメン二郎しか勝たん!!",
   }
 }
 

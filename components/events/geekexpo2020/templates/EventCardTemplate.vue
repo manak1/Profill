@@ -21,7 +21,7 @@
             {{ result.question.text }}
           </p>
           <p
-            class="text-center mt-1 p-5 rounded-md lg:text-lg"
+            class="text-center text-gray-600 mt-1 p-5 rounded-md lg:text-lg"
             style="background-color: #eeeeee;"
           >
             {{ result.comment }}

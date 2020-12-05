@@ -44,6 +44,7 @@ export default {
     return {
       selections: [
         { text: "好きなラーメン店は?", isQuestion: true },
+        { text: "最近のマイブームは?", isQuestion: true },
         { text: "推し言語(フレームワーク等)は?", isQuestion: true },
         { text: "今日の意気込みをどうぞ!", isQuestion: false },
       ],
