@@ -1,7 +1,6 @@
 <template>
   <div class="w-full">
-    <ObjectLoader v-if="loading" />
-    <BannerGeekexpo2020 v-if="isRoot && banner" @close="closeBanner" />
+    <BannerGeekexpo2020 v-if="banner" @close="closeBanner" />
     <LayoutHeader :class="applyBannerHeight" />
     <div class="hidden lg:block" :class="applyFixedHeightPc" />
     <div class="lg:hidden" :class="applyFixedHeightSp" />
@@ -10,8 +9,6 @@
 </template>
 
 <script>
-import LoadingMapper from "@/store/loader"
-
 export default {
   data() {
     return {
@@ -27,11 +24,6 @@ export default {
     }
   },
   computed: {
-    ...LoadingMapper.mapState(["loading"]),
-    isRoot() {
-      return this.$route.path === "/"
-    },
-
     applyFixedHeightPc() {
       return {
         "header-height-pc": !this.banner,
@@ -44,7 +36,6 @@ export default {
         "header-banner-height-sp": this.banner,
       }
     },
-
     applyBannerHeight() {
       return {
         "banner-height": this.banner,
