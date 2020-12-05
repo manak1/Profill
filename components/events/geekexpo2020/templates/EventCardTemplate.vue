@@ -4,12 +4,13 @@
       <div class="aspect-ratio-16/9" />
       <div
         class="flex flex-col justify-evenly text-black color-black relative z-10 pt-3 px-5 pb-12"
+        :style="ApplyColor"
       >
-        <div class="text-black color-black">
-          <h2 class="text-black text-lg lg:text-3xl">
+        <div>
+          <h2 class="text-lg lg:text-3xl">
             {{ result.college }}
           </h2>
-          <p class="text-black text-2xl lg:text-4xl font-bold lg:mt-1">
+          <p class="text-2xl lg:text-4xl font-bold lg:mt-1">
             {{ result.last_name }} {{ result.first_name }}
           </p>
         </div>
@@ -58,6 +59,7 @@
 
 <script>
 import { geekexpoMapper } from "@/store/events/geekexpo2020/form"
+import { colorMapper } from "@/store/color"
 
 export default {
   components: {
@@ -68,6 +70,12 @@ export default {
   },
   computed: {
     ...geekexpoMapper.mapGetters(["result"]),
+    ...colorMapper.mapGetters(["color"]),
+    ApplyColor() {
+      return {
+        color: this.color.text_color,
+      }
+    },
   },
 }
 </script>

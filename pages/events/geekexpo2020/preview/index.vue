@@ -8,7 +8,11 @@
         <p class="font-bold">
           文字色
         </p>
-        <object-color-picker type="swatches" class="mt-4" />
+        <object-color-picker
+          type="swatches"
+          class="mt-4"
+          @setColor="setTextColor"
+        />
       </div>
     </div>
 
@@ -27,11 +31,30 @@
 </template>
 
 <script>
+import { colorMapper } from "@/store/color"
 import ObjectColorPicker from "@/components/object/ObjectColorPicker"
 
 export default {
   components: {
     ObjectColorPicker,
+  },
+  data() {
+    return {
+      colorList: null,
+    }
+  },
+  computed: {
+    ...colorMapper.mapGetters(["color"]),
+  },
+  mounted() {
+    this.colorList = { ...this.color }
+  },
+  methods: {
+    ...colorMapper.mapMutations(["SET_COLORS"]),
+    setTextColor(color) {
+      this.colorList.text_color = color
+      this.SET_COLORS(this.colorList)
+    },
   },
 }
 </script>
