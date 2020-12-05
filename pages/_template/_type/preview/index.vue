@@ -108,33 +108,6 @@ export default {
       this.imgUrl = window.URL.createObjectURL(i.target.files[0])
       this.SET_IMAGE({ url: this.imgUrl })
     },
-    // uploadImage(i) {
-    //   let image = i.target.files[0]
-    //   //imageがなかったら
-    //   if (!image) {
-    //     return
-    //   }
-    //   // サイズが大きすぎたら
-    //   if (image.size > 10000000) {
-    //     return
-    //   }
-    //   //jpeg,pngじゃなかったら
-    //   if (image.type !== "image/jpeg" || image.type !== "image/png") {
-    //     return
-    //   }
-    //
-    //   let reader = new FileReader()
-    //   reader.onerror = () => alert("画像の読み取りに失敗しました")
-    //   reader.onload = async () => {
-    //     const base64 = reader.result.split(",")[1]
-    //     this.$loader.on()
-    //     //ここで背景に適用できれば良い
-    //
-    //     this.$loader.off()
-    //     return base64
-    //   }
-    //   reader.readAsDataURL(image)
-    // },
   },
 }
 </script>

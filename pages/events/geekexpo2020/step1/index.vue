@@ -1,5 +1,5 @@
 <template>
-  <EventPagesBody :title="`プロフィール`">
+  <EventPagesBody v-if="form" :title="`プロフィール`">
     <template v-slot:body>
       <EventFormProfile v-model="form" @input="inputForm" />
       <div class="text-center mb-20 ml-32">
@@ -25,7 +25,7 @@ import { geekexpoMapper } from "@/store/events/geekexpo2020/form"
 export default {
   data() {
     return {
-      form: {},
+      form: null,
     }
   },
   computed: {

@@ -4,7 +4,7 @@ export const geekexpoMapper = createNamespacedHelpers(
   "events/geekexpo2020/form"
 )
 
-export const profile = () => {
+const profile = () => {
   return {
     college: "",
     first_name: "",
@@ -12,14 +12,14 @@ export const profile = () => {
   }
 }
 
-export const sns = () => {
+const sns = () => {
   return {
     twitter: "",
     github: "",
   }
 }
 
-export const content = () => {
+const content = () => {
   return {
     question: "",
     comment: "",
@@ -42,7 +42,7 @@ export const getters = {
       last_name: state.step1.last_name,
       twitter: state.step2.twitter,
       github: state.step2.github,
-      question_number: state.step3.question_number,
+      question: state.step3.question,
       comment: state.step3.comment,
     }
   },
@@ -62,12 +62,5 @@ export const mutations = {
     state.step1 = profile()
     state.step2 = sns()
     state.step3 = content()
-  },
-}
-
-export const actions = {
-  clearInput({ commit }) {
-    localStorage.clear()
-    commit("CLEAR_INPUT")
   },
 }

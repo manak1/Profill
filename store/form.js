@@ -2,7 +2,7 @@ import { createNamespacedHelpers } from "vuex"
 
 export const formMapper = createNamespacedHelpers("form")
 
-export const profile = () => {
+const profile = () => {
   return {
     first_name: "",
     last_name: "",
@@ -11,7 +11,7 @@ export const profile = () => {
   }
 }
 
-export const sns = () => {
+const sns = () => {
   return {
     instagram: "",
     twitter: "",
@@ -19,7 +19,7 @@ export const sns = () => {
   }
 }
 
-export const company = () => {
+const company = () => {
   return {
     organization: "",
     department: "",
@@ -74,12 +74,5 @@ export const mutations = {
     state.step1 = profile()
     state.step2 = sns()
     state.step3 = company()
-  },
-}
-
-export const actions = {
-  clearInput({ commit }) {
-    localStorage.clear()
-    commit("CLEAR_INPUT")
   },
 }

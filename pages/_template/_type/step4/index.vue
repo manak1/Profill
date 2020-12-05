@@ -31,12 +31,6 @@ export default {
       componentData: null,
     }
   },
-  mounted() {
-    const { templates } = require("@/static/data/templates.json")
-    const template = templates.find((item) => item.name === this.template)
-    const type = template.types.find((item) => item.name === this.type)
-    this.componentData = `${template.name}${type.name}`
-  },
   computed: {
     ...formMapper.mapGetters(["result"]),
     template() {
@@ -45,6 +39,12 @@ export default {
     type() {
       return this.$route.params.type
     },
+  },
+  mounted() {
+    const { templates } = require("@/static/data/templates.json")
+    const template = templates.find((item) => item.name === this.template)
+    const type = template.types.find((item) => item.name === this.type)
+    this.componentData = `${template.name}${type.name}`
   },
   methods: {
     ...formMapper.mapActions(["clearInput"]),
@@ -58,7 +58,6 @@ export default {
       anchor.href = imgUrl
       anchor.download = "output.png"
       anchor.click()
-      // this.clearInput()
     },
   },
 }

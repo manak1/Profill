@@ -7,21 +7,24 @@
       >
         <div class="text-black color-black">
           <h2 class="text-black text-lg lg:text-3xl">
-            関西学院大学
+            {{ result.college }}
           </h2>
           <p class="text-black text-2xl lg:text-4xl font-bold lg:mt-1">
-            近藤 千沙
+            {{ result.last_name }} {{ result.first_name }}
           </p>
         </div>
         <div class="mt-5">
           <p class="lg:text-lg">
-            <span style="color: #4299e1;">Q</span>.貴方の最近の流行は?
+            <span v-if="result.question.isQuestion" style="color: #4299e1;">
+              Q
+            </span>
+            {{ result.question.text }}
           </p>
           <p
-            class="mt-1 p-5 rounded-md lg:text-lg"
+            class="text-center mt-1 p-5 rounded-md lg:text-lg"
             style="background-color: #eeeeee;"
           >
-            ラーメン次郎しか勝たん！
+            {{ result.comment }}
           </p>
         </div>
         <div class="space-y-1 mt-5 lg:space-y-2">
@@ -31,8 +34,8 @@
               src="@/assets/images/sns/twitter-color.svg"
               alt="ツイッタ―はこちら"
             />
-            <p class="ml-2 text-sm lg:text-lg">
-              @chisakondo
+            <p class="ml-2 text-gray-600 text-sm lg:text-lg">
+              {{ result.twitter }}
             </p>
           </div>
 
@@ -42,8 +45,8 @@
               src="@/assets/images/sns/github-color.svg"
               alt="Githubはこちら"
             />
-            <p class="ml-2 text-sm lg:text-lg">
-              @chisakondo
+            <p class="ml-2 text-gray-600 text-sm lg:text-lg">
+              {{ result.github }}
             </p>
           </div>
         </div>
@@ -54,6 +57,8 @@
 </template>
 
 <script>
+import { geekexpoMapper } from "@/store/events/geekexpo2020/form"
+
 export default {
   components: {
     geekexpo2020: () =>
@@ -61,7 +66,9 @@ export default {
         `@/components/events/geekexpo2020/templates/designs/EventDesignType1`
       ),
   },
-  computed: {},
+  computed: {
+    ...geekexpoMapper.mapGetters(["result"]),
+  },
 }
 </script>
 

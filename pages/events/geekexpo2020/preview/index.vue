@@ -28,6 +28,7 @@
 
 <script>
 import ObjectColorPicker from "@/components/object/ObjectColorPicker"
+
 export default {
   components: {
     ObjectColorPicker,

@@ -39,6 +39,7 @@
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="山田"
+              @input="input"
             />
             <div
               v-for="(message, index) in getMessages(['first_name'])"
@@ -54,6 +55,7 @@
               class="appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="太郎"
+              @input="input"
             />
             <div
               v-for="(message, index) in getMessages(['last_name'])"

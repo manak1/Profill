@@ -6,12 +6,12 @@
           <select
             v-model="$v.form.question.$model"
             class="border border-gray-300 rounded-md text-gray-700 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-            @input="input"
+            @change="input"
           >
             <option
               v-for="(selection, index) in selections"
               :key="index"
-              :value="selection.text"
+              :value="selection"
             >
               {{ selection.text }}
             </option>
