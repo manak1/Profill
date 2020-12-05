@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <BannerGeekexpo2020 v-if="banner" @close="closeBanner" />
+    <BannerGeekexpo2020 v-if="isEventRoute" @close="closeBanner" />
     <LayoutHeader :class="applyBannerHeight" />
     <div class="hidden lg:block" :class="applyFixedHeightPc" />
     <div class="lg:hidden" :class="applyFixedHeightSp" />
@@ -24,6 +24,9 @@ export default {
     }
   },
   computed: {
+    isEventRoute() {
+      return this.checkRoutePath()
+    },
     applyFixedHeightPc() {
       return {
         "header-height-pc": !this.banner,
@@ -45,6 +48,14 @@ export default {
   methods: {
     closeBanner() {
       this.banner = false
+    },
+    checkRoutePath() {
+      const route = this.$route.path
+      const isEvent = /^\/events\/.*/.test(route)
+      if (isEvent) {
+        this.banner = false
+      }
+      return !isEvent && this.banner
     },
   },
 }
