@@ -36,7 +36,7 @@ export default {}
 .c-icon__delete::before {
   content: "";
   display: inline-block;
-  background-image: url("~assets/images/banner/banner-delete.svg");
+  background-image: url("~assets/images/other/delete.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
