@@ -1,7 +1,7 @@
 <template>
   <header class="w-full fixed bg-white l-header z-40">
     <nav class="flex items-center justify-between flex-wrap p-5 lg:p-6">
-      <nuxt-link class="inline-block" to="/">
+      <a class="inline-block" href="/">
         <h1 class="text-white">
           <img
             src="@/assets/images/header/Rogo.svg"
@@ -9,7 +9,7 @@
             alt="Profillロゴ"
           />
         </h1>
-      </nuxt-link>
+      </a>
       <nuxt-link
         class="bg-transparent text-blue-700 hover:opacity-75 py-2 px-4 border border-blue-500 rounded"
         to="/about"
