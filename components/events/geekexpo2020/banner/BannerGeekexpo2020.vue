@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full fixed c-banner z-50 py-2 px-5 lg:px-6">
+  <div class="w-full fixed c-banner py-2 px-5 lg:px-6">
     <div class="relative text-center">
       <nuxt-link
         to="/events/geekexpo2020"
@@ -25,6 +25,7 @@ export default {}
 <style lang="scss" scoped>
 .c-banner {
   border: 6px solid #73e889;
+  z-index: 100;
 }
 .c-banner__title {
   color: #73e889;
