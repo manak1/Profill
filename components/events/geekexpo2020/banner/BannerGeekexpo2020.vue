@@ -7,7 +7,11 @@
       >
         技育EXPO専用ページはこちら
       </nuxt-link>
-      <a class="c-button__delete" href="#" @click.prevent="$emit('close')">
+      <a
+        class="c-button__delete bg-gray-700"
+        href="#"
+        @click.prevent="$emit('close')"
+      >
         <i class="c-icon__delete" />
       </a>
     </div>
@@ -29,7 +33,6 @@ export default {}
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #7c7c7c;
   width: 27px;
   height: 27px;
 }
