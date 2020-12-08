@@ -43,10 +43,10 @@ export default {
   data() {
     return {
       selections: [
-        { text: "今日の意気込みをどうぞ!", state: "&#x1f606;" },
+        { text: "意気込みをどうぞ!", state: "&#x1f606;" },
         { text: "研究内容は?", state: "&#x1f4da;" },
-        { text: "最近のマイブームは?", state: "&#x1f440;" },
-        { text: "推し言語(フレームワーク等)は?", state: "&#x1f4bb" },
+        { text: "マイブームは?", state: "&#x1f440;" },
+        { text: "推し言語は?", state: "&#x1f4bb" },
       ],
       messages,
     }

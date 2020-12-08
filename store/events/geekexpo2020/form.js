@@ -21,7 +21,7 @@ const sns = () => {
 
 const content = () => {
   return {
-    question: { text: "今日の意気込みをどうぞ!", state: "&#x1f606;" },
+    question: { text: "意気込みをどうぞ!", state: "&#x1f606;" },
     comment: "",
   }
 }

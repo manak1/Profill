@@ -3,7 +3,7 @@
     <div class="flex flex-inline">
       <div class="aspect-ratio-16/9" />
       <div
-        class="flex flex-col justify-evenly text-black color-black relative z-10 pt-3 px-5 pb-12"
+        class="flex flex-col justify-evenly text-black color-black relative z-10 pt-3 px-5 pb-12 w-1/3"
         :style="ApplyColor"
       >
         <div>
@@ -22,7 +22,7 @@
             {{ result.question.text }}
           </p>
           <p
-            class="text-center text-gray-600 mt-1 p-5 rounded-md lg:text-lg"
+            class="c-comment flex justify-center items-center text-gray-600 mt-1 p-5 rounded-md lg:text-lg"
             style="background-color: #eeeeee;"
           >
             {{ result.comment }}
@@ -80,4 +80,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.c-comment {
+  min-height: 64px;
+}
+</style>
