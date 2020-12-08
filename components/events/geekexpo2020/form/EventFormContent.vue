@@ -21,7 +21,7 @@
           <textarea
             id="hitokoto"
             v-model="$v.form.comment.$model"
-            placeholder="ラーメン二郎しか勝たん!!"
+            placeholder="今日一日よろしくお願いします！"
             class="autoexpand tracking-wide py-2 px-4 leading-relaxed appearance-none block w-full bg-white border border-gray-400 rounded-md hover:border-gray-400 focus:outline-none"
             @input="input"
           />
@@ -43,10 +43,10 @@ export default {
   data() {
     return {
       selections: [
-        { text: "好きなラーメン店は?", isQuestion: true },
-        { text: "最近のマイブームは?", isQuestion: true },
-        { text: "推し言語(フレームワーク等)は?", isQuestion: true },
-        { text: "今日の意気込みをどうぞ!", isQuestion: false },
+        { text: "今日の意気込みをどうぞ!", state: "&#x1f606;" },
+        { text: "研究内容は?", state: "&#x1f4da;" },
+        { text: "最近のマイブームは?", state: "&#x1f440;" },
+        { text: "推し言語(フレームワーク等)は?", state: "&#x1f4bb" },
       ],
       messages,
     }

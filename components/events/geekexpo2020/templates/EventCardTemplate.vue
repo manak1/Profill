@@ -11,14 +11,14 @@
             {{ result.college }}
           </h2>
           <p class="text-2xl lg:text-4xl font-bold lg:mt-1">
-            {{ result.last_name }} {{ result.first_name }}
+            {{ result.first_name }} {{ result.last_name }}
           </p>
         </div>
         <div class="mt-5">
           <p class="lg:text-lg">
-            <span v-if="result.question.isQuestion" style="color: #4299e1;">
-              Q
-            </span>
+            <client-only>
+              <span v-html="result.question.state" />
+            </client-only>
             {{ result.question.text }}
           </p>
           <p

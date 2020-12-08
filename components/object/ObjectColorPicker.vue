@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="type">
     <slider-picker v-if="type === 'slide'" v-model="colors" @input="setColor" />
     <compact-picker
       v-if="type === 'swatches'"
