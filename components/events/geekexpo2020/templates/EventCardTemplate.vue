@@ -22,8 +22,7 @@
             {{ result.question.text }}
           </p>
           <p
-            class="c-comment flex justify-center items-center text-gray-600 mt-1 p-5 rounded-md lg:text-lg"
-            style="background-color: #eeeeee;"
+            class="c-comment flex justify-center items-center text-gray-600 bg-gray-400 mt-1 p-5 rounded-md lg:text-lg"
           >
             {{ result.comment }}
           </p>
