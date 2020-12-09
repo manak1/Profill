@@ -3,19 +3,21 @@
     <template v-slot:body>
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <div class="text-right mb-8">
-          <select
-            v-model="$v.form.question.$model"
-            class="border border-gray-300 rounded-md text-gray-700 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-            @change="input"
-          >
-            <option
-              v-for="(selection, index) in selections"
-              :key="index"
-              :value="selection"
+          <div class="c-form__select">
+            <select
+              v-model="$v.form.question.$model"
+              class="border border-gray-300 rounded-md text-gray-700 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+              @change="input"
             >
-              {{ selection.text }}
-            </option>
-          </select>
+              <option
+                v-for="(selection, index) in selections"
+                :key="index"
+                :value="selection"
+              >
+                {{ selection.text }}
+              </option>
+            </select>
+          </div>
         </div>
         <div class="mb-3">
           <textarea
@@ -55,4 +57,21 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.c-form__select {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    background-image: url("~assets/images/other/chevron.svg");
+    background-size: cover;
+  }
+}
+</style>
